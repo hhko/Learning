@@ -32,6 +32,7 @@
   - Cache the result of a function so it’s only computed once
 
 ## 참고 자료(한국어)
+1. [함수형 프로그래밍과 ES6+](https://www.youtube.com/watch?v=4sO0aWTd3yc)
 1. [모나드와 함수형 아키텍처](https://teamdable.github.io/techblog/Moand-and-Functional-Architecture)
 1. [기존의 사고 방식을 깨부수는 함수형 사고](https://evan-moon.github.io/2019/12/15/about-functional-thinking/)
 1. [수학에서 기원한 프로그래밍 패러다임, 순수 함수](https://evan-moon.github.io/2019/12/29/about-pure-functions/)
@@ -54,6 +55,7 @@
 1. [썬한코딩, 모나드 - 3부](https://www.youtube.com/watch?v=DvFv6n32xME)
 1. [썬한코딩, 함수형 프로그래밍 - 1부](https://www.youtube.com/watch?v=PYKBYfjhwhw)
 1. [썬한코딩, 함수형 프로그래밍 - 2부](https://www.youtube.com/watch?v=FGpm-mIsbuU)
+1. [함수형 프로그래밍이란 무엇이고? 어디에? 어떻게 쓸까?](https://tacademy.skplanet.com/live/player/onlineLectureDetail.action?seq=143)
 
 ## 참고 자료(영어)
 1. [Get value out of your monad - Mark Seemann](https://www.youtube.com/watch?v=F9bznonKc64&t)
