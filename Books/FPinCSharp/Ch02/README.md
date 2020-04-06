@@ -83,7 +83,7 @@
   ```
 
 ### Stage 2: 순수 함수
-- 개선점: 입력 값(linesToDelete) 변경에서 출력 값 생성(반환)으로 변경한다(순수 함수).
+- 개선점: 입력 값(```linesToDelete```) 변경에서 출력 값 생성(반환, ```IEnumerable<OrderLine>```)으로 변경한다(순수 함수).
 - 예
   ```cs
   [Pure]
