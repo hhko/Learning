@@ -39,7 +39,9 @@
   public string GreetingFor(string name) =>
      $"Hello {name}";
   ```
-
+- 순수 함수와 불순 함수 분리  
+  ![image](./Images/Isolation.png)  
+  
 ### Stage 3: 순수 함수 합성
 - 개선점: 함수를 연결 시킬 수 있다(함수 합성).
 - 예
