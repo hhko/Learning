@@ -78,10 +78,10 @@ namespace PrimitiveObsession
             //   - "예외 처리"는 호출자가 처리해할 로직 흐름을 증가 시킨다(로직 복잡도가 무한해 진다).
             //   - "기본 값 처리"는 성공과 동일한 타입이기 때문에 로직 흐름이 증가되지 않는다(로직 복잡도가 유한해 진다: 컴파일 타임에 결정된다).
             //   - 예.
-	        //        string msg = val.Match(
+            //        string msg = val.Match(
             //                 Some: _ => $"Hello {_}",
             //                 None: () => "Hi");         // 실패도 string 타입을 반환한다.
-	        // - 문제점: 실패일 때 기본 값이 아닌 처리는 할 수 없나 ? (있다.배움은 늘 기다림을 요구한다. 개선 방법은 다음에.)
+            // - 문제점: 실패일 때 기본 값이 아닌 처리는 할 수 없나 ? (있다.배움은 늘 기다림을 요구한다. 개선 방법은 다음에.)
             {
                 Stage5.Calculate.CalculateRiskProfile(Stage5.Age.Of(30));
                 Stage5.Calculate.CalculateRiskProfile(Stage5.Age.Of(70));
