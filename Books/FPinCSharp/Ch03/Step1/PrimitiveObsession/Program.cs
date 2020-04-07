@@ -57,7 +57,7 @@ namespace PrimitiveObsession
                 //Stage3.Calculate.CalculateRiskProfile(new Stage3.Age(10000));
             }
 
-            // Stage 4. Age 타입 개선
+            // Stage 4: Age 타입 개선
             // - Risk CalculateRiskProfile(Age age)
             // - 개선점: 연산자 재정의를 통해 구조적으로 데이터에 접근하는 습관을 차단 시킨다.
             // - 문제점: 유효성 검사가 실패하면 여전히 Runtime에 ArgumentException이 발생한다.
@@ -71,7 +71,7 @@ namespace PrimitiveObsession
                 // public static bool operator <(Age l, int r) => ...;
             }
 
-            // Stage 5. Option<Age> 타입
+            // Stage 5: Option<Age> 타입
             // - Risk CalculateRiskProfile(Option<Age> age)
             // - 개선점: 유효성 검사 실패일 때 기본 값으로 처리한다.
             // - 질문: "예외 처리 vs. 기본 값 처리" 차이점은 ?
