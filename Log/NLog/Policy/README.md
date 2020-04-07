@@ -3,7 +3,6 @@
 ## 목차
 1. **[NLog Log Levels](#1-nlog-log-levels)**
 1. **[로그 출력 방법](#2-로그-출력-방법)**
-1. **[로그 단위 테스트](#3-로그-단위-테스트)**
 
 <br/>
 
@@ -19,7 +18,7 @@
   - Trace: 메서드 실행을 추적하기 위한 메서드 시작과 종료를 출력한다.
 
 ## 2. 로그 출력 방법
-1. **[+Trace: 메서드 실행을 추적하기 위한 메서드 시작과 종료를 출력한다.+]**
+1. **Trace: 메서드 실행을 추적하기 위한 메서드 시작과 종료를 출력한다.**
    - 대상
      - 필수: public 메서드
      - 선택: 생성자, private와 protected 메서드, 정적 메서드
@@ -49,7 +48,7 @@
         return ret;
      }
      ```
-1. **[+Debug: 메서드 실행을 디버깅하기 위한 메서드 상태 값을 출력한다.+]**
+1. **Debug: 메서드 실행을 디버깅하기 위한 메서드 상태 값을 출력한다.**
    - 형식: 없다(어떤 형식이든 가능하다).
    - 위치: 없다(Trace 로그 영역을 제외한 어디든 가능하다).
    - 예
@@ -66,7 +65,7 @@
         return ret;
      }
      ```
-1. **[+Info: 메서드 실행 목표를 출력한다.+]**
+1. **Info: 메서드 실행 목표를 출력한다.**
    - 조건: 메서드 실행이 성공할 때만 Info 로그를 출력한다.
      - **메서드와 Info 로그 관계는 "메서드 : Info 로그 = 1 : 1"이다(Single Responsibility Principle).**
    - 형식: 없다(메서드 비즈니스 목표를 기술할 수 있는 어떤 형식이든 가능하다).
@@ -84,7 +83,7 @@
         return ret;
      }
      ```     
-1. **[+Warn: 메서드 실행 중 조기 반환 이유를 출력한다.+]**
+1. **Warn: 메서드 실행 중 조기 반환 이유를 출력한다.**
    - 조건: 조기 반환할 때 로그를 출력한다.
      - 조기 반환?
        - 입력 값이 유효(Validation)하지 않아 더 이상 진행하는 것이 의미가 없을 때이다.
@@ -113,7 +112,7 @@
         return ret;
      }
      ```   
-1. **[+Error: 메서드 실행 중 예외를 출력한다.+]**
+1. **Error: 메서드 실행 중 예외를 출력한다.**
    - 조건: 메서드 예외 처리에서 Exception을 출력한다.
    - 형식: 없다(Exception 클래스외 정보를 추가한다).
    - 위치: catch 블럭에 위치한다.
@@ -137,7 +136,8 @@
         _logger.Trace("Returned from DoSomething");   // (return 구문을 제외한) 마지막 줄
         return ret;
      }
-1. **[+Fatal: 메서드 실행 중 예외 또는 조기 반환 이유를 출력한다.+]**
+	 ```
+1. **Fatal: 메서드 실행 중 예외 또는 조기 반환 이유를 출력한다.**
    - 조건: 예외 또는 조기 반환으로 더 이상 애플리케이션 실행이 의미가 없을 때 출력한다.
    - 형식: 
      - 조기 반환: "WHAT. WHY. HOW."
@@ -176,116 +176,5 @@
         _logger.Trace("Returned from ConnectionString");   // (return 구문을 제외한) 마지막 줄
         return dbConnect;
      }
-## 3. 로그 단위 테스트
-- 목표
-  - 로그 Level과 Message 테스트이다.
-  - NLog.config 환경설정 기반의 결과물은 단위 테스트 대상이 아니다.
-- 단위 테스트 개발 방법
-  - 로그 출력을 MemoryTarget을 이용하여 메모리에서 확인한다.
-  - MemoryTarget 단위 테스트 방법: [링크](https://github.com/NLog/NLog/blob/dev/tests/NLog.UnitTests/Targets/MemoryTargetTests.cs)
-- 개발 환경
-  - Visual Studio 2017
-  - Code Coverage: [AxoCover](https://marketplace.visualstudio.com/items?itemName=axodox1.AxoCover)
-    - Visual Studio 2017만 제공한다.
-    - xUnit 2.2.0만 제공한다.
-- App 프로젝트 
-  - .NET Framework 4.5
-  - NLog 4.7.0
-  - Autofac 4.9.4
-- Lib 프로젝트 
-  - .NET Framework 4.5
-  - NLog 4.7.0
-- 단위 테스트 프로젝트
-  - .NET Framework 4.5.2 이상
-    - xUnit과 AxoCover가 4.5.2 이상에서만 동작한다.
-  - NLog 4.7.0
-  - xUnit 2.2.0
-  - xUnit.Runner.VisualStudio 2.2.0
-  - FluentAssertions 5.10.3
-- 코드 커버리지 제외 시키기
-  - 클래스 제외
-    ```cs
-    using System.Diagnostics.CodeAnalysis;
-    
-    [ExcludeFromCodeCoverage]
-    public clsss Foo
-    {
-       // ...
-    }
-    ```
-  - 메서드 제외
-    ```cs
-    using System.Diagnostics.CodeAnalysis;
-    
-    public clsss Foo
-    {
-        [ExcludeFromCodeCoverage]
-        public Foo(ILogger logger)
-        { 
-            // ... 
-        }
-    }
-    ```
-- 예제 코드
-  - 로직 코드
-    ```cs
-    public class TightCoupledNLog
-    {
-        // NLog는 Tight Coupled일 때도 단위 테스트가 가능하다.
-        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
-
-        public int Divide(int x, int y)
-        {
-            _logger.Trace("Entered into Divide");
-
-            int ret = x / y;
-            _logger.Info($"{x} / {y} = {ret}");
-
-            _logger.Trace("Returned from Divide");
-            return ret;
-        }
-    }
-    ```
-  - 단위 테스트 코드
-    - 로그 출력 내용은 _memoryTarget.Logs에서 모두 확인할 수 있다.
-    ```cs
-    public class TightCoupledNLogSpec
-    {
-        private readonly MemoryTarget _memoryTarget;
-
-        public TightCoupledNLogSpec()
-        {
-            _memoryTarget = new MemoryTarget
-                {
-                    Layout = "${level}"
-                };
-
-            SimpleConfigurator.ConfigureForTargetLogging(_memoryTarget, LogLevel.Trace);
-        }
-
-        [Fact]
-        public void ShouldHave_TwoTraces()
-        {
-            // Arrange
-            TightCoupledNLog sut = new TightCoupledNLog();
-
-            // Act
-            sut.Divide(2019, 10);
-
-            // Assert
-            _memoryTarget.Logs
-                .Where(log => log.StartsWith("Trace"))
-                .Count()
-                .Should().Be(2);
-        }
-    }
-    ```
-  - xUnit 단위 테스트 병렬화 취소
-    ```cs
-    // AssemblyInfo.cs 파일
-    [assembly: Xunit.CollectionBehavior(DisableTestParallelization = true)]
-    ```
-- 단위 테스트 코드 커버리지
-  - 코드 커버리지  
-    ![image](./Images/AxoCoverResult.png)
+	 ```
 
