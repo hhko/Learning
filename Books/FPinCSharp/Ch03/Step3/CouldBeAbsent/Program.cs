@@ -2,7 +2,7 @@
 
 namespace CouldBeAbsent
 {
-    using static CouldBeAbsent.Stage2.F;
+    using static Stage2.F;
 
     class Program
     {
@@ -17,6 +17,9 @@ namespace CouldBeAbsent
             {
                 var firstName = Some("Enrico");
                 var middleName = None;
+
+                Stage2.Hello.Greet(None);
+                Stage2.Hello.Greet(Some("John"));
             }
         }
     }

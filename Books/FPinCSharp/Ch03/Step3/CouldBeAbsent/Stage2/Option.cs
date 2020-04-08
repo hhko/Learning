@@ -5,15 +5,24 @@ using System.Text;
 namespace CouldBeAbsent.Stage2
 {
     using Unit = System.ValueTuple;
+    using static F;
 
     public static partial class F
     {
-        public static Unit Unit() => default(Unit);
+        public static Unit Unit() => 
+            default(Unit);
 
         public static Option.None None =>
             Option.None.Default;
 
-        public static Option.Some<T> Some<T>(T value) =>
+        // 반환 타입을 "Option.Some<T>"에서 "Option<T>"으로 변경한다.
+        // - 변경 전
+        //   public static Option.Some<T> Some<T>(T value) =>
+        // - 변경 후
+        //   public static Option<T> Some<T>(T value) =>
+        // 질문?
+        // - Option.Some<T> 타입이 Option<T> 타입으로 변환(?)할 수 있나?
+        public static Option<T> Some<T>(T value) =>
             new Option.Some<T>(value);
     }
 
@@ -52,5 +61,33 @@ namespace CouldBeAbsent.Stage2
         //
         //    public struct Some<T> : Option<T> { /* ... */ }
         //}
+    }
+
+    public struct Option<T>
+    {
+        private readonly bool _isSome;
+        private readonly T _value;
+
+        private Option(T value)
+        {
+            _isSome = true;
+            _value = value;
+        }
+
+        public static implicit operator Option<T>(Option.None _) =>
+            new Option<T>();
+
+        public static implicit operator Option<T>(Option.Some<T> some) =>
+            new Option<T>(some.Value);
+
+        public static implicit operator Option<T>(T value) =>
+            value == null 
+            ? None              // F.None
+            : Some(value);      // F.Some
+
+        public R Match<R>(Func<R> None, Func<T, R> Some) =>
+            _isSome
+            ? Some(_value)
+            : None();
     }
 }

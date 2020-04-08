@@ -22,8 +22,22 @@ namespace WhyNotVoid
 
             // Stage 2: Unit 
             // - 개선점: void 타입을 Unit으로 변경하여 Action을 Func을 구분하지 않는다(일관성consistency을 제공한다).
-            //   - void는 타입이 아니다.
+            //   - void는 타입이 아니다(void을 명시적으로 입력 값으로 전달할 수 없다).
+            //     - 예. 
+            //              void First(); 
+            //              void Second();
+            //
+            //              Second(First());
+            //              컴파일 에러가 발생한다.
+            //              Error CS1501  No overload for method 'Second' takes 1 arguments
             //   - Unit은 타입이다(데이터가 없음the absence of data을 나타낸다).
+            //     - 예. 
+            //              Unit First(Unit _); 
+            //              Unit Second(Unit _);
+            //
+            //              Unit _2 = Second(First(_1));
+            //              컴파일 에러가 없다.
+            //
             // - 문제점: 모든 Action을 Func으로 변환 시켜야 한다.
             {
                 // 반환 값이 있을 때: Func
