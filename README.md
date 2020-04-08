@@ -8,4 +8,6 @@
 - 저장소
   - [Git](./Repo/Git)
 - 로그
-  - [NLog](./Log/NLog)
+  - [NLog](./Logs/NLog)
+- 블로그
+  - [Mark Seemann](./Blogs/MarkSeemann)
