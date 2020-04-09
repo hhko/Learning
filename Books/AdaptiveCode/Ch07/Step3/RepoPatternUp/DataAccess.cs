@@ -1,34 +1,48 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
 //
 // 교육 목표
-// - where class: 함수 조건 준수(Set<T> 함수), 참조 데이터 타입
-// - where class, IEntity: T 타입 제약
+// - in, out은 인터페이스에만 적용가능한다.
+// - in, out은 함께 사용할 수 없다(함수 입력/출력으로 인터페이스가 분리되어야 한다.)
+// - out: 함수 출력, 덜 구체적
+// - in: 함수 입력, 더 구체적
 //
 
-namespace Lab_03_RepoPattern
+namespace Lab_03_RepoPattern_Improved
 {
     public class EmployeeDb : DbContext
     {
         public DbSet<Employee> Employees { get; set; }
     }
 
-    public interface IRepository<T> : IDisposable
+    public interface IReadOnlyRepository<out T> : IDisposable
     {
-        // Read
         T FindById(int id);
         IQueryable<T> FindAll();
+    }
 
-        // Write
+    public interface IWriteOnlyRepository<in T> : IDisposable
+    {
         void Add(T newEntity);
         void Delete(T entity);
         int Commit();
+    }
+
+    //public interface IRepository<in T> : IReadOnlyRepository<T>
+    //{
+    //    void Add(T newEntity);
+    //    void Delete(T entity);
+    //    int Commit();
+    //}
+
+    public interface IRepository<T> : IReadOnlyRepository<T>, IWriteOnlyRepository<T>
+    {
+
     }
 
     public class SqlRepository<T> : IRepository<T> where T : class, IEntity
@@ -44,7 +58,7 @@ namespace Lab_03_RepoPattern
 
         public void Add(T newEntity)
         {
-            if (newEntity.IsValid2())
+            if (newEntity.IsValid())
             {
                 _set.Add(newEntity);
             }
