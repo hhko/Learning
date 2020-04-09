@@ -1,5 +1,5 @@
 # Learning
-- 배움은 설렘이다.
+- 배움은 설렘이다 for developers.
 
 ## 목차
 - 책
