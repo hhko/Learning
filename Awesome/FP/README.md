@@ -9,8 +9,6 @@
 - [ ] [모던 자바 인 액션(자바 8 인 액션)](http://www.yes24.com/Product/Goods/77125987?scode=032&OzSrank=14)
 - [ ] [함수형 자바스크립트](http://www.yes24.com/24/UsedShop/Goods/58181696?scode=048_002)
 - [ ] [하스켈로 배우는 함수형 프로그래밍](http://www.yes24.com/Product/Goods/19842361?scode=032&OzSrank=5)
-- [ ] [Domain Modeling Made Functional](https://pragprog.com/book/swdddf/domain-modeling-made-functional)
-- [ ] [Functional Programming in C# with Categories](https://leanpub.com/functional-programming-in-cSharp-with-categories)
 - [ ] [컴퓨터과학이 여는 세계](http://www.yes24.com/Product/Goods/17976737)
 
 ## 동영상(한국어)
@@ -59,6 +57,7 @@
 ## 책(영어)
 - [ ] [Functional Programming in C#](https://www.manning.com/books/functional-programming-in-c-sharp)
 - [ ] [Domain Modeling Made Functional](https://pragprog.com/book/swdddf/domain-modeling-made-functional)
+- [ ] [Functional Programming in C# with Categories](https://leanpub.com/functional-programming-in-cSharp-with-categories)
 
 ## 동영상(영어)
 - [ ] [Functional Programming with C#](https://www.pluralsight.com/courses/functional-programming-csharp)
