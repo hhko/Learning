@@ -12,7 +12,7 @@
     {
         public static IEnumerable<T> LogLINQ<T>(this IEnumerable<T> enumerable, string logName, Func<T, string> printMethod)
         {
-#if DEBUG
+    #if DEBUG
             int count = 0;
             foreach (var item in enumerable)
             {
@@ -24,9 +24,9 @@
                 yield return item;
             }
             Debug.WriteLine($"{logName}|count = {count}");
-#else
-    return enumerable;
-#endif
+    #else
+            return enumerable;
+    #endif
         }
     }
   ```	
