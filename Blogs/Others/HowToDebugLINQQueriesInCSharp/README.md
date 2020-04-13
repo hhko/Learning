@@ -42,5 +42,5 @@
         .LogLINQ("logWhere2", e=>e.Name)
         .OrderBy(e => e.Age);  
   ```
-- 로그 출력
-  ![](./Images/LogLINQ.png)  
+- 로그 출력  
+  ![](./Images/logLINQ.png)  
