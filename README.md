@@ -23,3 +23,5 @@
     - [Refactoring to Aggregate Services](./Blogs/MarkSeemann/RefactoringToAggregateServices)
   - [Others](./Blogs/Others)	
     - [How To Debug LINQ Queries in C#](./Blogs/Others/HowToDebugLINQQueriesInCSharp)
+- Awesome
+  - [Functional Programming](./Awesome/FP)
