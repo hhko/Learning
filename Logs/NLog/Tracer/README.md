@@ -1,3 +1,5 @@
+# 로그 출력 자동화
+
 ## 목차
 1. **[목표](#1-목표)**
 1. **[기대효과](#2-기대효과)**
@@ -31,7 +33,7 @@
        return "2020";
     }
     ```
-  - 적용 후
+  - 적용 후 코드
     ```cs
     string value = sample.DoSomething(2019);
 
@@ -41,7 +43,7 @@
        return "2020";
     }
     ```
-  - 적용 후: 로그 출력 자동화
+  - 적용 후 로그 출력
     - 메서드 이름과 입출력 타입과 값을 확인할 수 있다.
       - 입력: DoSomething(Int32) (x=2019)
       - 출력: DoSomething(Int32) ($return=2020)
@@ -68,14 +70,14 @@
        }
     }
     ```
-  - 적용 후
+  - 적용 후 코드
     ```cs
     public void DoSomething()
     {
        ...
     }
     ```
-  - 로그 출력 자동화 결과
+  - 적용 후 로그 출력
     - Tracer.4NLog.Fody 3.3.0 패키지는 예외 처리 로그를 Trace Level로 출력한다.
     - Tracer.4NLog.Fody 3.3.0 패키지는 예외 처리 로그를 출력 후에 rethrow한다.
     - 예외 타입과 소스 라인, 호출 스택을 확인할 수 있다.
@@ -150,7 +152,7 @@
     TRACE TracerApp.Simple Returned from set_X(Int32) (). Time taken: 0.01 ms.
     ```
 - 메서드
-  - 입출력 타입과 값을 제공한다(값은 ToString() 결과 값이다).
+  - 입출력 타입과 값을 제공한다(ToString() 결과 값이다).
   - 예
     ```cs
     sample.DoSomething("2019");
@@ -172,6 +174,7 @@
       - 타입: String
       - 값: msg=2019
     - 출력: int
+      - 타입: 제공하지 않는다.
       - 값: $return=2020
 
 #### 4.2 추적 제외
@@ -248,7 +251,7 @@
     // 로그 출력이 없다. 
     ```
 - 메서드 입력 값: ```[NoTrace]```
-  - 지정된 메서드 입력 인자 값이 출력되지 않는다(값은 ToString() 결과 값이다).
+  - 지정된 메서드 입력 인자 값이 출력되지 않는다(ToString() 결과 값이다).
   - 예
     ```cs
     sample.DoSomething("2019");
@@ -397,6 +400,12 @@
     ```
 
 ## 6. 성능 테스트
+- NLog 설정: Disk IO로 인한 성능 테스트 영향을 제거하기 위해 Memory Target으로 지정한다.
+  ```
+  <targets>
+    <target xsi:type="Memory" name="c" layout="${pad:padding=5:inner=${level:uppercase=true}} ${logger} ${message}"/>
+  </targets>
+  ```
 - 성능 테스트 코드
   ```cs
   using NLog;

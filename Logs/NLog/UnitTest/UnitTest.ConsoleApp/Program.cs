@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Core;
 using NLog;
+using NLog.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,7 @@ namespace UnitTest.ConsoleApp
     {
         static void Main(string[] args)
         {
-            // Log 설정 파일을 지정한다.
-            LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(@"Configurations\App.NLog.config");
+            LogManager.Configuration = new XmlLoggingConfiguration(@"Configurations\App.NLog.config");
 
             // NLog은 Tight Coupled일 때도 단위 테스트가 가능하다.
             TightCoupledNLog tightCoupledNLog = new TightCoupledNLog();
@@ -33,7 +33,6 @@ namespace UnitTest.ConsoleApp
                 looseCoupledNLog.Divide(2019, 10);
             }
 
-            // Log을 정리한다.
             LogManager.Shutdown();
         }
     }
