@@ -21,7 +21,7 @@
   - public 메서드가 추적 대상이다(protected, private 메서드 추적도 가능하다).
   - public 메서드의 입출력 타입과 값을 출력한다(Primitive Type만 값을 제공한다).
   - public 메서드 실행 시간(ms 단위)을 출력한다.
-  - 적용 전
+  - 적용 전 코드
     ```cs
     string value = sample.DoSomething(2019);
 
@@ -55,7 +55,7 @@
     ```
 - **Error Level 로그 출력 자동화**
   - **Error: 메서드 실행 중 예외를 출력한다.**
-  - 적용 전
+  - 적용 전 코드
     ```cs
     public void DoSomething()
     {
