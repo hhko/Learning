@@ -121,7 +121,7 @@
   - ```[NoReturnTrace]```: "메서드 출력 값"을 제외한다.
 
 ## 4. 로그 출력 자동화
-#### 4.1 추적
+### 4.1 추적
 - 생성자
   - FodyWeavers.xml 파일: ```traceConstructors="true"```
   - 예
@@ -177,7 +177,7 @@
       - 타입: 제공하지 않는다.
       - 값: $return=2020
 
-#### 4.2 추적 제외
+### 4.2 추적 제외
 - 생성자
   - FodyWeavers.xml 파일: ```traceConstructors="false"```    
   - 예
@@ -289,7 +289,7 @@
     TRACE TracerApp.Simple Entered into DoSomething(String).
     TRACE TracerApp.Simple Returned from DoSomething(String) (). Time taken: 0.03 ms.
     ```
-#### 4.3 추적 패턴
+### 4.3 추적 패턴
 - 추적 대상 유/무를 ```FodyWeavers.xml``` 파일에서 전역으로 설정한다.
 - 추적 대상 유/무
   - &lt;On&gt;: 추적 대상
