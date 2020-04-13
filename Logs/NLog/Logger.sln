@@ -15,6 +15,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.Lib.Tests", "UnitTest\UnitTest.Lib.Tests\UnitTest.Lib.Tests.csproj", "{89C37324-7A11-4AE1-8BC4-C1A065BEC7DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tracer", "Tracer", "{D8E56C57-F5A6-4987-BBCC-FA025B2C2C53}"
+	ProjectSection(SolutionItems) = preProject
+		Tracer\README.md = Tracer\README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer.ConsoleApp", "Tracer\Tracer.ConsoleApp\Tracer.ConsoleApp.csproj", "{1BDDC353-3D8B-490D-A531-6EF657D69590}"
 EndProject
