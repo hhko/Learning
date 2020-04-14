@@ -16,3 +16,6 @@
 > Many of the suggestions are also feasable in C# or Java, but the lightweight nature of F# types means that it is much more likely that we will do this kind of refactoring.
 
 - 타입 설계을 통해 함수형 설계 익히기
+- https://thecodebuzz.com/awesome-code-primitive-obsession-code-smell-with-example/
+- https://github.com/lucax88x/PrimitiveObsession
+
