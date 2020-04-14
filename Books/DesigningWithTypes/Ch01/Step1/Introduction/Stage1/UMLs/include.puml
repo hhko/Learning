@@ -1,3 +1,15 @@
 @startuml
-!include .\\Contact.puml
+class Contact {
+    + FirstName : string <<get>> <<set>>
+    + MiddleInitial : string <<get>> <<set>>
+    + LastName : string <<get>> <<set>>
+    + EmailAddress : string <<get>> <<set>>
+    + IsEmailVerified : bool <<get>> <<set>>
+    + Address1 : string <<get>> <<set>>
+    + Address2 : string <<get>> <<set>>
+    + City : string <<get>> <<set>>
+    + State : string <<get>> <<set>>
+    + Zip : string <<get>> <<set>>
+    + IsAddressValid : bool <<get>> <<set>>
+}
 @enduml

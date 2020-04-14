@@ -11,6 +11,8 @@
 	- [Chapter 01. 객체, 설계](./Books/Object/Ch01)
   - [C#으로 배우는 적응형 코드](./Books/AdaptiveCode)
     - [Chapter 07. Covariance & Contravariance](./Books/AdaptiveCode/Ch07)
+  - [Designing with Types](./Books/DesigningWithTypes)
+    - [Chapter 01. Introduction](./Books/DesigningWithTypes/Ch01)
 - 저장소
   - [Git](./Repo/Git)
 - 로그

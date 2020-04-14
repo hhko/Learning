@@ -1,7 +1,36 @@
 @startuml
-!include .\\Contact.puml
-!include .\\EmailContactInfo.puml
-!include .\\PersonalName.puml
-!include .\\PostalAddress.puml
-!include .\\PostalContactInfo.puml
+class Contact {
+    + Name : PersonalName <<get>> <<set>>
+    + EmailContactInfo : EmailContactInfo <<get>> <<set>>
+    + PostalContactInfo : PostalContactInfo <<get>> <<set>>
+}
+
+class PersonalName {
+    + FirstName : string <<get>> <<set>>
+    + MiddleInitial : string <<get>> <<set>>
+    + LastName : string <<get>> <<set>>
+}
+
+class EmailContactInfo {
+    + EmailAddress : string <<get>> <<set>>
+    + IsEmailVerified : bool <<get>> <<set>>
+}
+
+class PostalContactInfo {
+    + Address : PostalAddress <<get>> <<set>>
+    + IsAddressValid : bool <<get>> <<set>>
+}
+
+class PostalAddress {
+    + Address1 : string <<get>> <<set>>
+    + Address2 : string <<get>> <<set>>
+    + City : string <<get>> <<set>>
+    + State : string <<get>> <<set>>
+    + Zip : string <<get>> <<set>>
+}
+
+Contact ..> PersonalName
+Contact ..> EmailContactInfo
+Contact ..> PostalContactInfo
+
 @enduml
