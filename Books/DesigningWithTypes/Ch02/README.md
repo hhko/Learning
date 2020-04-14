@@ -12,4 +12,6 @@
 ### Stage 2: 리팩토링 후
 
 
-                                                                                               
+https://blog.ploeh.dk/2015/01/19/from-primitive-obsession-to-domain-modelling/                                                                                               
+https://andrewlock.net/using-strongly-typed-entity-ids-to-avoid-primitive-obsession-part-1/
+https://enterprisecraftsmanship.com/posts/functional-c-primitive-obsession/
