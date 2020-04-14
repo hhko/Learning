@@ -8,8 +8,8 @@
 
 ## Step1
 - 리팩토링 전
-  ![Class Diagram](./Step1/Introduction/Stage1/UMLs/include.puml)
+  ![Class Diagram](./Step1/Introduction/Stage1/UMLs/include.png)
 - 리팩토링 후
-  ![Class Diagram](./Step1/Introduction/Stage2/UMLs/include.puml)
+  ![Class Diagram](./Step1/Introduction/Stage2/UMLs/include.png)
 
                                                                                                
