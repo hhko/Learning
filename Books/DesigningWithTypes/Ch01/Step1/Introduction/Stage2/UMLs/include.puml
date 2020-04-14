@@ -1,0 +1,7 @@
+@startuml
+!include .\\Contact.puml
+!include .\\EmailContactInfo.puml
+!include .\\PersonalName.puml
+!include .\\PostalAddress.puml
+!include .\\PostalContactInfo.puml
+@enduml

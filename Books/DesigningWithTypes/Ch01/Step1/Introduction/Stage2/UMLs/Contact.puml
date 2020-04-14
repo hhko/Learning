@@ -1,0 +1,7 @@
+@startuml
+class Contact {
+    + Name : PersonalName <<get>> <<set>>
+    + EmailContactInfo : EmailContactInfo <<get>> <<set>>
+    + PostalContactInfo : PostalContactInfo <<get>> <<set>>
+}
+@enduml

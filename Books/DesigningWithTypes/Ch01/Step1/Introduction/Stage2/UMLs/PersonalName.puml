@@ -1,0 +1,7 @@
+@startuml
+class PersonalName {
+    + FirstName : string <<get>> <<set>>
+    + MiddleInitial : string <<get>> <<set>>
+    + LastName : string <<get>> <<set>>
+}
+@enduml

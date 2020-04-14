@@ -1,0 +1,6 @@
+@startuml
+class PostalContactInfo {
+    + Address : PostalAddress <<get>> <<set>>
+    + IsAddressValid : bool <<get>> <<set>>
+}
+@enduml

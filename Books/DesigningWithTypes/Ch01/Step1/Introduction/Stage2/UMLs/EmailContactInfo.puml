@@ -1,0 +1,6 @@
+@startuml
+class EmailContactInfo {
+    + EmailAddress : string <<get>> <<set>>
+    + IsEmailVerified : bool <<get>> <<set>>
+}
+@enduml
