@@ -14,13 +14,13 @@
     ```cs
     public class Contact
     {
-	    // 이름
+        // 이름
         public string FirstName { get; set; }
         // use "option" to signal optionality
         public string MiddleInitial { get; set; }
         public string LastName { get; set; }
           
-		// 메일
+        // 메일
         public string EmailAddress { get; set; }
         //true if ownership of email address is confirmed
         public bool IsEmailVerified { get; set; }
@@ -46,7 +46,8 @@
 ### Stage 2: 리팩토링 후
 - 개선점: 
   - **Guideline: Use records or tuples to group together data that are required to be consistent (that is “atomic”) but don’t needlessly group together data that is not related.**
-  - **이름**과 **메일**, **주소**로 세부 데이터 타입을 만든다.
+  - 도메인을 표현하는 최소 단위 **이름**과 **메일**, **주소**로 세부 데이터 타입을 만든다.
+  - 도메인 최소 단위 기준으로 타입을 분리시켜 불필요한 의존성을 제거한다.
 - 코드
   ```cs
   public class Contact
