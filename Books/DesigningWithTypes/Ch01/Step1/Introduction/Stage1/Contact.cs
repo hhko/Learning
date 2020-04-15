@@ -14,7 +14,7 @@ namespace Introduction.Stage1
 
         // 메일
         public string EmailAddress { get; set; }
-        //true if ownership of email address is confirmed
+        // true if ownership of email address is confirmed
         public bool IsEmailVerified { get; set; }
 
         // 주소
@@ -23,7 +23,7 @@ namespace Introduction.Stage1
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
-        //true if validated against address service
+        // true if validated against address service
         public bool IsAddressValid { get; set; }
     }
 }
