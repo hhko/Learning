@@ -8,6 +8,8 @@ open Stage2
 let main argv =
     printfn "Hello World from F#!"
 
+    // 타입 추론: 타입을 명시하지 않고 생성할 수 있다.
+    // 레코드 타입: https://docs.microsoft.com/ko-kr/dotnet/fsharp/language-reference/records
     let stage1Contact = { 
             // 이름
             FirstName = "n1";

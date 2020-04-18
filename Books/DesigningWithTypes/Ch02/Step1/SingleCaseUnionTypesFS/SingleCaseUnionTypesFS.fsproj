@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Stage1\PrimitiveTypes.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

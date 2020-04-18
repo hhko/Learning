@@ -1,4 +1,5 @@
 ﻿module Stage2
+    // module -> open
 
 // 이름
 type PersonalName = 
