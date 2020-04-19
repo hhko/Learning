@@ -5,29 +5,21 @@ open PrimitiveTypes
 
 [<EntryPoint>]
 let main argv =
-    // Stage 1 
-    // - using the constructor as a function
-    let x = "a" |> EmailAddress
+    // Stage 1 : Discriminated Unions
+    "x" |> constructedSingular
+    ["a"; "b"; "c"] |> constructedPural 
 
-    "a" 
+    "x1Let" 
     |> EmailAddress
-    |> printfn "%A"
-        // %s for strings
-        // %b for bools
-        // %i for ints
-        // %f for floats
-        // %A for pretty-printing tuples, records and union types
-        // %O for other objects, using ToString()
+    |> deconstructedSingular1Let        
 
-    ["a"; "b"; "c"]
-    |> List.map EmailAddress
-    |> printfn "%A"
+    "x2Pipe" 
+    |> EmailAddress
+    |> deconstructedSingular2Pipe
 
-    // - inline deconstruction
-    let a1 = "a" |> EmailAddress
-    let (EmailAddress a2) = a1
-    printfn "%s" a2
-
+    let x1 = "a" |> EmailAddress
+    x1 |> deconstructedSingular2Pipe
+    
     let address =
         ["a"; "b"; "c"]
         |> List.map EmailAddress
