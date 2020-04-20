@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Compile Include="Stage1\PrimitiveTypes.fs" />
+    <Compile Include="Stage2\Contact.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
