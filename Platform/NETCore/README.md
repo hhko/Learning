@@ -1,10 +1,10 @@
 # .NET Core & Visual Studio Code
 
 ## 참고 자료
-- dotnet 명령어 : https://docs.microsoft.com/ko-kr/dotnet/core/tools/dotnet?tabs=netcore21
-- VSCode 문서: https://code.visualstudio.com/docs
-- NuGet 폴더 관리: https://docs.microsoft.com/ko-kr/nuget/consume-packages/managing-the-global-packages-and-cache-folders
-- 프레임워크명 : https://docs.microsoft.com/ko-kr/dotnet/standard/frameworks
+- dotnet 명령어 : [링크](https://docs.microsoft.com/ko-kr/dotnet/core/tools/dotnet?tabs=netcore21)
+- VSCode 문서: [링크](https://code.visualstudio.com/docs)
+- NuGet 폴더 관리: [링크](https://docs.microsoft.com/ko-kr/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- 프레임워크명 : [링크](https://docs.microsoft.com/ko-kr/dotnet/standard/frameworks)
 
 ## dotnet 명령어
 - 버전: dotnet --version
@@ -23,13 +23,13 @@
 - 프로젝트 추가하기
   - 명령: dotnet sln [솔루션 파일] add [프로젝트 파일]
   - 예제: dotnet sln helloworld.sln add helloworld/helloworld.csproj  
-- ~~TODO: 여러 프로젝트를 한번에 추가하기~~
-  - ~~명령: dotnet sln [솔루션 파일] add [프로젝트 파일] N개~~
+- _TODO: 여러 프로젝트를 한번에 추가하기_
+  - _명령: dotnet sln [솔루션 파일] add [프로젝트 파일] N개_
 - 프로젝트 제거하기
   - 명령: dotnet sln [솔루션 파일] remove [프로젝트 파일]
   - 예제: dotnet sln helloworld.sln remove helloworld/helloworld.csproj 
-- ~~TODO: 여러 프로젝트를 한번에 제거하기~~
-  - ~~명령: dotnet sln [솔루션 파일] remove [프로젝트 파일] N개~~
+- _TODO: 여러 프로젝트를 한번에 제거하기_
+  - _명령: dotnet sln [솔루션 파일] remove [프로젝트 파일] N개_
 
 ### 참조
 - 프로젝트 참조 추가하기
@@ -54,7 +54,7 @@
     - 명령: dotnet add [프로젝트 파일] package [패키지명] -v [버전]
     - 예제: dotnet add ./helloworld/helloworld.csproj package akka -v 1.3.16
   - N개
-    - ~~TODO: 명령: dotnet add [프로젝트 파일] 1개 package [패키지명 조건] N개~~
+    - _TODO: 명령: dotnet add [프로젝트 파일] 1개 package [패키지명 조건] N개_
 - NuGet 패키지 참조 목록보기
   - 명령: dotnet list [프로젝트 파일] package   
   - 예제: dotnet list ./helloworld/helloworld.csproj package   
@@ -63,16 +63,16 @@
     - 명령: dotnet remove [프로젝트 파일] package [패키지명]
     - 예제: dotnet remove ./helloworld/helloworld.csproj package akka
   - N개
-    - ~~TODO: 명령: dotnet remove [프로젝트 파일] 1개 package [패키지명 조건] N개~~
-- ~~TODO: NuGet 패키지 업데이트 가능 유/무 확인하기~~
-- ~~TODO: NuGet 패키지 업데이트하기~~
-- ~~TODO: NuGet 패키지 복원하기~~
+    - _TODO: 명령: dotnet remove [프로젝트 파일] 1개 package [패키지명 조건] N개_
+- _TODO: NuGet 패키지 업데이트 가능 유/무 확인하기_
+- _TODO: NuGet 패키지 업데이트하기_
+- _TODO: NuGet 패키지 복원하기_
 	
 ### 빌드
 - 솔루션 빌드하기
   - 명령: dotnet build [솔루션명] -c [debug | release] -f [프레임워크명] -v [q[uiet] | m[inimal] | n[ormal] | d[etailed] | diag[nostic]]
   - 예제: dotnet build helloworld.sln -c release -f netstandard2.1
-- ~~TODO: 솔루션 재빌드 ~~
+- _TODO: 솔루션 재빌드_
 - 솔루션 정리하기
   - 명령: dotnet clean -c [debug | release]
   - 예제: dotnet clean -c release
@@ -82,8 +82,8 @@
 - 프로젝트 실행하기
   - 명령: dotnet run --project [프로젝트명] -c [debug | release] -- 프로그램인수
   - 예제: dotnet run --project ./helloworld/helloworld.csproj -c debug -- xyz 2019
-- ~~TODO: 여러 프로젝트  빌드하기~~
-- ~~TODO: 프로젝트 정리하기~~
+- _TODO: 여러 프로젝트  빌드하기_
+- _TODO: 프로젝트 정리하기_
 
 ### 단위 테스트
 - 빌드하기
@@ -158,7 +158,7 @@
 - 복수개 프로젝트 개별 실행?
 - 플랫폼 지정(Any CPU, ...)
 - VSCode에 설치된 확장 도구 목록 확인하기
-- launch/tasks.json 파일 이해하기, [링크](- https://docs.microsoft.com/ko-kr/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio?view=vs-2019)
+- launch/tasks.json 파일 이해하기 [링크](https://docs.microsoft.com/ko-kr/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio?view=vs-2019)
 - .code-workspace 확장자?
 - Terminal
 - 확대/축소
