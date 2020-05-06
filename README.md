@@ -1,6 +1,8 @@
 # Learning
 - 배움은 설렘이다 for developers.
 
+<img src="./Images/Map_vs_Bind.png"/>
+
 ## 목차
 1. 책
    - [함수형 프로그래밍 in C#](./Books/FPinCSharp)
