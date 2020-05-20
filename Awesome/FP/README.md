@@ -58,6 +58,7 @@
 - [ ] [Functional Programming in C#](https://www.manning.com/books/functional-programming-in-c-sharp)
 - [ ] [Domain Modeling Made Functional](https://pragprog.com/book/swdddf/domain-modeling-made-functional)
 - [ ] [Functional Programming in C# with Categories](https://leanpub.com/functional-programming-in-cSharp-with-categories)
+- [ ] [Software Design: Functional Programming in C#](https://leanpub.com/c/funcsharp)
 
 ## 동영상(영어)
 - [ ] **[Stepping from Object-oriented to Functional Style with C# 8, and No Tears](https://www.youtube.com/watch?v=UM-3ZsHhogA)**
