@@ -60,6 +60,7 @@
 - [ ] [Functional Programming in C# with Categories](https://leanpub.com/functional-programming-in-cSharp-with-categories)
 
 ## 동영상(영어)
+- [ ] **[Stepping from Object-oriented to Functional Style with C# 8, and No Tears](https://www.youtube.com/watch?v=UM-3ZsHhogA)**
 - [ ] [Functional Programming with C#](https://www.pluralsight.com/courses/functional-programming-csharp)
 - [ ] [Applying Functional Principles in C#](https://www.pluralsight.com/courses/csharp-applying-functional-principles)
 - [ ] [Writing Purely Functional Code in C#](https://www.pluralsight.com/courses/writing-purely-functional-code-csharp)
@@ -70,6 +71,7 @@
 - [ ] [Functional Programming With C# Workshop](https://www.youtube.com/watch?v=OPxyomlxP4o)
 - [ ] [Functional Programming in C#](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Functional-Programming-in-CSharp)
 - [ ] [Category theory and life](https://www.youtube.com/watch?v=ho7oagHeqNc)
+- [ ] [Software Design: Functional Programming in C#](https://www.udemy.com/course/functional-csharp/)
 
 ## 참고 자료(영어)
 - [x] [Mark Seemann - Refactoring to Aggregate Services](https://github.com/hhko/Learning/tree/master/Blogs/MarkSeemann/RefactoringToAggregateServices)
