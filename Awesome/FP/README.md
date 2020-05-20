@@ -1,4 +1,4 @@
-# Awesome 함수형 프로그래밍 for .NET
+# Awesome 함수형 프로그래밍
 
 ## 책(한국어)
 - [ ] [실전 코드로 배우는 실용주의 디자인 패턴](http://www.yes24.com/Product/goods/34572809)
