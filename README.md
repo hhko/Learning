@@ -8,6 +8,7 @@
    - [함수형 프로그래밍 in C#](./Books/FPinCSharp)
      - [Chapter 02. Why function purity matters](./Books/FPinCSharp/Ch02)
      - [Chapter 03. Designing function signatures and types](./Books/FPinCSharp/Ch03)	
+     - [Chapter 05. Designing programs with function composition](./Books/FPinCSharp/Ch05)	
    - [오브젝트](./Books/Object)
      - [Chapter 00. 패러다임](./Books/Object/Ch00)
      - [Chapter 01. 객체, 설계](./Books/Object/Ch01)
