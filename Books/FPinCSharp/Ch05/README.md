@@ -47,7 +47,7 @@
 
      var joe = Some(new Person("Joe", "Bloggs"));
 
-     // 함수 합성(h 함수 有) : emailFor
+     // 함수 합성(h 함수 有) : emailFor, AppendDomain(AbbreviateName(p))
      var email1 = joe.Map(emailFor);
 
      // 함수 합성(h 함수 無) : AbbreviateName.AppendDomain
