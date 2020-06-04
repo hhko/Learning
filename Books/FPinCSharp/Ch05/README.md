@@ -6,7 +6,7 @@
 1. 함수 합성 정의
    - **h(x) = (f · g)(x) = f(g(x))**
 1. 함수 합성 구현
-   - g 함수(AbbreviateName)와 f 함수(AppendDomain)라 가정하자.
+   - g 함수는 AbbreviateName, f 함수는 AppendDomain라 가정하자.
      ```
      static string AbbreviateName(Person p)
         => Abbreviate(p.FirstName) + Abbreviate(p.LastName);
@@ -17,7 +17,7 @@
      static string Abbreviate(string s)
         => s.Substring(0, 2).ToLower();
      ```
-   - **함수 합성(h 함수 有 - Func)** : ```emailfor```
+   - **함수 합성(h 함수 有 - Func)** : ```emailfor```, ```AppendDomain(AbbreviateName(p));```
      ```
      Func<Person, string> emailFor = p => 
         AppendDomain(AbbreviateName(p));
