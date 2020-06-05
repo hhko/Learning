@@ -52,6 +52,7 @@
 - [ ] [함수형 프로그래밍이란 무엇이고? 어디에? 어떻게 쓸까?](https://tacademy.skplanet.com/live/player/onlineLectureDetail.action?seq=143)
 - [ ] [Functional Programming in scala 스터디](https://github.com/kpug/fpis/blob/master/wiki/article.md)
 - [ ] [모노이드](https://sojin.io/article/%EB%AA%A8%EB%85%B8%EC%9D%B4%EB%93%9C/)
+- [ ] [3분 모나드](https://overcurried.com/3%EB%B6%84%20%EB%AA%A8%EB%82%98%EB%93%9C/)
 - [ ] [공변과 반공변](https://sojin.io/article/%EA%B3%B5%EB%B3%80%EA%B3%BC-%EB%B0%98%EA%B3%B5%EB%B3%80)
 
 ## 책(영어)
