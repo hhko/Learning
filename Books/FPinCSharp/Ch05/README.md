@@ -6,7 +6,7 @@
 1. 함수 합성 정의
    - **h(x) = (f · g)(x) = f(g(x))**
 1. 함수 합성 구현
-   - g 함수는 AbbreviateName, f 함수는 AppendDomain라 가정하자.
+   - **f 함수는 AppendDomain**, **g 함수는 AbbreviateName**라 가정하자.
      ```
      static string AbbreviateName(Person p)
         => Abbreviate(p.FirstName) + Abbreviate(p.LastName);
