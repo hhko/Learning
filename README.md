@@ -46,7 +46,8 @@
        WriteLine($"10 {Test(10, 20)} 20");
        ```
    - Expression과 Statement 관계
-     - [A statement may have internal components (e.g., expressions).](https://en.wikipedia.org/wiki/Statement_(computer_science))
+     - [A statement may have internal components (e.g., expressions).](https://en.wikipedia.org/wiki/Statement_(computer_science))  
+     <img src="./Images/Expression_vs_Statement.png"/>
 1. Expression과 Declarative, Composition, Readable 관계
    ```
    Expression : Founction Name → Declarative
@@ -55,7 +56,7 @@
       ↓
    Composition : Function Flow → Readable
    ```
-1. 모나드
+1. 모나드  
    <img src="./Images/Map_vs_Bind.png"/>
 
 ### 2. 자료구조
