@@ -1,4 +1,4 @@
-# 1. 애자일 마스터 AGILE SAMURAI
+# 애자일 마스터 AGILE SAMURAI
 
 ## Part 1. 애자일 소개하기
 - [1장. 애자일의 핵심](./Ch01.md)
