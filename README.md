@@ -75,6 +75,11 @@
      - [Chapter 07. Covariance & Contravariance](./Books/AdaptiveCode/Ch07)
    - [Designing with Types](./Books/DesigningWithTypes)
      - [Chapter 01. Introduction](./Books/DesigningWithTypes/Ch01)
+   - [애자일 마스터](./Books/AgileSamurai)
+     - [1장. 애자일의 핵심](./Books/AgileSamurai/Ch01.md)
+     - [2장. 애자일 팀 만나기](./Books/AgileSamurai/Ch02.md)
+     - [3장. 모두 한 버스에 타는 법](./Books/AgileSamurai/Ch03.md)
+     - [4장. 크게 보기](./Books/AgileSamurai/Ch04.md)
 1. 강의
    - [Advanced Defensive Programming Techniques](./Lectures/DefensiveProgramming)
 1. 플랫폼
