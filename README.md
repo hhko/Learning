@@ -52,10 +52,10 @@
    ```
    Expression : Founction Name → Declarative ↘
       │        : Function Signature → Pure -----→ Predictable → Testable → Maintainable
-	  │                                                                      ↗     
-     output                                                               ↗
-      ↓                                                                 ↗
-   Composition : Function Flow → Readable  ──────┘  
+      │                                                      ↗     
+     output                                                ↗
+      ↓                                                  ↗
+   Composition : Function Flow → Readable  ──────────────┘  
    ```
 1. Map vs. Bind  
    <img src="./Images/Map_vs_Bind.png"/>
