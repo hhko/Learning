@@ -50,11 +50,12 @@
      <img src="./Images/Expression_vs_Statement.png"/>
 1. Expression과 Declarative, Composition, Readable 관계
    ```
-   Expression : Founction Name → Declarative
-      │
-     output
-      ↓
-   Composition : Function Flow → Readable
+   Expression : Founction Name → Declarative ↘
+      │        : Function Signature → Pure -----→ Predictable → Testable → Maintainable
+	  │                                                                      ↗     
+     output                                                               ↗
+      ↓                                                                 ↗
+   Composition : Function Flow → Readable  ──────┘  
    ```
 1. Map vs. Bind  
    <img src="./Images/Map_vs_Bind.png"/>
