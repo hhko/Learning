@@ -56,7 +56,7 @@
       ↓
    Composition : Function Flow → Readable
    ```
-1. 모나드  
+1. Map vs. Bind  
    <img src="./Images/Map_vs_Bind.png"/>
 
 ### 2. 자료구조
