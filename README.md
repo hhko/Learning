@@ -53,7 +53,7 @@
 	   <img src="./Images/Wiki_Function.png"/>
 	 - 수학 함수 f는 입력 x와 출력 y을 갖는다.
 	 - Expression을 통해 프로그램 세계의 함수도 입력(argument type)과 출력(return type)을 갖는다(Statement은 출력이 선택적이다).
-	 - Expression을 통해 프로그램 세계의 함수가 수학 함수의 성질 중 기본 조건(입력과 출력이 존재한다)을 충족 시키게 된다.
+	 - Expression을 통해 프로그램 세계의 함수가 수학 함수 성질 중 "입력과 출력" 존재를 충족 시킨다.
 1. Expression과 Declarative, Composition, Readable 관계
    ```
    Expression : Founction Name → Declarative ─────────────┐
@@ -62,8 +62,8 @@
       ↓                                                   ↗
    Composition : Function Flow → Readable ────────────────┘  
    ```
-1. Map vs. Bind  
-   <img src="./Images/Map_vs_Bind.png"/>
+1. Map vs. Bind vs. Return : Normal World vs Elevated World(Containerized)
+   <img src="./Images/Map_vs_Bind_vs_Return.png"/>
 
 ### 2. 자료구조
 1. 불변 vs. 가변
