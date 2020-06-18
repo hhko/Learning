@@ -56,11 +56,11 @@
 	 - Expression을 통해 프로그램 세계의 함수가 수학 함수의 성질 중 기본 조건(입력과 출력이 존재한다)을 충족 시키게 된다.
 1. Expression과 Declarative, Composition, Readable 관계
    ```
-   Expression : Founction Name → Declarative ───────┐
-      │                                                                     ↘
+   Expression : Founction Name → Declarative ─────────────┐
+      │                                                   ↘
      input/output : Function Signature → Pure → Predictable → Testable → Maintainable 
-      ↓                                                                    ↗
-   Composition : Function Flow → Readable   ───────┘  
+      ↓                                                   ↗
+   Composition : Function Flow → Readable ────────────────┘  
    ```
 1. Map vs. Bind  
    <img src="./Images/Map_vs_Bind.png"/>
