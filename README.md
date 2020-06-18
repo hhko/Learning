@@ -51,8 +51,8 @@
    - 왜 Expression이 중요한가?
      - 수학 함수 정의 : [첫 번째 집합의 임의의 한 원소를 두 번째 집합의 오직 한 원소에 대응시키는 이항관계다. ](https://ko.wikipedia.org/wiki/%ED%95%A8%EC%88%98)  
 	   <img src="./Images/Wiki_Function.png"/>
-	 - 수학 함수는 입력과 출력을 갖는다.
-	 - Expression을 통해 프로그램 세계의 함수도 입력과 출력을 갖는다(Statement은 출력이 선택적이다).
+	 - 수학 함수 f는 입력 x와 출력 y을 갖는다.
+	 - Expression을 통해 프로그램 세계의 함수도 입력(argument type)과 출력(return type)을 갖는다(Statement은 출력이 선택적이다).
 	 - Expression을 통해 프로그램 세계의 함수가 수학 함수의 성질 중 기본 조건(입력과 출력이 존재한다)을 충족 시키게 된다.
 1. Expression과 Declarative, Composition, Readable 관계
    ```
