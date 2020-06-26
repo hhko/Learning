@@ -1,4 +1,4 @@
-# Learning
+# Learning is exciting for developers.
 - 배움은 설렘이다 for developers.
 
 ## 함수형 주요 특징
