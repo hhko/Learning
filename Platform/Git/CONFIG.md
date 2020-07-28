@@ -2,7 +2,7 @@
 
 ## 목차
 
-## 1. 계정 설정
+## 1. Git 계정 설정
 - 환경 설정 확인
   ```shell
   git config --list
@@ -21,7 +21,7 @@
 - 관련 자료  
   - [Git 프로젝트/저장소마다 다른 계정 정보 사용하기](https://awesometic.tistory.com/128)
   
-## 2. 암호 변경  
+## 2. Git 암호 변경  
 - 상황
   - 암호가 잘못되어 Clone을 못한다.
     ![](./Images/GitPassword_AuthenticationFailed.png)
