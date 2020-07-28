@@ -18,7 +18,17 @@
   git config --local user.name "a-user-only-for-this-repository"
   git config --local user.email "and-an-email-as-well@gmail.com"
   ```
+- 관련 자료  
+  - [Git 프로젝트/저장소마다 다른 계정 정보 사용하기](https://awesometic.tistory.com/128)
   
-## 참고 자료
-- [Git 프로젝트/저장소마다 다른 계정 정보 사용하기](https://awesometic.tistory.com/128)
+## 2. 암호 변경  
+- 상황
+  - 암호가 잘못되어 Clone을 못한다.
+    ![](./Images/GitPassword_AuthenticationFailed.png)
+- Windows에서 Git 암호 변경
+  - "실행 > 자격 증명 관리자"을 실행 시킨다(Credential Manager).
+  - 해당 암호를 변경한다.
+    ![](./Images/GitPassword_CredentialManager.png)
+- 관련 자료
+  - [GIT 암호 변경](https://lazymankook.tistory.com/80)
 
