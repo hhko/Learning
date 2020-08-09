@@ -88,6 +88,7 @@
      - [4장. 크게 보기](./Books/AgileSamurai/Ch04.md)
 1. 강의
    - [Advanced Defensive Programming Techniques](./Lectures/DefensiveProgramming)
+   - [.NET Unit Testing with AutoFixture](./Lectures/.NETUnitTestingWithAutoFixture)
 1. 플랫폼
    - [Git](./Platform/Git)
    - [.NET Core](./Platform/NETCore)
