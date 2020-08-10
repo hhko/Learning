@@ -108,7 +108,7 @@
  
 ### 1.7 Writing a Test with Manual Anonymous Test Data
 - 상수 : ```1```
-  ``cs
+  ```cs
   [Fact]
   public void Create_AnonymousTestData_Manually()
   {
@@ -158,4 +158,17 @@
   }
   ```
 
-### 1.9 Summary
+<br/>
+
+## 2. Creating Anonymous Test Data and Objects with AutoFixture
+### 2.1 Introduction
+### 2.2 Creating Anonymous Strings
+### 2.3 Creating Anonymous Numbers
+### 2.4 Creating Anonymous Dates and Times
+### 2.5 Creating Enums and GUIDs
+### 2.6 Generating Email Addresses
+### 2.7 Creating Sequences of Anonymous Values
+### 2.8 Creating Anonymous Instances of Custom Types
+### 2.9 Creating Complex Anonymous Object Graphs
+### 2.10 Creating Objects with DataAnnotations
+### 2.11 Summary
