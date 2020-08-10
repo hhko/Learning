@@ -203,13 +203,152 @@
   - ```fixture.Create<ulong>();```
  
 ### 2.4 Creating Anonymous Dates and Times
+- DateTime : ```fixture.Create<DateTime>();```
+- TimeSpan : ```fixture.Create<TimeSpan>();```
+
 ### 2.5 Creating Enums and GUIDs
+- Guid : ```fixture.Create<Guid>();```
+- Enum : ```fixture.Create<EmailMessageType>();```
+  ```cs
+  public enum EmailMessageType
+  {
+        Unspecified,
+        Sales,
+        Support,
+        AccountManagement
+  }
+  ```
 ### 2.6 Generating Email Addresses
+- 네임스페이스 : ```using System.Net.Mail;```
+- 타입
+  - MailAddress
+  - EmailAddressLocalPart
+  - DomainName
+- 메일 타입
+  - ```fixture.Create<MailAddress>()```
+  - ```fixture.Create<EmailAddressLocalPart>().LocalPart```
+  - ```fixture.Create<DomainName>().Domain```
+    
 ### 2.7 Creating Sequences of Anonymous Values
+- ```CreateMany<T>``` : ```IEnumerable<T>``` 객체 생성 후 데이터를 추가한다(기본 3개).
+  - ```public static IEnumerable<T> CreateMany<T>(this ISpecimenBuilder builder``` : 3개 
+  - ```public static IEnumerable<T> CreateMany<T>(this ISpecimenBuilder builder, int count)``` : 갯수 지정 
+- ```AddManyTo<T>``` : 생성된 ```IEnumerable<T>```에 데이터를 추가한다(기본 3개). 
+  - ```public static void AddManyTo<T>(this IFixture fixture, ICollection<T> collection)``` : 3개
+  - ```public static void AddManyTo<T>(this IFixture fixture, ICollection<T> collection, int repeatCount)``` : 갯수 지정
+  - ```public static void AddManyTo<T>(this IFixture fixture, ICollection<T> collection, Func<T> creator)``` : 사용자 정의 데이터 생성
+
 ### 2.8 Creating Anonymous Instances of Custom Types
+- 기본타입 매개변수 생성자
+  ```cs
+  public EmailMessage(
+    string toAddress, 
+    string messageBody, 
+    bool isImportant)
+  {
+    ToAddress = toAddress;
+    IsImportant = isImportant;
+
+    // 생성자 매개변수로 AutoFixture가 접근한다. 
+    // 접두사는 매개변수 이름이 된다.
+    // 예. MessageBody "messageBodyb0238ae0-fa72-418c-be95-b6428048813e", string
+    MessageBody = messageBody;
+  }
+
+  public string ToAddress { get; set; }
+  public bool IsImportant { get; set; }
+
+  // AutoFixture가 접근할 수 없다
+  public string MessageBody { get; private set; }     
+  ```
+- 생성자 데이터 주입
+  - AutoFixture는 생성자의 기본타입 매개변수를 자동으로 주입한다.
+  ```cs
+  var message = fixture.Create<EmailMessage>();
+    // +Id	                {ce30fbdb-8cdd-4e03-ad98-c1911b567b85}, ystem.Guid
+    // IsImportant	        false, bool
+    // MessageBody	        messageBodyb0238ae0-fa72-418c-be95-b6428048813e", string
+    // MessageType	        Unspecified, Ch2.CreatingFixture.mailMessageType
+    // SomePrivateProperty	null, string
+    // SomePublicField	    SomePublicField0f1c2f1c-b9fb-4ea2-9f2a-d4e17ed7b6c1", string
+    // SomePublicProperty	SomePublicProperty8181b948-e3ad-413d-a1cd-87092df4ecae", string
+    // ToAddress	        ToAddressebddc868-2a7b-4a31-a25a-9854c515521f", string
+    // _somePrivateField	null, string
+  ```
 ### 2.9 Creating Complex Anonymous Object Graphs
+- 사용자 정의타입 매개변수 생성자
+  ```cs
+  public Order(Customer customer)
+  {
+    // ...
+  }
+  ```
+- 생성자 데이터 주입
+  - AutoFixture는 생성자의 기본타입과 사용자 정의타입 매개변수를 자동으로 주입한다. 
+  ```cs
+  var order = fixture.Create<Order>();
+  ```
+- 생성자 데이터 주입(AutoFixture 없이)
+  ```cs
+  // Arrange
+  var customer = new Customer()
+  {
+      CustomerName = "Eugene"
+  };
+
+  var order = new Order(customer)
+  {
+      Id = 42,
+      OrderDate = DateTime.Now,
+      Items =
+      {
+          new OrderItem
+          {
+              ProductName = "Notebook",
+              Quantity = 2
+          }
+      }
+  };
+  ```
 ### 2.10 Creating Objects with DataAnnotations
+
+- [System.ComponentModel.DataAnnotations 네임스페이스](https://docs.microsoft.com/ko-kr/dotnet/api/system.componentmodel.dataannotations?view=netcore-3.1)
+  - StringLength : 데이터 필드에서 허용하는 최소 및 최대 문자 길이를 지정합니다.
+  - Range : 데이터 필드의 값에 대해 숫자 범위 제약 조건을 지정합니다.
+  ```cs
+  using System.ComponentModel.DataAnnotations;
+
+  public class PlayerCharacter
+  {
+      [StringLength(20)]
+      public string RealName { get; set; }
+
+      [StringLength(8)]
+      public string GameCharacterName { get; set; }
+
+      [Range(0, 100)]
+      public int CurrentHealth { get; set; }
+  }
+  ```
+- 단위 테스트
+  ```cs
+  [Fact]
+  public void Create_DataAnnotation()
+  {
+      // Arrange
+      var fixture = new Fixture();
+      
+      // Act
+      var playerCharacter = fixture.Create<PlayerCharacter>();
+
+      // Assert
+      Assert.Equal(20, playerCharacter.RealName.Length);
+      Assert.Equal(8, playerCharacter.GameCharacterName.Length);
+      Assert.InRange<int>(playerCharacter.CurrentHealth, 0, 100);
+  }
+  ```
+
 ### 2.11 Summary
-- Anonymous test data
+- Anonymous test data 정의
   - Use anonymous values only when they **don't have a specific meaning to the SUT**.
   - Anonymous values **should not affect logical program flow**.
