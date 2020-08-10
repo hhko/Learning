@@ -176,8 +176,8 @@
 ### 2.2 Creating Anonymous Strings
 - ```fixture.Create<string>();```, ```fixture.Create<char>();```
   - **constrain the range of random values**을 생성한다.
- 		 - firstName	: "42ee27f7-b895-4562-855a-c8af8a2080ae",	string
-	 	 - lastName	: "67ff5868-6e34-4820-bff0-9966eae1251c",	string
+    - firstName	: "42ee27f7-b895-4562-855a-c8af8a2080ae", string
+    - lastName	: "67ff5868-6e34-4820-bff0-9966eae1251c", string
 - ```Create<T>(this ISpecimenBuilder builder)``` vs. ```Create<T>(this ISpecimenBuilder builder, T seed)```
   - ```public static T Create<T>(this ISpecimenBuilder builder)``` : Creates an anonymous variable of the requested type.
   - ```public static T Create<T>(this ISpecimenBuilder builder, T seed)``` : Creates an anonymous object, potentially using the supplied seed as additional information when creating the object.
