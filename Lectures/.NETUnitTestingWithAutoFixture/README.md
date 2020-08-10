@@ -54,10 +54,10 @@
 
 ### 1.1 Introduction
 #### The Benefits of AutoFixture
-- Increase productivity
-- Reduce test maintenance
-- Improve test readability
-- Less test code
+- **양** : Increase productivity
+- **양** : Improve test readability
+- **음** : Reduce test maintenance
+- **음** : Less test code
 
 * 변경 전
   ```cs
