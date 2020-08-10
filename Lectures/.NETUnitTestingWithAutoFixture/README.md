@@ -162,8 +162,46 @@
 
 ## 2. Creating Anonymous Test Data and Objects with AutoFixture
 ### 2.1 Introduction
+- Create anonymous test data
+  - strings
+  - numbers : int, float, double, ...
+  - dates & times
+  - enums & GUIDs
+  - email addresses
+  - sequences of anonymous values
+  - instances of custom types
+  - complex anonymous object graphs
+  - objects with DataAnnotations
+ 
 ### 2.2 Creating Anonymous Strings
+- ```fixture.Create<string>();```, ```fixture.Create<char>();```
+  - **constrain the range of random values**을 생성한다.
+ 		 - firstName	: "42ee27f7-b895-4562-855a-c8af8a2080ae",	string
+	 	 - lastName	: "67ff5868-6e34-4820-bff0-9966eae1251c",	string
+- ```Create<T>(this ISpecimenBuilder builder)``` vs. ```Create<T>(this ISpecimenBuilder builder, T seed)```
+  - ```public static T Create<T>(this ISpecimenBuilder builder)``` : Creates an anonymous variable of the requested type.
+  - ```public static T Create<T>(this ISpecimenBuilder builder, T seed)``` : Creates an anonymous object, potentially using the supplied seed as additional information when creating the object.
+    - [AutoFixture.SeedExtensions NuGet 4.13.0](https://www.nuget.org/packages/AutoFixture.SeedExtensions/) : Extensions for the most common AutoFixture operations to provide overloads with a seed.
+    - 예. fixture.Create("First_");
+  
 ### 2.3 Creating Anonymous Numbers
+- Use anonymous values only when they **don't have a specific meaning to the SUT**.
+- [Constrained Non-Determinism](https://blog.ploeh.dk/2009/03/05/ConstrainedNon-Determinism/)
+  - For **input** where **the value** holds **a particular meaning in the context of the SUT**, you will still need to hand-pick values as always. E.g. if the input is expected to be an XML string conforming to a particular schema, a Guid string makes no sense.
+- A given test must execute the same production code every time it is executed.
+  - Anonymous values **should not affect logical program flow**.
+- Numbers
+  - ```fixture.Create<byte>();```
+  - ```fixture.Create<double>();```
+  - ```fixture.Create<short>();```
+  - ```fixture.Create<long>();```
+  - ```fixture.Create<sbyte>();```
+  - ```fixture.Create<float>();```
+  - ```fixture.Create<ushort>();```
+  - ```fixture.Create<int>();```
+  - ```fixture.Create<uint>();```
+  - ```fixture.Create<ulong>();```
+ 
 ### 2.4 Creating Anonymous Dates and Times
 ### 2.5 Creating Enums and GUIDs
 ### 2.6 Generating Email Addresses
@@ -172,3 +210,6 @@
 ### 2.9 Creating Complex Anonymous Object Graphs
 ### 2.10 Creating Objects with DataAnnotations
 ### 2.11 Summary
+- Anonymous test data
+  - Use anonymous values only when they **don't have a specific meaning to the SUT**.
+  - Anonymous values **should not affect logical program flow**.
