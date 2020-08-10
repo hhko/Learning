@@ -93,3 +93,69 @@
   - Fixie
 - .NET Framework : 4.5.2
 - .NET Standard : 1.5, 2.0
+
+### 1.4 Introducing the Fixture Class
+- Test method - Fixture class - string, ...
+
+### 1.5 Creating a Test Project and Installing AutoFixture
+- [AutoFixture NuGet 4.13.0](https://www.nuget.org/packages/AutoFixture/)
+- 4.11.0 예제 구성
+
+### 1.6 Writing an Initial Test with Non-anonymous Test Data
+- public : 테스트 클래스
+- [Fact] : 단위 테스트 메서드 애트리뷰트
+- Anonymous test data : 테스트를 수행하는 과정에서 실제 값이 무엇인지는 중요하지 않다(알 필요가 없다). 
+ 
+### 1.7 Writing a Test with Manual Anonymous Test Data
+- 상수 : ```1```
+  ``cs
+  [Fact]
+  public void Create_AnonymousTestData_Manually()
+  {
+      // Arrnage
+      var sut = new IntCalculator();
+  
+      // Act
+      sut.Subtract(1);    // 1 : Anonymous test data
+  
+      // Assert
+      Assert.True(sut.Value < 0);
+  }
+  ```
+- 변수 : ```int aPositiveNumber = 1;```
+  ```cs
+  [Fact]
+  public void Create_AnonymousTestData_Manually_By_Variable()
+  {
+      // Arrnage
+      var sut = new IntCalculator();
+      int aPositiveNumber = 1;   // 1 : Anonymous test data
+  
+      // Act
+      sut.Subtract(aPositiveNumber);
+  
+      // Assert
+      Assert.True(sut.Value < 0);
+  }  
+  ```
+ 
+### 1.8 Using an AutoFixture Fixture Instance to Create Anonymous Test Data
+- Fixture 클래스 : _TODO : fixture.Create<T> 음수 값이 없나???_
+  ```cs
+  [Fact]
+  public void Create_AnonymousTestData_Automatically_By_AutoFixtrue()
+  {
+      // Arrnage
+      var sut = new IntCalculator();
+      var fixture = new Fixture();
+      int aPositiveNumber = fixture.Create<int>(); // Anonymous test data : 실제 값은 중요하지 않다.
+  
+      // Act
+      sut.Subtract(aPositiveNumber);
+  
+      // Assert
+      Assert.True(sut.Value < 0);
+  }
+  ```
+
+### 1.9 Summary
