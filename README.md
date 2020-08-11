@@ -37,8 +37,9 @@
      - [ ] Approval Tests for .NET
      - [ ] Mocking with Moq and xUnit 
      - [x] [.NET Unit Testing with AutoFixture](./Lectures/.NETUnitTestingWithAutoFixture)
+     - [ ] Creating Maintainable Contexts for Automated Testing
      - [ ] Integration Testing ASP.NET Core Applications: Best Practices
-     - [ ] Testing with EF Core
+     - [ ] [Testing with EF Core](./Lectures/TestingWithEFCore/)
      - [ ] Creating Automated Browser Tests with Selenium in C#  
    - .NET
      - [ ] Building ASP.NET Core Hosted Services and .NET Core Worker Services
@@ -58,5 +59,9 @@
      - [How To Debug LINQ Queries in C#](./Blogs/Others/HowToDebugLINQQueriesInCSharp)
      - [How to Use and Unit Test ILogger](./Blogs/Others/HowToUseAndUnitTestILogger)
      - [ASP.NET Core 3.1 Web API Quick Start](https://medium.com/imaginelearning/asp-net-core-3-1-microservice-quick-start-c0c2f4d6c7fa)
+     - Creating Web API in ASP.NET Core 2.0
+       - 1. [Web API](https://www.codingame.com/playgrounds/35462/creating-web-api-in-asp-net-core-2-0/part-1---web-api)
+       - 2. [Unit Tests](https://www.codingame.com/playgrounds/35462/creating-web-api-in-asp-net-core-2-0/part-2---unit-tests)
+       - 3. [Integration Tests](https://www.codingame.com/playgrounds/35462/creating-web-api-in-asp-net-core-2-0/part-3---integration-tests)
 1. Awesome
    - [함수형 프로그래밍](./Awesome/FP)
