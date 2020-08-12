@@ -35,6 +35,17 @@
    - 2.12 Demo - Testing with Referential Integrity
    - 2.13 Advantages and Disadvantages of the InMemory Database Provider
    - 2.14 Summary
+1. Improving the Reliability of EF Core Testing with SQLite
+   - 3.1 Coming Up
+   - 3.2 Introducing SQLite
+   - 3.3 Demo - Unit Testing with SQLite
+   - 3.4 Demo - Using Multiple DbContext Instances
+   - 3.5 Demo - Testing with Referential Integrity
+   - 3.6 Adding EF Core Logging
+   - 3.7 Demo - Adding EF Core Logging
+   - 3.8 Demo - Logging to Test Explorer
+   - 3.9 Limitations of SQLite
+   - 3.10 Summary
 
 ## 1. Getting Started with EF Core Testing
 
@@ -195,13 +206,243 @@
   ```
 
 ### 2.4 Unit Testing with the Arrange, Act, Assert Pattern
+- Phases
+  - Arrange : Set up the test
+    - 예. Set up the context, instantiate the repository, create an author to add
+  - Act : Invoke the method we want to test
+    - 예. Call the AddAuthor method on the repository
+  - Assert : Verify that the action of the tested method behaved as expected
+    - 예. Check if the author was added
+ - AAA Pattern
+   - Separates what is being tested from the rest
+   - The chance of mixing assertions inside of the act-set dininishes
+ - Both work towards better readability
+   - Makes it easy to understand how the code works
+   - Makes it easier to find out why a test fails
+- 목표
+  - 구조화 : 3개 영역으로 구분 -> 명확한 목표 -> 읽기 쉬운 코드, 실패 이유
+- 단위 테스트 이름
+  - ```AddAuthor_Author_AuthorIsAdded```
+    - ```AddAuthor_``` : Name of the method being tested
+    - ```_Author_``` : Scenario (state) under which the method is being tested
+    - ```_AuthorIsAdded``` : Expected behavior when the scenario is invoked
+
 ### 2.5 Demo - Writing Your First Unit Test Using the Inmemory Database Provider
+- xUnit 프로젝트 생성 : ASP.NET, EF Core을 위한 추가 패키지 설치는 필요 없다.
+- 메모리 데이터베이스로 DbContet 객체 생성하기
+  ```cs
+  var options = new DbContextOptionsBuilder<CourseContext>()
+        .UseInMemoryDatabase("CourseDatabaseForTesting")
+        .Options;
+
+  using (var context = new CourseContext(options))
+  {
+    // ...
+  }
+  ```
+
 ### 2.6 Demo - Writing Additional Unit Tests
+- 단위 테스트가 InMemory 데이터베이스를 공유하고 있다. 단위 테스트는 격리되지 않는다.
+  ```cs
+  CourseManager.API.Tests.AuthorRepositoryTests.AddAuthor_AuthorWithoutCountryId_AuthorHasBEAsCountryId
+     Source: AuthorRepositoryTests.cs line 80
+     Duration: 11 ms
+  Message: 
+     System.ArgumentException : An item with the same key has already been added. Key: BE
+  ```
+- 이유
+  - ```.UseInMemoryDatabase("CourseDatabaseForTesting")``` : 같은 이름을 사용하기 때문이다.
+  ```cs
+  [Fact]
+  public void 1...()
+  {
+    var options = new DbContextOptionsBuilder<CourseContext>()
+        .UseInMemoryDatabase("CourseDatabaseForTesting")
+        .Options;
+
+    using (var context = new CourseContext(options))
+    { ... }
+  }
+
+  public void 2...()
+  {
+    var options = new DbContextOptionsBuilder<CourseContext>()
+        .UseInMemoryDatabase("CourseDatabaseForTesting")
+        .Options;
+
+    using (var context = new CourseContext(options))
+    { ... }    
+  }
+  ```
+
 ### 2.7 Isolating Tests
+- 격리(Isolation) : 단위 테스트는 개별로 수행한다(데이터를 공유하지 않는다. : 개별 인스턴스)
+- Each test shoud start with a clean, seperate database to avoid interference
+  - 이득 : Tests running in parallel make this even more clear
+
 ### 2.8 Demo - Isolating Tests
+- InMemory 데이터베이스를 격리 시키기 위해서는 개별 이름을 가져야 한다.
+  ```cs
+  var options = new DbContextOptionsBuilder<CourseContext>()
+        .UseInMemoryDatabase($"CourseDatabaseForTesting{Guid.NewGuid()}")
+        .Options;
+  ```
+
 ### 2.9 Improving Tests by Using Multiple DbContext Instances
+- Isherent disconnected nature in ASP.NET Core
+  - **Each request uses its own context instance**
+
 ### 2.10 Demo - Using Multiple DbContext Instances
+- statement 단위로 context을 분리한다.
+- 변경 전
+  ```cs
+  using (var context = new CourseContext(options))
+  {
+    context.Authors.Add( ... );
+    ...
+    context.SaveChanges();
+
+    var repo = new AuthorRepository(context);
+    repo. ...;
+  }
+  ```
+- 변경 후
+  ```cs
+  using (var context = new CourseContext(options))
+  {
+    context.Authors.Add( ... );
+    ...
+    context.SaveChanges();
+  }
+
+  using (var context = new CourseContext(options))
+  {
+    var repo = new AuthorRepository(context);
+    repo. ...;
+  }
+  ```
+
 ### 2.11 Mocking Limitations of the InMemory Database Provider
+- It's not a perfect replacement for DbContext mocking or for a real database
+- InMemory 데이터베이스는 Relationship 데이터베이스가 아니다.
+
 ### 2.12 Demo - Testing with Referential Integrity
+- Foreign Key가 등록되지 않아도 단위 테스트가 성공한다.
+  ```cs
+  using (var context = new CourseContext(options))
+  {
+      // Foreign Key가 등록되어 있지 않아도 테스트가 성공한다.
+      // why?
+      //   InMemory 데이터베이스는 Relationship 데이터베이스가 아니기 때문이다.
+      //context.Countries.Add(new Country()
+      //{
+      //    Id = "BE",
+      //    Description = "Belgium"
+      //});
+
+      //context.Countries.Add(new Country()
+      //{
+      //    Id = "US",
+      //    Description = "United States of America"
+      //});
+
+      context.Authors.Add(new Author()
+        { 
+          FirstName = "Kevin", 
+          LastName = "Dockx", 
+          CountryId = "BE" 
+        });
+
+      context.SaveChanges();
+  }
+  ```
+
 ### 2.13 Advantages and Disadvantages of the InMemory Database Provider
+- Advantages
+  - Mostly doesn't use database specific features
+  - Doesn't depend on relational features
+  - Fast
+- Disadvantages
+  - The InMemory database provider isn't a relation database
+    - No referential integrity checks : Foreign Key 유요성 검사
+    - No DefaultValueSql(string)
+    - No TimeStamp or IsRowVersion
+    - ...
+- InMemory 데이터베이스 제공자는 여러가지 이유로 Production 환경을 대처하지 못한다.
+
 ### 2.14 Summary
+- The InMemory database provider is designed to be a general purpose database for testing, fully running in memory
+  - Allows unit testing parts of our code that would normally be tested through integration tests
+
+<br/>
+
+## 3. Improving the Reliability of EF Core Testing with SQLite
+### 3.1 Coming Up
+### 3.2 Introducing SQLite
+- SQLite is a self-contained, serverless, zero-configuration, transactional SQL database engine
+
+### 3.3 Demo - Unit Testing with SQLite
+- 패키지 추가 : ```<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.7" />```
+- 데이터베이스 접속을 변경한다.
+  ```cs
+  using Microsoft.Data.Sqlite;
+  using Microsoft.EntityFrameworkCore;
+
+  var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = ":memory:" };
+  var connection = new SqliteConnection(connectionStringBuilder.ToString());
+
+  var options = new DbContextOptionsBuilder<CourseContext>()
+      .UseSqlite(connection)
+      .Options;
+  ```
+- 데이터베이스 접속을 명시적으로 호출해야 한다.
+  - 호출 전 : 접속을 호출하지 않으면 다음과 같은 예외가 발생한다.
+    ```cs
+    Assert.Throws() Failure
+    Expected: typeof(System.ArgumentException)
+    Actual:   typeof(Microsoft.Data.Sqlite.SqliteException): SQLite Error 1: 'no such table: Author'.
+    ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 1: 'no such table: Author'.
+    ```
+  - 호출
+    ```cs
+    using (var context = new CourseContext(options))
+    {
+        context.Database.OpenConnection();
+        context.Database.EnsureCreated();
+        ...
+    }
+    ```
+
+### 3.4 Demo - Using Multiple DbContext Instances
+- 한번만 호출하면 된다.
+  ```cs
+  context.Database.OpenConnection();
+  context.Database.EnsureCreated();
+  ```
+- TODO : 한 단위 테스트에서 여러번 호출하여 에외가 발생되는지 확인해 보자.
+
+### 3.5 Demo - Testing with Referential Integrity
+- Foreign key 관련 예외를 확인한다.
+
+### 3.6 Adding EF Core Logging
+- [EfCore.TestSupport](https://github.com/JonPSmith/EfCore.TestSupport)
+
+### 3.7 Demo - Adding EF Core Logging
+- Microsoft.Extensions.Logging
+- LoggerFactory, ILoggerProvider, ILogger
+- .UseLoggerFactory(new LoggerFactory(new [] { ... }))
+
+### 3.8 Demo - Logging to Test Explorer
+- ITestOutputHelper
+
+### 3.9 Limitations of SQLite
+- Lacks support for
+  - Schemas
+  - SQL sequences
+- Different implementation of
+  - Computed columns
+  - User-defined functions
+  - Fragment default values
+  - Column types
+
+### 3.10 Summary
