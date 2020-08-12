@@ -566,6 +566,8 @@
 ### 4.3 SQLite database provider 단위 테스트
 - 패키지
   ```cs
+  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.7" />
+  
   using Microsoft.Data.Sqlite;
   using Microsoft.EntityFrameworkCore;
   ```
@@ -588,7 +590,7 @@
   ```cs
   class SqliteLogger : ILogger
   class SqliteLoggerProvider : ILoggerProvider
-  
+
   .UseLoggerFactory(new LoggerFactory(new[] {
       new SqliteLoggerProvider(message =>
       {
