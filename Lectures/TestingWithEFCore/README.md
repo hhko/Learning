@@ -2,15 +2,18 @@
 
 ## 자료
 - [Testing with EF Core](https://app.pluralsight.com/library/courses/ef-core-testing/table-of-contents)
+- Entity Framework Core: Getting Started(Testing with the InMemory Provider Instead of a Real Database)
 - Blogs
-  - ...
+  - [Using in-memory databases for unit testing EF Core applications](https://www.thereformedprogrammer.net/using-in-memory-databases-for-unit-testing-ef-core-applications/)
+  - [EF Core 테스트 샘플](https://docs.microsoft.com/ko-kr/ef/core/miscellaneous/testing/testing-sample)
 - Youtube
-  - ... 
+  - [Simplified Unit Testing with the Entity Framework Core InMemory Provider](https://www.youtube.com/watch?v=ddrR440JtiA)
+  - [Making unit tests simple again with .Net Core and EF Core](https://www.youtube.com/watch?v=6nYefHkKby8)
 
 ## 목표
-- InMemory and SQLite database providers
-- Test isolation
-- Logging EF Core logs
+- 데이터베이스 제공자 : InMemory and SQLite database providers 이해하기
+- 격리 : Test isolation of InMemory and SQLite database providers
+- 로그 : Logging EF Core unit test logs
 
 ## 목차
 1. Getting Started with EF Core Testing
@@ -50,7 +53,6 @@
 ## 1. Getting Started with EF Core Testing
 
 ### 1.1 Coming Up
-
 ### 1.2 Course Prerequisites
 - Framekwork and Packages
   - .NET Core 2.2
@@ -377,9 +379,17 @@
 <br/>
 
 ## 3. Improving the Reliability of EF Core Testing with SQLite
+
 ### 3.1 Coming Up
+- SQLite
+- Logging
+
 ### 3.2 Introducing SQLite
 - SQLite is a self-contained, serverless, zero-configuration, transactional SQL database engine
+  - self-contained : Requires minial OS support
+  - serverless : Doesn't require a separate server process
+  - zero-configuration : No installation or link to server process
+  - transactional SQL database engine : Changes happen completely or not at all
 
 ### 3.3 Demo - Unit Testing with SQLite
 - 패키지 추가 : ```<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.7" />```
@@ -419,21 +429,105 @@
   context.Database.OpenConnection();
   context.Database.EnsureCreated();
   ```
-- TODO : 한 단위 테스트에서 여러번 호출하여 에외가 발생되는지 확인해 보자.
+- 여러번 호출되어도 예외 또는 결과 값이 변하지 않는다.
 
 ### 3.5 Demo - Testing with Referential Integrity
 - Foreign key 관련 예외를 확인한다.
+- SQLite는 Foreign Key 관계를 검증한다(InMemory에서는 제공하지 않는다).
+  ```cs
+  Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while updating the entries. See the inner exception for details.
+  ----Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+  ```
 
 ### 3.6 Adding EF Core Logging
 - [EfCore.TestSupport](https://github.com/JonPSmith/EfCore.TestSupport)
-
-### 3.7 Demo - Adding EF Core Logging
+- When a unit test fails
+  - You know the expected behavior hasn't been met
 - Microsoft.Extensions.Logging
 - LoggerFactory, ILoggerProvider, ILogger
+
+### 3.7 Demo - Adding EF Core Logging
 - .UseLoggerFactory(new LoggerFactory(new [] { ... }))
+  ```cs
+  internal class SqliteLogger : ILogger
+  {
+      private readonly Action<string> _action;
+      private readonly LogLevel _logLevel;
+
+      public SqliteLogger(Action<string> aAction, LogLevel logLevel)
+      {
+          _action = aAction;
+          _logLevel = logLevel;
+      }
+
+      public IDisposable BeginScope<TState>(TState state)
+      {
+          return null;
+      }
+
+      public bool IsEnabled(LogLevel logLevel)
+      {
+          return logLevel >= _logLevel;
+      }
+
+      public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+      {
+          _action($"LogLevel: {logLevel}, {state}");
+      }
+  }
+
+  internal class SqliteLoggerProvider : ILoggerProvider
+  {
+      private readonly Action<string> _action;
+      private readonly LogLevel _logLevel;
+
+      public SqliteLoggerProvider(
+          Action<string> action,
+          LogLevel logLevel = LogLevel.Information)
+      {
+          _action = action;
+          _logLevel = logLevel;
+      }
+
+      public ILogger CreateLogger(string categoryName)
+      {
+          return new SqliteLogger(_action, _logLevel);
+      }
+
+      public void Dispose()
+      {
+          
+      }
+  }
+
+  public class AuthorRepositoryTests_SQLite
+  {
+      private readonly ITestOutputHelper _output;
+
+      public AuthorRepositoryTests_SQLite(ITestOutputHelper output)
+      {
+          _output = output;
+      }
+      
+  .UseLoggerFactory(new LoggerFactory(new[] {
+      new SqliteLoggerProvider(message =>
+      {
+        _output.WriteLine(message);
+      }) }))
+  ```
 
 ### 3.8 Demo - Logging to Test Explorer
 - ITestOutputHelper
+  ```cs
+  LogLevel: Information, Entity Framework Core 3.1.7 initialized 'CourseContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+  LogLevel: Information, Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+  SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+  LogLevel: Information, Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+  CREATE TABLE "Country" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Country" PRIMARY KEY,
+    "Description" TEXT NULL
+  );
+  ```
 
 ### 3.9 Limitations of SQLite
 - Lacks support for
@@ -446,3 +540,58 @@
   - Column types
 
 ### 3.10 Summary
+
+## 4. 정리
+### 4.1 DbContext
+- DbContext 등록 : services.AddDbContext<CourseContext>(options => ... )
+- DbContext 옵션 주입 : public CourseContext(DbContextOptions<CourseContext> options) : base(options)
+- DbContext 옵션 생성 : protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+### 4.2 InMemory database provider 단위 테스트
+- DbContext 옵션 생성
+  ```cs
+  var options = new DbContextOptionsBuilder<CourseContext>()
+        .UseInMemoryDatabase($"CourseDatabaseForTesting{Guid.NewGuid()}")
+        .Options;
+	```
+- DbContext 개별 생성 : statement 단위로 개별 생성
+  ```cs	
+  using (var context = new CourseContext(options)) 
+  { 
+    ... 
+  }
+  ```
+- InMemory database provider는 Foreign Key을 검증하지 못한다.
+
+### 4.3 SQLite database provider 단위 테스트
+- 패키지
+  ```cs
+  using Microsoft.Data.Sqlite;
+  using Microsoft.EntityFrameworkCore;
+  ```
+- DbContext 옵션 생성
+  ```cs
+  var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = ":memory:" };
+  var connection = new SqliteConnection(connectionStringBuilder.ToString());
+
+  var options = new DbContextOptionsBuilder<CourseContext>()
+      .UseSqlite(connection)
+      .Options;
+	```
+- DbContext 명시적 접속과 테이블 생성
+  ```cs 
+  using (var context = new CourseContext(options))
+  {
+      context.Database.OpenConnection();
+      context.Database.EnsureCreated();
+- Logger 객체 생성
+  ```cs
+  class SqliteLogger : ILogger
+  class SqliteLoggerProvider : ILoggerProvider
+  
+  .UseLoggerFactory(new LoggerFactory(new[] {
+      new SqliteLoggerProvider(message =>
+      {
+        _output.WriteLine(message);
+      }) }))
+  ```

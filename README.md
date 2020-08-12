@@ -38,12 +38,16 @@
      - [ ] Mocking with Moq and xUnit 
      - [x] [.NET Unit Testing with AutoFixture](./Lectures/.NETUnitTestingWithAutoFixture)
      - [ ] Creating Maintainable Contexts for Automated Testing
+     - [ ] Automated Testing for Fraidy Cats Like Me
      - [ ] Integration Testing ASP.NET Core Applications: Best Practices
-     - [ ] [Testing with EF Core](./Lectures/TestingWithEFCore/)
+     - [x] [Testing with EF Core](./Lectures/TestingWithEFCore/)
+     - [ ] Integration Testing of Entity Framework Applications
      - [ ] Creating Automated Browser Tests with Selenium in C#  
    - .NET
      - [ ] Building ASP.NET Core Hosted Services and .NET Core Worker Services
      - [ ] Using Configuration and Options in .NET Core and ASP.NET Core Apps
+     - [ ] Advanced Entity Framework 6: The Ninja Features
+     - [ ] Entity Framework Database Performance Anti-patterns
 1. 플랫폼
    - [Git](./Platform/Git)
    - [.NET Core](./Platform/NETCore)
