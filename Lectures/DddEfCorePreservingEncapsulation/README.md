@@ -7,7 +7,7 @@
 - Youtube
   - [마이크로서비스 개발을 위한 Domain Driven Design](https://www.youtube.com/watch?v=QUMERCN3rZs)
   
-##   
+## 
 1. Introduction
    - 1.1 Introduction
    - 1.2 Encapsulation and Separation of Concerns
