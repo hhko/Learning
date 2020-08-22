@@ -32,15 +32,15 @@
      - [ ] Error Handling in C# with Exceptions
      - [ ] Working with Nulls in C#
    - 단위 테스트 
+     - [x] [.NET Unit Testing with AutoFixture](./Lectures/.NETUnitTestingWithAutoFixture)
+     - [x] [Testing with EF Core](./Lectures/TestingWithEFCore/)
      - [ ] Testing .NET Code with xUnit.net: Getting Started 
      - [ ] Improving Unit Tests with Fluent Assertions
      - [ ] Approval Tests for .NET
      - [ ] Mocking with Moq and xUnit 
-     - [x] [.NET Unit Testing with AutoFixture](./Lectures/.NETUnitTestingWithAutoFixture)
      - [ ] Creating Maintainable Contexts for Automated Testing
      - [ ] Automated Testing for Fraidy Cats Like Me
      - [ ] Integration Testing ASP.NET Core Applications: Best Practices
-     - [x] [Testing with EF Core](./Lectures/TestingWithEFCore/)
      - [ ] Integration Testing of Entity Framework Applications
      - [ ] Creating Automated Browser Tests with Selenium in C#  
    - .NET

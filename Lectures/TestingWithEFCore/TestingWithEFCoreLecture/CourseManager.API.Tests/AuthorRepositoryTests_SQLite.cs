@@ -149,9 +149,9 @@ namespace CourseManager.API.Tests
             var options = new DbContextOptionsBuilder<CourseContext>()
                 .UseSqlite(connection)
                 .UseLoggerFactory(new LoggerFactory(new[] {
-                    new SqliteLoggerProvider(log =>
+                    new SqliteLoggerProvider(message =>
                     {
-                        _output.WriteLine(log);
+                        _output.WriteLine(message);
                     }) }))
                 .Options;
 

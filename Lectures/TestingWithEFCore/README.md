@@ -561,13 +561,21 @@
     ... 
   }
   ```
+- 값 확인 vs. 상태 확인
+  ```cs
+  // 값 확인
+  Assert.AreNotEqual(0, ... .Id);
+
+  // 상태 확인
+  Assert.AreEqual(EntityState.Added, context.Entry( ... ).State);
+  ```
 - InMemory database provider는 Foreign Key을 검증하지 못한다.
 
 ### 4.3 SQLite database provider 단위 테스트
 - 패키지
   ```cs
   <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.7" />
-  
+
   using Microsoft.Data.Sqlite;
   using Microsoft.EntityFrameworkCore;
   ```

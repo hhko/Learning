@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Step02_FluentAssertion/1.0.0": {
+        "runtime": {
+          "Step02_FluentAssertion.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Step02_FluentAssertion/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
