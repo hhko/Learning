@@ -6,7 +6,9 @@ namespace Step03_RunWithoutVS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Calculator calc = new Calculator();
+
+            Console.WriteLine($"Hello UnitTest : {calc.Add(1, 6)}");
         }
     }
 }

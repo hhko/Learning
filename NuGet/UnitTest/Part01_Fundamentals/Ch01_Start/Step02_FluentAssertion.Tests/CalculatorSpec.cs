@@ -13,13 +13,14 @@ namespace Step02_FluentAssertion.Tests
             Calculator calc = new Calculator();
 
             // Act
-            int result = calc.Add(1, 6);
+            int actual = calc.Add(1, 6);
 
             //=====================
             // Assert 변경 전
             //=====================
-            Assert.Equal(7, result);
-            Assert.Equal(result, 7);
+            Assert.Equal(7, actual);
+            
+            //Assert.Equal(actual, 7);
             // Warning xUnit2000
             //   The literal or constant value 7 should be passed as the 'expected' argument in the call 
             //   to 'Assert.Equal(expected, actual)' 
@@ -29,14 +30,14 @@ namespace Step02_FluentAssertion.Tests
             // Assert 변경 후
             //=====================
             //
-            // Fluetn Assert: 영어 문장 쓰듯 구현 한다.
+            // FluentAssertions 패키지는 자연어 형태의 코드를 구현을 제공한다.
             //
-            // Should는 의무를 뜻하는 조동사다.
+            // "주어(Subject) should be 명사." 문장은 '주어'와 '명사' Equal 관계를 제공한다.
             //
-            // result.Should().Be(7);       // 프로그래밍
-            // => The result should be 7.   // 영문장
+            // actual.Should().Be(7);       // 프로그래밍
+            // => The actual should be 7.   // 자연어
             //
-            result.Should().Be(7);
+            actual.Should().Be(7);
         }
     }
 }

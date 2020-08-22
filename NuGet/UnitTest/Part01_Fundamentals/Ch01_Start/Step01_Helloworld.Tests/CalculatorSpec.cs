@@ -12,10 +12,10 @@ namespace Step01_Helloworld.Tests
             Calculator calc = new Calculator();
 
             // Act: 수행
-            int result = calc.Add(1, 6);
+            int actual = calc.Add(1, 6);
 
             // Assert: 확인
-            Assert.Equal(7, result);
+            Assert.Equal(7, actual);
         }
     }
 }
