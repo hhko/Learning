@@ -51,11 +51,12 @@
 1. 플랫폼
    - [Git](./Platform/Git)
    - [.NET Core](./Platform/NETCore)
-1. 패키지
-   - [NLog](./Packages/NLog)
-     - [로그 정책](./Packages/NLog/Policy)
-     - [로그 단위 테스트](./Packages/NLog/UnitTest)
-     - [로그 출력 자동화](./Packages/NLog/Tracer)
+1. NuGet
+   - [NLog](./NuGet/NLog)
+     - [로그 정책](./NuGet/NLog/Policy)
+     - [로그 단위 테스트](./NuGet/NLog/UnitTest)
+     - [로그 출력 자동화](./NuGet/NLog/Tracer)
+   - [UnitTest](./NuGet/UnitTest)
 1. 블로그
    - [Mark Seemann](./Blogs/MarkSeemann)
      - [Refactoring to Aggregate Services](./Blogs/MarkSeemann/RefactoringToAggregateServices)
