@@ -1,10 +1,10 @@
 ﻿# Chapter 1. Start
 
 ## 목차
-1. 단위 테스트 프로젝트 만들기 : Step 1. Helloworld
-1. 자연어 형태의 Assert 구현하기 : Step 2. Fluent Assertion
-1. 단위 테스트 실행하기 : Step 3. Run Without Visual Studio
-1. 코드 커버리지 생성하기 : Setp 4. Code Coverage
+1. 단위 테스트 프로젝트 만들기 
+1. 자연어 형태의 Assert 구현하기 
+1. 단위 테스트 실행하기 
+1. 코드 커버리지 생성하기
 1. GitHub 자동화하기
 
 ## Step 1. Helloworld
@@ -14,24 +14,27 @@
 - 단위 테스트를 Visual Studio에서 실행한다.
 
 ### 2. 단위 테스트 프로젝트 만들기
+1. 단위 프로젝트 형식
+   - .NET Core Classlibrary C# 프로젝트
 1. 단위 테스트 프로젝트명 규칙
    - `프로젝트명.[Tests]`
    - 예. 
      - 프로젝트명 : Step01_Helloworld
      - 단위 테스트 프로젝트명 : `Step01_Helloworld.Tests`
 1. 단위 테스트 패키지 추가
-   - xunit과 xunit.runner.visualstudio 버전을 동일 시킨다.
+   - `xunit`과 `xunit.runner.visualstudio` 버전을 동일 시킨다.
    - xunit 2.4.1
    - xunit.runner.visualstudio 2.4.1
 1. 단위 테스트 클래스명 규칙
    - `클래스명Spec`
    - 예
      - 클래스명 : Calculator
-     - 단위 테스트 클래스명 :  CalculatorSpec
+     - 단위 테스트 클래스명 :  `CalculatorSpec`
 1. 단위 테스트 만들기
+   - xUnit가 단위 테스트 클래스와 메서드를 접근하기 위해 `public` 접근 제한자로 지정되어야 한다.
    - `public` 단위 테스트 클래스 
-   - `public void` 단위 테스트 메서드
-     - `[Fact]` 단위 테스트 속성 추가
+   - `public void` 단위 테스트 메서드 : 결과 값이 없다.
+     - `[Fact]` 단위 테스트 속성 추가 : xUnit이 식별하기 위한 속성이다.
    ```cs
    using Xunit;
 
@@ -45,10 +48,10 @@
    }
    ```
 1. 단위 테스트 구현
-   - 3A 패턴
+   - 3A 패턴 : 단위 테스트는 한번에 하나의 메서드만 테스트한다.
      - Arrange : 메서드 실행 준비
-     - Act : 메서드 실행
-     - Assert : 메서드 결과 값 확인
+     - Act : 메서드 실행(1개)
+     - Assert : 메서드 실행 결과 확인
    ```cs
    public class CalculatorSpec
    {
@@ -193,3 +196,30 @@
    - [Coverlet GitHub](https://github.com/coverlet-coverage/coverlet)
    - [Coverlet Integration with MSBuild](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)
    - [Coverlet integration with VSTest](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md)
+
+
+
+
+XUnit.Coverlet.Collector
+XUnit.Coverlet.MSBuild
+
+dotnet test --collect:"XPlat Code Coverage"
+    // Coverlet의 데이터 수집기에 해당하는 식별 이름입니다. 이 이름은 필수이지만 대/소문자를 구분하지 않습니다.
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+
+dotnet tool install -g dotnet-reportgenerator-globaltool
+다음 명령을 사용하여 도구를 호출할 수 있습니다. reportgenerator
+'dotnet-reportgenerator-globaltool' 도구('4.6.4' 버전)가 설치되었습니다.
+
+dotnet tool list -g
+패키지 ID                                 버전              명령
+----------------------------------------------------------------------
+dotnet-reportgenerator-globaltool      4.6.4           reportgenerator
+
+
+reportgenerator
+"-reports:Path\To\TestProject\TestResults\{guid}\coverage.cobertura.xml"
+"-targetdir:coveragereport"
+-reporttypes:Html
+
+- [Order .NET Core unit tests](https://github.com/dotnet/samples/tree/master/csharp/unit-testing/XUnit.TestProject)
