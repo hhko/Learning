@@ -21,6 +21,10 @@
   - ```git log --branches --not --remotes```
   - https://blog.outsider.ne.kr/820
 
+## git branch
+- 참고 사이트
+  - [Git - ( local / remote ) branch 사용법 정리](https://jw910911.tistory.com/16)
+
 ## git fetch
 ### 원격 저장소 브랜치 정보를 로컬 저장소 브랜치에 반영하기
 - 시나리오
