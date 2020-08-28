@@ -52,3 +52,6 @@
 - 탐색기에서 폴더를 이동하면 git status에서 자동으로 인식하지 못한다.
   - git add -f [이동된 폴더 경로]
   - git restore --staged [제외시킬 폴더 경로]  
+
+## 참고 사이트
+- https://seamless.tistory.com/43
