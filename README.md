@@ -60,7 +60,7 @@
 1. 블로그
    - [Mark Seemann](./Blogs/MarkSeemann)
      - [Refactoring to Aggregate Services](./Blogs/MarkSeemann/RefactoringToAggregateServices)
-   - [IAmTimCorey]
+   - IAmTimCorey
      - [.NET Core Console App with Dependency Injection, Logging, and Settings](./Blogs/IAmTimCorey/BetterConsoleApp/ConsoleUI)
    - [Others](./Blogs/Others)	
      - [How To Debug LINQ Queries in C#](./Blogs/Others/HowToDebugLINQQueriesInCSharp)

@@ -1,0 +1,26 @@
+﻿@model Ch02.WebApp.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Welcome to our Tennis Club";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            <h4>How's the weather?</h4>
+            <p>@Model.WeatherDescription</p>
+        </div>
+    </div>
+</div>
+
+@*
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+*@
