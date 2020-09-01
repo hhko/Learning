@@ -5,7 +5,8 @@
 1. 자연어 형태의 Assert 구현하기 : Step02_FluentAssertion
 1. 단위 테스트 실행하기 : Step03_RunWithoutVS
 1. 코드 커버리지 생성하기 : Step04_CodeCoverage
-1. 복수 프로젝트 코드 커버리지 통합하기 : Step05_MultipleCodeCoverage
+1. 프로젝트 코드 커버리지 통합하기 : Step05_MultipleCodeCoverage
+1. GitLab 자동화하기
 1. GitHub 자동화하기
 
 <br/>
@@ -362,18 +363,61 @@
 
 <br/>
 
-## **4. 복수 프로젝트 코드 커버리지 통합하기 : Step05_MultipleCodeCoverage**
+## **5. 복수 프로젝트 코드 커버리지 통합하기 : Step05_MultipleCodeCoverage**
 ### 1. 목표
 - 복수개 단위 테스트 결과를 1개로 통합 시킨다.
 
+### 2. 코드 커버리지 & HTML 만들기
+1. 준비
+   - coverlet.msbuild 패키지 추가
+   - dotnet-reportgenerator-globaltool 도구 설치
+1. 코드 커버리지 만들기
+   - **프로젝트 단위로 코드 커버리지 파일 만들기 : 추천**
+      - `-CoverletOutput` 현재 경로는 `.proj` 파일이 있는 프로젝트 폴더이다.
+      - 예
+        ```
+        dotnet test [프로젝트 경로] /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./../TestResults/Step05_MultipleCodeCoverage1.UnitTests.xml
+        dotnet test [프로젝트 경로] /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./../TestResults/Step05_MultipleCodeCoverage2.UnitTests.xml
+        dotnet test [프로젝트 경로] /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./../TestResults/Step05_MultipleCodeCoverage3.UnitTests.xml
+        ```
+   - 통합 코드 커버리지 파일 만들기
+     - 출력 형식 
+       - 마지막을 제외한 모든 프로젝트 : /p:CoverletOutputFormat=json
+       - 통합 마지막 프로젝트 : /p:CoverletOutputFormat=opencover
+       - Why?
+         - json 형식만 Coverlet은 통합 코드 커버리지 파일을 만들 수 있다.
+         - ReportGenerator는 Coverlet의 json 형식 파일을 입력으로 처리하지 못한다. OpenCover 형식을 입력 받는다.
+     - 통합
+       - 처음을 제외한 모든 프로젝트 : /p:MergeWith="./../TestResults/coverage.json"
+       - Why?
+         - 처음을 제외한 모든 프로젝트부터 통합해야하기 때문이다.
+     - 예
+       ```
+       // 처음 프로젝트
+       dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=json /p:CoverletOutput=./../TestResults/
 
+       // 중간 프로젝트
+       dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=json /p:CoverletOutput=./../TestResults/ /p:MergeWith="./../TestResults/coverage.json"
+
+       // 마지막 프로젝트
+       dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./../TestResults/ /p:MergeWith="./../TestResults/coverage.json"
+       ```
+1. 통합 코드 커버리지 HTML 만들기
+   - Cobertura, OpenCover 모두 출력 파일이 .xml 확자다.
+   - `-reports` 옵션에서 모든 .xml 파일을 입력 받는다.
+   - 예
+     ```
+     reportgenerator "-reports:./TestResults/*.xml" "-targetdir:./TestResults/CoverageReport" -reporttypes:Html -historydir:./TestResults/CoverageHistory
+     ```
+1. 통합 코드 커버리지 HTML  
+   ![](./Images/Step05_MultipleCodeCoverage.png)  
 
 <br/>
 
 ## 참고 사이트
 - [dotnet test](https://docs.microsoft.com/ko-kr/dotnet/core/tools/dotnet-test)
 - [Use code coverage for unit testing](https://docs.microsoft.com/ko-kr/dotnet/core/testing/unit-testing-code-coverage?tabs=windows)
-- [Coverlet GitHub](https://github.com/coverlet-coverage/coverlet)
+- [Coverlet](https://github.com/coverlet-coverage/coverlet)
 - [Coverlet Integration with MSBuild](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)
 - [Coverlet integration with VSTest](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md)
 - [Order .NET Core unit tests](https://github.com/dotnet/samples/tree/master/csharp/unit-testing/XUnit.TestProject)
