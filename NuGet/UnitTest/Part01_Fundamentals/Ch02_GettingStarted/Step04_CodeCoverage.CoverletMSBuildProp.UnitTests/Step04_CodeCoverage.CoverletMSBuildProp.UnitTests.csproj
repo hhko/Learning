@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CollectCoverage>true</CollectCoverage>
+    <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+    <CoverletOutput>./TestResults/</CoverletOutput>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="2.9.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="ReportGenerator" Version="4.6.5" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- dotnet test /t:coverage -->
+  <!-- dotnet build /t:coverage -->
+  <!-- dotnet msbuild /t:coverage -->
+  <Target Name="Coverage">
+    <ItemGroup>
+      <CoverageFiles Include="./TestResults/coverage.cobertura.xml" />
+    </ItemGroup>
+    <ReportGenerator ReportFiles="@(CoverageFiles)" TargetDirectory="./TestResults/CoverageReport" ReportTypes="Html" HistoryDirectory="./TestResults/CoverageHistory" VerbosityLevel="Info" />
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Step04_CodeCoverage\Step04_CodeCoverage.csproj" />
+  </ItemGroup>
+  
+</Project>

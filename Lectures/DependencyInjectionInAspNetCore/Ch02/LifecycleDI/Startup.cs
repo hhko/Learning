@@ -27,7 +27,8 @@ namespace Ch02.LifecycleDI
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddTransient<GuidService>();
-            services.AddSingleton<GuidService>();
+            //services.AddSingleton<GuidService>();
+            services.AddScoped<GuidService>();
 
             services.AddControllers();
         }

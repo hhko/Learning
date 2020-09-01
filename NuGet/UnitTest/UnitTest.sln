@@ -5,22 +5,46 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part01_Fundamentals", "Part01_Fundamentals", "{69E92A47-8E29-43E4-ADE2-89840AD328B4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch01_Start", "Ch01_Start", "{A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch02_GettingStarted", "Ch02_GettingStarted", "{A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}"
 	ProjectSection(SolutionItems) = preProject
-		Part01_Fundamentals\Ch01_Start\README.md = Part01_Fundamentals\Ch01_Start\README.md
+		Part01_Fundamentals\Ch02_GettingStarted\README.md = Part01_Fundamentals\Ch02_GettingStarted\README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step01_Helloworld", "Part01_Fundamentals\Ch01_Start\Step01_Helloworld\Step01_Helloworld.csproj", "{451D9020-E106-4835-9BB6-E0A55F3A971D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step01_Helloworld", "Part01_Fundamentals\Ch02_GettingStarted\Step01_Helloworld\Step01_Helloworld.csproj", "{451D9020-E106-4835-9BB6-E0A55F3A971D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step01_Helloworld.Tests", "Part01_Fundamentals\Ch01_Start\Step01_Helloworld.Tests\Step01_Helloworld.Tests.csproj", "{B7139100-7F9A-4321-9F8E-8DEC16D02AE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step01_Helloworld.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step01_Helloworld.UnitTests\Step01_Helloworld.UnitTests.csproj", "{B7139100-7F9A-4321-9F8E-8DEC16D02AE6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step02_FluentAssertion", "Part01_Fundamentals\Ch01_Start\Step02_FluentAssertion\Step02_FluentAssertion.csproj", "{FE53B47D-7C20-466F-8AF5-9CC3B81A8F73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step02_FluentAssertion", "Part01_Fundamentals\Ch02_GettingStarted\Step02_FluentAssertion\Step02_FluentAssertion.csproj", "{FE53B47D-7C20-466F-8AF5-9CC3B81A8F73}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step02_FluentAssertion.Tests", "Part01_Fundamentals\Ch01_Start\Step02_FluentAssertion.Tests\Step02_FluentAssertion.Tests.csproj", "{14B98E87-889D-445A-B185-E0881B37EA09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step02_FluentAssertion.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step02_FluentAssertion.UnitTests\Step02_FluentAssertion.UnitTests.csproj", "{14B98E87-889D-445A-B185-E0881B37EA09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step03_RunWithoutVS", "Part01_Fundamentals\Ch01_Start\Step03_RunWithoutVS\Step03_RunWithoutVS.csproj", "{CF9F50AB-F315-4372-885E-3FE5D70C417C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step03_RunWithoutVS", "Part01_Fundamentals\Ch02_GettingStarted\Step03_RunWithoutVS\Step03_RunWithoutVS.csproj", "{CF9F50AB-F315-4372-885E-3FE5D70C417C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step03_RunWithoutVS.Tests", "Part01_Fundamentals\Ch01_Start\Step03_RunWithoutVS.Tests\Step03_RunWithoutVS.Tests.csproj", "{0ACFFE4D-B0D2-4062-A14E-58884ADD066E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step03_RunWithoutVS.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step03_RunWithoutVS.UnitTests\Step03_RunWithoutVS.UnitTests.csproj", "{0ACFFE4D-B0D2-4062-A14E-58884ADD066E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step04_CodeCoverage", "Part01_Fundamentals\Ch02_GettingStarted\Step04_CodeCoverage\Step04_CodeCoverage.csproj", "{D9D8EFC3-C0D5-4F89-A420-0F491A8DFE2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch01_Overview", "Ch01_Overview", "{C0EBB376-6CCF-4C52-A37B-56C94ECE3346}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step04_CodeCoverage.CoverletMSBuild.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step04_CodeCoverage.CoverletMSBuild.UnitTests\Step04_CodeCoverage.CoverletMSBuild.UnitTests.csproj", "{8389E5F0-334E-47AA-9DAB-CF0B5575171A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step04_CodeCoverage.CoverletCollector.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step04_CodeCoverage.CoverletCollector.UnitTests\Step04_CodeCoverage.CoverletCollector.UnitTests.csproj", "{33770F06-71A0-4D88-8077-821E2A31340D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step04_CodeCoverage.TestSdk.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step04_CodeCoverage.TestSdk.UnitTests\Step04_CodeCoverage.TestSdk.UnitTests.csproj", "{C6A39A14-DE36-45A1-9E84-8972A1EA3FF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step04_CodeCoverage.CoverletMSBuildProp.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step04_CodeCoverage.CoverletMSBuildProp.UnitTests\Step04_CodeCoverage.CoverletMSBuildProp.UnitTests.csproj", "{BF40F479-E209-4278-AB81-4797BB38A777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step05_MultipleCodeCoverage1", "Part01_Fundamentals\Ch02_GettingStarted\Step05_MultipleCodeCoverage1\Step05_MultipleCodeCoverage1.csproj", "{B4F8B887-C86B-47C2-8E24-F2A5ED33DB51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step05_MultipleCodeCoverage2", "Part01_Fundamentals\Ch02_GettingStarted\Step05_MultipleCodeCoverage2\Step05_MultipleCodeCoverage2.csproj", "{DA9A5B73-4BC1-41EE-9E7C-B0860ABF37B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step05_MultipleCodeCoverage3", "Part01_Fundamentals\Ch02_GettingStarted\Step05_MultipleCodeCoverage3\Step05_MultipleCodeCoverage3.csproj", "{1BA6F26C-BAC7-4A4A-A6DB-9EEE996E476F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step05_MultipleCodeCoverage1.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step05_MultipleCodeCoverage1.UnitTests\Step05_MultipleCodeCoverage1.UnitTests.csproj", "{F6DE5E75-29AA-423E-80D5-CA32D7FE9A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step05_MultipleCodeCoverage2.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step05_MultipleCodeCoverage2.UnitTests\Step05_MultipleCodeCoverage2.UnitTests.csproj", "{B528F3CD-FBDC-45C0-B65C-E31A2B853F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step05_MultipleCodeCoverage3.UnitTests", "Part01_Fundamentals\Ch02_GettingStarted\Step05_MultipleCodeCoverage3.UnitTests\Step05_MultipleCodeCoverage3.UnitTests.csproj", "{86DF6EEB-9151-446B-A982-77704D05EB3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +76,50 @@ Global
 		{0ACFFE4D-B0D2-4062-A14E-58884ADD066E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ACFFE4D-B0D2-4062-A14E-58884ADD066E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ACFFE4D-B0D2-4062-A14E-58884ADD066E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9D8EFC3-C0D5-4F89-A420-0F491A8DFE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D8EFC3-C0D5-4F89-A420-0F491A8DFE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D8EFC3-C0D5-4F89-A420-0F491A8DFE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D8EFC3-C0D5-4F89-A420-0F491A8DFE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8389E5F0-334E-47AA-9DAB-CF0B5575171A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8389E5F0-334E-47AA-9DAB-CF0B5575171A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8389E5F0-334E-47AA-9DAB-CF0B5575171A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8389E5F0-334E-47AA-9DAB-CF0B5575171A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33770F06-71A0-4D88-8077-821E2A31340D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33770F06-71A0-4D88-8077-821E2A31340D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33770F06-71A0-4D88-8077-821E2A31340D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33770F06-71A0-4D88-8077-821E2A31340D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A39A14-DE36-45A1-9E84-8972A1EA3FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A39A14-DE36-45A1-9E84-8972A1EA3FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A39A14-DE36-45A1-9E84-8972A1EA3FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A39A14-DE36-45A1-9E84-8972A1EA3FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF40F479-E209-4278-AB81-4797BB38A777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF40F479-E209-4278-AB81-4797BB38A777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF40F479-E209-4278-AB81-4797BB38A777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF40F479-E209-4278-AB81-4797BB38A777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F8B887-C86B-47C2-8E24-F2A5ED33DB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F8B887-C86B-47C2-8E24-F2A5ED33DB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F8B887-C86B-47C2-8E24-F2A5ED33DB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F8B887-C86B-47C2-8E24-F2A5ED33DB51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9A5B73-4BC1-41EE-9E7C-B0860ABF37B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9A5B73-4BC1-41EE-9E7C-B0860ABF37B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9A5B73-4BC1-41EE-9E7C-B0860ABF37B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9A5B73-4BC1-41EE-9E7C-B0860ABF37B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA6F26C-BAC7-4A4A-A6DB-9EEE996E476F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA6F26C-BAC7-4A4A-A6DB-9EEE996E476F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA6F26C-BAC7-4A4A-A6DB-9EEE996E476F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA6F26C-BAC7-4A4A-A6DB-9EEE996E476F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6DE5E75-29AA-423E-80D5-CA32D7FE9A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DE5E75-29AA-423E-80D5-CA32D7FE9A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DE5E75-29AA-423E-80D5-CA32D7FE9A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DE5E75-29AA-423E-80D5-CA32D7FE9A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B528F3CD-FBDC-45C0-B65C-E31A2B853F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B528F3CD-FBDC-45C0-B65C-E31A2B853F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B528F3CD-FBDC-45C0-B65C-E31A2B853F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B528F3CD-FBDC-45C0-B65C-E31A2B853F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86DF6EEB-9151-446B-A982-77704D05EB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86DF6EEB-9151-446B-A982-77704D05EB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86DF6EEB-9151-446B-A982-77704D05EB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86DF6EEB-9151-446B-A982-77704D05EB3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +132,18 @@ Global
 		{14B98E87-889D-445A-B185-E0881B37EA09} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
 		{CF9F50AB-F315-4372-885E-3FE5D70C417C} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
 		{0ACFFE4D-B0D2-4062-A14E-58884ADD066E} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{D9D8EFC3-C0D5-4F89-A420-0F491A8DFE2B} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{C0EBB376-6CCF-4C52-A37B-56C94ECE3346} = {69E92A47-8E29-43E4-ADE2-89840AD328B4}
+		{8389E5F0-334E-47AA-9DAB-CF0B5575171A} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{33770F06-71A0-4D88-8077-821E2A31340D} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{C6A39A14-DE36-45A1-9E84-8972A1EA3FF5} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{BF40F479-E209-4278-AB81-4797BB38A777} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{B4F8B887-C86B-47C2-8E24-F2A5ED33DB51} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{DA9A5B73-4BC1-41EE-9E7C-B0860ABF37B8} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{1BA6F26C-BAC7-4A4A-A6DB-9EEE996E476F} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{F6DE5E75-29AA-423E-80D5-CA32D7FE9A20} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{B528F3CD-FBDC-45C0-B65C-E31A2B853F95} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
+		{86DF6EEB-9151-446B-A982-77704D05EB3C} = {A7D69D87-9C17-4FFF-BCE4-8C6B414EF9B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {87E4CEC7-7949-4C73-8E85-7778057975EB}

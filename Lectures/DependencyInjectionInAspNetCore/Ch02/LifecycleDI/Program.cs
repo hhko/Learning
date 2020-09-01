@@ -18,6 +18,10 @@ namespace Ch02.LifecycleDI
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .UseDefaultServiceProvider(options =>
+                {
+                    options.ValidateScopes = true;
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
