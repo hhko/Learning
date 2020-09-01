@@ -4,6 +4,7 @@
 ## 목차
 1. Self
    - [함수형](./Self/Functional)
+   - [단위 테스트](./Self/UnitTest)
 1. 책
    - [함수형 프로그래밍 in C#](./Books/FPinCSharp)
      - [Chapter 02. Why function purity matters](./Books/FPinCSharp/Ch02)
@@ -56,7 +57,6 @@
      - [로그 정책](./NuGet/NLog/Policy)
      - [로그 단위 테스트](./NuGet/NLog/UnitTest)
      - [로그 출력 자동화](./NuGet/NLog/Tracer)
-   - [UnitTest](./NuGet/UnitTest)
 1. 블로그
    - [Mark Seemann](./Blogs/MarkSeemann)
      - [Refactoring to Aggregate Services](./Blogs/MarkSeemann/RefactoringToAggregateServices)

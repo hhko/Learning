@@ -8,7 +8,9 @@
 1. 복수 프로젝트 코드 커버리지 통합하기 : Step05_MultipleCodeCoverage
 1. GitHub 자동화하기
 
-## 1. 단위 테스트 프로젝트 만들기 : Step01_Helloworld
+<br/>
+
+## **1. 단위 테스트 프로젝트 만들기 : Step01_Helloworld**
 ### 1. 목표
 - 단위 테스트 프로젝트를 생성한다.
 - 단위 테스트를 생성한다.
@@ -79,7 +81,7 @@
 
 <br/>
 
-## 2. 자연어 형태의 Assert 구현하기 : Step02_FluentAssertion
+## **2. 자연어 형태의 Assert 구현하기 : Step02_FluentAssertion**
 ### 1. 목표
 - Assert 코드를 더 읽기 쉬운 코드(자연어 형태의 코드)로 변경한다. 
 
@@ -123,7 +125,7 @@
 
 <br/>
 
-## 3. 단위 테스트 실행하기 : Step03_RunWithoutVS
+## **3. 단위 테스트 실행하기 : Step03_RunWithoutVS**
 ### 1. 목표
 - Visual Studio 없이 단위 테스트를 실행한다. 
 
@@ -181,7 +183,7 @@
 
 <br/>
 
-## 4. 코드 커버리지 생성하기 : Step04_CodeCoverage
+## **4. 코드 커버리지 생성하기 : Step04_CodeCoverage**
 ### 1. 목표
 - 코드 커버리지를 생성한다.
 - 코드 커버리지 결과를 시각화(콘솔, HTML, VS, VSCode)한다.
@@ -348,7 +350,7 @@
    }
    ```
 
-## 5. Visual Studio 코드 커버리지
+### 5. Visual Studio 코드 커버리지
 1. AxoCover([Site](https://marketplace.visualstudio.com/items?itemName=axodox1.AxoCover), [GitHub](https://github.com/axodox/AxoCover))
    - xUnit 2.2.0만 제공한다.
    - Visual Studio 2019는 현재 제공하지 않는다(2020-04-07 기준)
@@ -357,12 +359,10 @@
 1. PrestoCoverage([Site](https://marketplace.visualstudio.com/items?itemName=PiotrKula.prestocoverage), [GitHub](https://github.com/ppumkin/PrestoCoverage))
    - Visual Studio 2017, 2019 모두 제공한다.
    - Coverlet 기반으로 동작한다.
-1. AxoCover 결과  
-   ![image](/uploads/5d73538085549a033f962994f1461569/image.png)
 
 <br/>
 
-## 4. 복수 프로젝트 코드 커버리지 통합하기 : Step05_MultipleCodeCoverage
+## **4. 복수 프로젝트 코드 커버리지 통합하기 : Step05_MultipleCodeCoverage**
 ### 1. 목표
 - 복수개 단위 테스트 결과를 1개로 통합 시킨다.
 
