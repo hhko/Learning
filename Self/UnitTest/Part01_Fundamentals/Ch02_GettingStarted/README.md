@@ -1,4 +1,4 @@
-﻿# Chapter 1. Start
+﻿# Chapter 2. Getting Started
 
 ## 목차
 1. 단위 테스트 프로젝트 만들기 : Step01_Helloworld
@@ -322,8 +322,8 @@
      - dotnet test /t:coverage
      - dotnet build /t:coverage
      - dotnet msbuild /t:coverage
-1. 솔루션 탐색기 구성
-   ![](./Images/Step04_SolutionExplorer.png)
+1. 솔루션 탐색기 구성  
+   ![](./Images/Step04_SolutionExplorer.png)  
 
 
 ### 4. 코드 커버리지 제외
