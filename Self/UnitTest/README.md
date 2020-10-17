@@ -42,6 +42,9 @@
      - ...?
    - FTP
      - ...?
+   - Dapper
+   - Kafka
+   - RabbotMQ
    - 통신(gRPC, ...)
      - ...?
    - 정적 클래스
