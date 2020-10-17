@@ -206,10 +206,14 @@
        dotnet test 
           /p:CollectCoverage=true 
           /p:CoverletOutputFormat=cobertura   // 출력 형식
-          /p:CoverletOutput=./TestResults/     // 출력 경로 : 반드시 `/`을 추가해야한다.
-          /p:Include="[CompanyName.*]*" 
-          /p:Exclude="[*Tests]*"
+          /p:CoverletOutput=./TestResults/    // 출력 경로 : 반드시 끝에 `/`을 추가해야한다.
+          /p:Include=\"[CompanyName.*]*\"     // 시작과 끝은 `\"`으로 구성해야 한다(복수개 옵션을 추가하기 위해서). `,`로 구분하여 여러개를 추가한다.
+          /p:Exclude=\"[*Tests]*\"            // 시작과 끝은 `\"`으로 구성해야 한다(복수개 옵션을 추가하기 위해서). `,`로 구분하여 여러개를 추가한다.
+          /p:ExcludeByFile=\"**/dir1/class1.cs,**/dir2/*.cs,**/dir3/**/*.cs\"  // 시작과 끝은  `\"`으로 구성하고 `,`로 구분한다.
        ```
+       - `[어셈블리명]네임스페이스.클래스명` or `[어셈블리명]네임스페이스`
+         - `[*]*` 모든 어셈블리의 모든 네임스페이스
+         - `/p:Exclude=\"[coverlet.*]Coverlet.Core.Coverage\"` 
        - 출력 형식
          - Json(기본형식) : coverage.json
          - lcov : coverage.info
