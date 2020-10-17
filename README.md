@@ -4,7 +4,7 @@
 ## 목차
 1. Self
    - [함수형](./Self/Functional)
-   - [단위 테스트](./Self/UnitTest)
+   - [단위 테스트](./Self/UnitTest) : why. 코드를 더 자세히 이해할 수 있다(**자신감을 불어넣어 준다**).
 1. 책
    - [함수형 프로그래밍 in C#](./Books/FPinCSharp)
      - [Chapter 02. Why function purity matters](./Books/FPinCSharp/Ch02)
