@@ -43,6 +43,7 @@
    - FTP
      - ...?
    - Dapper
+     - DataAbstractions.Dapper
    - Kafka
    - RabbotMQ
    - 통신(gRPC, ...)
