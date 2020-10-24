@@ -13,7 +13,7 @@
    - Type inference
    - Generics
 1. Writing Purely Functional Code
-   - Function **evaluates**. it does not **execute**(Argument가 실해한다).
+   - Function **evaluates**. it does not **execute**(Argument가 실행 단위다).
    - Result depeands on **arguments**, not on **state**.
    - Values do **not change**, etc.   
 1. Making Your C# More Functional 
