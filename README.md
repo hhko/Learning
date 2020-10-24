@@ -25,7 +25,7 @@
 1. 강의
    - 설계
      - [ ] [Advanced Defensive Programming Techniques](./Lectures/DefensiveProgramming)
-     - [ ] Writing Purely Functional Code in C#
+     - [ ] [Writing Purely Functional Code in C#](./Lectures/WritingPurelyFunctionalCodeInCSharp)
      - [ ] Making Your C# Code More Functional
      - [ ] Writing Highly Maintainable Unit Tests
      - [ ] Dependency Injection in ASP.NET Core 
