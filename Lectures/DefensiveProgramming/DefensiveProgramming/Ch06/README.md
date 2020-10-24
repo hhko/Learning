@@ -21,7 +21,10 @@
 - bool 반환은 raw 데이터 반환과 같다. 가급적 피하자.
 
 ## 6.4 Removing Guards Through Design
-- 주제 : 
+- 주제 : Implicit Validation Principle
+- One consistent object constructs another consistent object.
+- `bool 반환 메서드(상태 확인) vs. 객체 반환 메서드(역량 요청)`
+- `객체 반환 메서드(역량 요청)`은 이미 consistent object에게 다른 consistent object을 요청하는 것이다.
 
 ## 6.5 Turning Domain Rules into Rule Objects
 - 주제 : 
