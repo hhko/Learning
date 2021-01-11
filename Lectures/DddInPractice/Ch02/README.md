@@ -1,4 +1,4 @@
-## Chaper 2.
+## Chaper 2. Value Object vs. Entity
 
 ## °³³ä Á¤¸®
 ![](./Ch02_Summary.png)

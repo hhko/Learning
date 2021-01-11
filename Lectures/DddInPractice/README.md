@@ -1,5 +1,9 @@
 # [Domain-Driven Design in Practice](https://app.pluralsight.com/library/courses/domain-driven-design-in-practice/table-of-contents?aid=7010a000002LUv7AAG)
 
+## 목차
+- [Chapter 1. DDD 개요](./Ch01)
+- [Chapter 2. Value Object vs. Entity](./Ch02)
+
 ## DDD 패키지
 - [ABP Framework](https://github.com/abpframework/abp)
 - [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
@@ -7,6 +11,6 @@
 
 ## 참고 사이트
 - [Hands-on Domain-Driven Design with .NET Core book](https://github.com/alexeyzimarev/ddd-book)
-- [Value Object](ttps://docs.microsoft.com/ko-kr/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects)
+- [Value Object](https://docs.microsoft.com/ko-kr/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects)
 - [Value Object | Youtube](https://www.youtube.com/watch?v=kVtfQrkDC94)
 - [Entity](https://docs.microsoft.com/ko-kr/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces)
