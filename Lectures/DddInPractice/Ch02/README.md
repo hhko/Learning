@@ -1,6 +1,8 @@
 ## Chaper 2.
 
 ## °³³ä Á¤¸®
+![](./Ch02_Summary.png)
+
 ### 1. µµ¸ÞÀÎ ¸ðµ¨
 1. Domain Model  
    == Domain Logic  

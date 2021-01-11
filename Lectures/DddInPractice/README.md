@@ -1,10 +1,11 @@
+# [Domain-Driven Design in Practice](https://app.pluralsight.com/library/courses/domain-driven-design-in-practice/table-of-contents?aid=7010a000002LUv7AAG)
 
-## DDD ∆–≈∞¡ˆ
+## DDD Ìå®ÌÇ§ÏßÄ
 - [ABP Framework](https://github.com/abpframework/abp)
 - [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 - [Akkatecture](https://github.com/Lutando/Akkatecture)
 
-## ¬¸∞Ì ªÁ¿Ã∆Æ
+## Ï∞∏Í≥† ÏÇ¨Ïù¥Ìä∏
 - [Hands-on Domain-Driven Design with .NET Core book](https://github.com/alexeyzimarev/ddd-book)
 - [Value Object](ttps://docs.microsoft.com/ko-kr/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects)
 - [Value Object | Youtube](https://www.youtube.com/watch?v=kVtfQrkDC94)
