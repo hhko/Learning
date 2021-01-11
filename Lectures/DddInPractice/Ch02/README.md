@@ -47,6 +47,30 @@
 <br/>
 
 ## 예제
+### 0. 요구사항
+1. Value Object	 
+   - Generic 타입
+   - Reference Equality
+   - Structural Equality
+   - GetHashCode
+   - GetHashCode 성능 최적화
+   - operator ==
+   - operator !=
+   - Serializable
+   - ? IComparable, IComparable<T>
+   - ? IEquatable<T>
+   - ? default constructor
+1. Entity
+   - Id
+   - default Id
+   - Identifier Equality
+   - Reference Equality   
+   - GetHashCode
+   - GetHashCode 성능 최적화
+   - operator ==
+   - operator !=
+   - ? default constructor
+   
 ### 1. Pluralsight
 1. Value Object 요구사항
    - [x] Generic 타입 
@@ -107,3 +131,6 @@
          }
      }
      ```
+	 
+
+	 
