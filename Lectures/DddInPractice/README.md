@@ -33,3 +33,5 @@
 - [Value Object](https://docs.microsoft.com/ko-kr/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects)
 - [Value Object | Youtube](https://www.youtube.com/watch?v=kVtfQrkDC94)
 - [Entity](https://docs.microsoft.com/ko-kr/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces)
+- [Docker에서 SQL Server 컨테이너 이미지 실행](https://docs.microsoft.com/ko-kr/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&preserve-view=true&pivots=cs1-bash)
+- [SQL Server Docker 컨테이너 배포 및 연결](https://docs.microsoft.com/ko-kr/sql/linux/sql-server-linux-docker-container-deployment?view=sql-server-ver15&pivots=cs1-bash)
