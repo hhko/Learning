@@ -51,6 +51,7 @@ namespace Step_03_HasBehavior
         {
             if (arg == null)
                 throw new ArgumentNullException(nameof(arg));
+
             if (_currency != arg._currency)
                 throw new ArgumentException($"화폐 단위가 다름 (this:{_currency}, arg:{arg._currency})", nameof(arg));
 
