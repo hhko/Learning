@@ -22,6 +22,8 @@
      - [2장. 애자일 팀 만나기](./Books/AgileSamurai/Ch02.md)
      - [3장. 모두 한 버스에 타는 법](./Books/AgileSamurai/Ch03.md)
      - [4장. 크게 보기](./Books/AgileSamurai/Ch04.md)
+   - [도메인 주도 설계 철저 입문](./Books/DDDGuide/)
+     - [1장. 도메인 주도 설계란?](./Books/DDDGuide/Ch01)
 1. 강의
    - 설계
      - [ ] [Advanced Defensive Programming Techniques](./Lectures/DefensiveProgramming)
