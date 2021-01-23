@@ -24,6 +24,8 @@
      - [4장. 크게 보기](./Books/AgileSamurai/Ch04.md)
    - [도메인 주도 설계 철저 입문](./Books/DDDGuide/)
      - [1장. 도메인 주도 설계란?](./Books/DDDGuide/Ch01)
+	 - [2장. 시스템 특유의 값을 나타내기 위한 '값 객체'](./Books/DDDGuide/Ch02)
+     - [3장. 생애주기를 갖는 객체 '앤티티'](./Books/DDDGuide/Ch03)
 1. 강의
    - 설계
      - [ ] [Advanced Defensive Programming Techniques](./Lectures/DefensiveProgramming)
