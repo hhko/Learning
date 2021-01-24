@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch02", "Ch02", "{03AC1E7C-B
 		Ch02\README.md = Ch02\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_01_IEquatable", "Ch02\Step_01_IEquatable\Step_01_IEquatable.csproj", "{545CE0F4-6931-403C-8ECB-A9983D393FDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_01_IEquatable", "Ch02\Step_01_IEquatable\Step_01_IEquatable.csproj", "{545CE0F4-6931-403C-8ECB-A9983D393FDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_01_IEquatable.UnitTests", "Ch02\Step_01_IEquatable.UnitTests\Step_01_IEquatable.UnitTests.csproj", "{A3089023-F374-474A-AE9D-3D1AAEB517B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_01_IEquatable.UnitTests", "Ch02\Step_01_IEquatable.UnitTests\Step_01_IEquatable.UnitTests.csproj", "{A3089023-F374-474A-AE9D-3D1AAEB517B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_02_Criteria", "Ch02\Step_02_Criteria\Step_02_Criteria.csproj", "{D7829F3F-C7DC-4751-8FBD-F2ADA53EE91B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_02_Criteria", "Ch02\Step_02_Criteria\Step_02_Criteria.csproj", "{D7829F3F-C7DC-4751-8FBD-F2ADA53EE91B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_03_HasBehavior", "Ch02\Step_03_HasBehavior\Step_03_HasBehavior.csproj", "{D5055982-FA58-46D0-BF3B-F75451A98D52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_03_HasBehavior", "Ch02\Step_03_HasBehavior\Step_03_HasBehavior.csproj", "{D5055982-FA58-46D0-BF3B-F75451A98D52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_03_HasBehavior.UnitTests", "Ch02\Step_03_HasBehavior.UnitTests\Step_03_HasBehavior.UnitTests.csproj", "{22452B1E-1306-422B-873A-3ACBCE24C86C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_03_HasBehavior.UnitTests", "Ch02\Step_03_HasBehavior.UnitTests\Step_03_HasBehavior.UnitTests.csproj", "{22452B1E-1306-422B-873A-3ACBCE24C86C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{180D5364-CF5F-4BA4-A0D7-C85580D0162E}"
 	ProjectSection(SolutionItems) = preProject
@@ -33,16 +33,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch03", "Ch03", "{2FC6BD6D-B
 		Ch03\README.md = Ch03\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_01_Identity", "Ch03\Step_01_Identity\Step_01_Identity.csproj", "{92BE9917-B92B-48B7-ACBB-07BEB4489B8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_01_Identity", "Ch03\Step_01_Identity\Step_01_Identity.csproj", "{92BE9917-B92B-48B7-ACBB-07BEB4489B8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_01_Identity.UnitTests", "Ch03\Step_01_Identity.UnitTests\Step_01_Identity.UnitTests.csproj", "{979F7F05-4689-4FB8-86FC-E58245646613}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_01_Identity.UnitTests", "Ch03\Step_01_Identity.UnitTests\Step_01_Identity.UnitTests.csproj", "{979F7F05-4689-4FB8-86FC-E58245646613}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch04", "Ch04", "{9C5914A3-1BCB-48D9-8097-516D764D69BF}"
 	ProjectSection(SolutionItems) = preProject
 		Ch04\README.md = Ch04\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_01_DomainCrossCutting", "Ch04\Step_01_DomainCrossCutting\Step_01_DomainCrossCutting.csproj", "{95628A2E-A71E-40FB-BAAB-2250BAE77500}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_01_DomainCrossCutting", "Ch04\Step_01_DomainCrossCutting\Step_01_DomainCrossCutting.csproj", "{95628A2E-A71E-40FB-BAAB-2250BAE77500}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch05", "Ch05", "{2BF7EEE3-8F34-4615-96F8-3B4DE0F40BCE}"
+	ProjectSection(SolutionItems) = preProject
+		Ch05\README.md = Ch05\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_01_Repository", "Ch05\Step_01_Repository\Step_01_Repository.csproj", "{CCA006C1-621F-4BF4-8C57-7834E8ED24BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +89,10 @@ Global
 		{95628A2E-A71E-40FB-BAAB-2250BAE77500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95628A2E-A71E-40FB-BAAB-2250BAE77500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95628A2E-A71E-40FB-BAAB-2250BAE77500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA006C1-621F-4BF4-8C57-7834E8ED24BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA006C1-621F-4BF4-8C57-7834E8ED24BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA006C1-621F-4BF4-8C57-7834E8ED24BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA006C1-621F-4BF4-8C57-7834E8ED24BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +106,7 @@ Global
 		{92BE9917-B92B-48B7-ACBB-07BEB4489B8D} = {2FC6BD6D-BFCD-43E0-8ECB-77D73E53B7C8}
 		{979F7F05-4689-4FB8-86FC-E58245646613} = {2FC6BD6D-BFCD-43E0-8ECB-77D73E53B7C8}
 		{95628A2E-A71E-40FB-BAAB-2250BAE77500} = {9C5914A3-1BCB-48D9-8097-516D764D69BF}
+		{CCA006C1-621F-4BF4-8C57-7834E8ED24BC} = {2BF7EEE3-8F34-4615-96F8-3B4DE0F40BCE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5530B255-3193-4989-A40C-51D8C4F6F023}
