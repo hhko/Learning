@@ -13,8 +13,4 @@
 		</PackageReference>
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\Ch02_Step2_Abp.Logic\Ch02_Step2_Abp.Logic.csproj" />
-	</ItemGroup>
-
 </Project>

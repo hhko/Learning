@@ -13,8 +13,4 @@
 		</PackageReference>
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\Ch02_Step1_Pluralsight.Logic\Ch02_Step1_Pluralsight.Logic.csproj" />
-	</ItemGroup>
-
 </Project>
