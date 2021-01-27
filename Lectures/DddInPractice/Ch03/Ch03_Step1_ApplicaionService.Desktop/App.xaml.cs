@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Ch03_Step1_Pluralsight.Desktop
+namespace Ch03_Step1_ApplicaionService.Desktop
 {
     /// <summary>
     /// Interaction logic for App.xaml
