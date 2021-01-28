@@ -17,3 +17,6 @@
        </Application.Resources>
    </Application>
    ```
+
+## 참고 사이트
+- [여러개의 ResourceDictionary를 한번에 참조하기](https://oksujay1127.tistory.com/87)
