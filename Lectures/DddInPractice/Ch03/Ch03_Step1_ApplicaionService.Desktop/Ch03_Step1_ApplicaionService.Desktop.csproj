@@ -6,4 +6,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\WpfCommon\WpfCommon.csproj" />
+    <ProjectReference Include="..\Ch03_Step1_ApplicaionService\Ch03_Step1_ApplicaionService.csproj" />
+  </ItemGroup>
+
 </Project>

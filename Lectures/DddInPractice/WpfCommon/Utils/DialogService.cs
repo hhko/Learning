@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WpfCommon
+namespace WpfCommon.Utils
 {
     public class DialogService
     {
