@@ -4,4 +4,4 @@
 ![](./Ch03_Summary.png)
 
 ## MVVM Binding
-![](./Ch03_Step1.png)
+![](./Ch03_Step1_Binding.png)
