@@ -46,7 +46,7 @@
       aspnetcore-targeting-pack-5.0 : 의존: dotnet-targeting-pack-5.0 (>= 5.0.0) 하지만 %s 패키지를 설치하지 않을 것입니다
      E: 의존성이 맞지 않습니다. 패키지 없이 'apt --fix-broken install'을 시도해 보십시오 (아니면 해결 방법을 지정하십시오).
      ```  
-     ![image](/Images/fix_broken_install.png)
+     ![image](./Images/fix_broken_install.png)
 
 <br/>
 
