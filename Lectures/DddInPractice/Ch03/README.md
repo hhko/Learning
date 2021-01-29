@@ -2,3 +2,6 @@
 
 ## 개념 정리
 ![](./Ch03_Summary.png)
+
+## MVVM Binding
+![](./Ch03_Step1.png)

@@ -22,17 +22,17 @@ namespace Ch02_Step6_Akkatecture
 
         }
 
-        public void InsertMoney(Money money)
+        public void InsertMoney(Money coinOrNote)
         {
             var coninsAndNotes = new Money[]
             {
                 Cent, TenCent, Quarter, Dollar, FiveDollar, TwentyDollar
             };
 
-            if (!coninsAndNotes.Contains(money))
+            if (!coninsAndNotes.Contains(coinOrNote))
                 throw new InvalidOperationException();
 
-            MoneyInTransaction += money;
+            MoneyInTransaction += coinOrNote;
         }
 
         public void ReturnMoney()

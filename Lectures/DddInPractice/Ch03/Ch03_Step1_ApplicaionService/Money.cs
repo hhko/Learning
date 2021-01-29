@@ -4,9 +4,6 @@ namespace Ch03_Step1_ApplicaionService
 {
     public sealed class Money : ValueObject<Money>
     {
-        //
-        // 단위 테스트 발굴 : 생성 과정을 단순화하고 더 명확하게 제공한다.
-        //
         public static readonly Money None = new Money(0, 0, 0, 0, 0, 0);
         public static readonly Money Cent = new Money(1, 0, 0, 0, 0, 0);
         public static readonly Money TenCent = new Money(0, 1, 0, 0, 0, 0);
@@ -22,9 +19,6 @@ namespace Ch03_Step1_ApplicaionService
         public int FiveDollarCount { get; private set; }        //  5.00
         public int TwentyDollarCount { get; private set; }      // 20.00
 
-        //
-        // 단위 테스트 발굴 : 총합을 표현한다.
-        //
         public decimal Amount =>
             OneCentCount * 0.01m +
             TenCentCount * 0.10m +
@@ -41,9 +35,6 @@ namespace Ch03_Step1_ApplicaionService
             int fiveDollarCount,
             int twentyDollarCount)
         {
-            //
-            // 단위 테스트 발굴 : 유효하지 않는 객체 생성을 방지한다.
-            //
             if (oneCentCount < 0)
                 throw new InvalidOperationException(nameof(oneCentCount));
             if (tenCentCount < 0)
@@ -76,9 +67,6 @@ namespace Ch03_Step1_ApplicaionService
                 money1.TwentyDollarCount + money2.TwentyDollarCount);
         }
 
-        //
-        // 단위 테스트 발굴 : "-" 연산자를 제공한다.
-        //
         public static Money operator -(Money money1, Money money2)
         {
             return new Money(
@@ -111,6 +99,20 @@ namespace Ch03_Step1_ApplicaionService
                 hashCode = (hashCode * 397) ^ FiveDollarCount;
                 hashCode = (hashCode * 397) ^ TwentyDollarCount;
                 return hashCode;
+            }
+        }
+
+        public override string ToString()
+        {
+            if (Amount < 1)
+            {
+                // 동전(Coin)
+                return "¢" + (Amount * 100).ToString("0");
+            }
+            else
+            {
+                // 지폐(Note)
+                return "$" + Amount.ToString("0.00");
             }
         }
     }

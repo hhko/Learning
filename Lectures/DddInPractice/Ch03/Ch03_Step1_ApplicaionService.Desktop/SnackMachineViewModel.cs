@@ -10,7 +10,9 @@ namespace Ch03_Step1_ApplicaionService.Desktop
         private readonly SnackMachine _snackMachine;
 
         public override string Caption => "Snack Machine";
-        public string MoneyInTransaction => _snackMachine.MoneyInTransaction.ToString();
+
+        //public string MoneyInTransaction => _snackMachine.MoneyInTransaction.ToString();
+        public Money MoneyInTransaction => _snackMachine.MoneyInTransaction;
         public Money MoneyInside => _snackMachine.MoneyInside + _snackMachine.MoneyInTransaction;
 
         private string _message = "";

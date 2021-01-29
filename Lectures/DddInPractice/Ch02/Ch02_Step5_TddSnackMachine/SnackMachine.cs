@@ -19,7 +19,7 @@ namespace Ch02_Step5_TddSnackMachine
         //  > 고객이 돈을 반환 요청할 때 투입한 돈을 구분할 수 있어야 하기 때문이다. 
         public Money MoneyInTransaction { get; set; } = None;
 
-        public void InsertMoney(Money money)
+        public void InsertMoney(Money coinOrNote)
         {
             //
             // 단위 테스트 발굴 : 유요한 입력을 체크한다.
@@ -28,10 +28,10 @@ namespace Ch02_Step5_TddSnackMachine
                 {
                     Cent, TenCent, Quarter, Dollar, FiveDollar, TwentyDollar
                 };
-            if (!coinsAndNotes.Contains(money))
+            if (!coinsAndNotes.Contains(coinOrNote))
                 throw new InvalidOperationException();
 
-            MoneyInTransaction += money;
+            MoneyInTransaction += coinOrNote;
         }
 
         public void ReturnMoney()
