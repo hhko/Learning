@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Ch03_Step1_ApplicaionService.Desktop
+namespace Ch03_Step2_ApplicaionService.Desktop
 {
     /// <summary>
     /// Interaction logic for MainView.xaml

@@ -38,3 +38,9 @@
      ```
 1. `Money` 클래스 단위 테스트 시나리오
    - `To_string_returns_correct_string_representation` : 돈의 단위 표현(동전 또는 지폐)을 확인한다.
+
+### Step 2. 데이터베이스
+1. Entity와 Value Object 테이블
+   - Value Object는 Entity와 통합 시킨다.
+     - Value Object는 Id을 갖기 않기 때문이다.
+     - Value Object은 Entity 없이 스스로 존재할 수 없다(Lifespan이 없다).
