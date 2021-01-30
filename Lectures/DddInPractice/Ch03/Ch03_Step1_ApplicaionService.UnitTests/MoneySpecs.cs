@@ -110,7 +110,7 @@ namespace Ch03_Step1_ApplicaionService.UnitTests
         }
         #endregion
 
-        #region 연산
+        #region Amout 연산
         [Theory]
         [InlineData(0, 0, 0, 0, 0, 0, 0)]
         [InlineData(1, 0, 0, 0, 0, 0, 0.01)]
@@ -141,6 +141,33 @@ namespace Ch03_Step1_ApplicaionService.UnitTests
             // TODO : ShouldBeEquivalentTo?
             money.Amount.Should().Be(expectedAmount);
             //money.Amount.ShouldBeEquivalentTo(expectedAmount);
+        }
+        #endregion
+
+        #region ToString() 연산
+        [Theory]
+        [InlineData(1, 0, 0, 0, 0, 0, "¢1")]
+        [InlineData(0, 0, 0, 1, 0, 0, "$1.00")]
+        [InlineData(1, 0, 0, 1, 0, 0, "$1.01")]
+        [InlineData(0, 0, 2, 1, 0, 0, "$1.50")]
+        public void To_string_returns_correct_string_representation(
+            int oneCentCount,
+            int tenCentCount,
+            int quarterCount,
+            int oneDollarCount,
+            int fiveDollarCount,
+            int twentyDollarCount,
+            string expectedString)
+        {
+            Money money = new Money(
+                oneCentCount,
+                tenCentCount,
+                quarterCount,
+                oneDollarCount,
+                fiveDollarCount,
+                twentyDollarCount);
+
+            money.ToString().Should().Be(expectedString);
         }
         #endregion
     }
