@@ -57,7 +57,9 @@
 ### Step 2. 데이터베이스
 1. MS SQL Server 개발 환경 구성
    - Developer 다운로드 : [링크](https://www.microsoft.com/ko-kr/sql-server/sql-server-downloads)
+   - SSMS(SQL Server Management Studio) 다운로드 : [링크](https://docs.microsoft.com/ko-kr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
    - [SQL Server 2019 Express 외부 접속을 위한 처리](https://www.098.co.kr/sql-server-2019-express-%EC%99%B8%EB%B6%80-%EC%A0%91%EC%86%8D%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%B2%98%EB%A6%AC/)
+   - SQL 스크립트 : [링크](./DbCreationScript.md)
 1. Entity와 Value Object 테이블
    - Value Object는 Entity와 통합 시킨다.
      - Value Object는 Id을 갖기 않기 때문이다.
@@ -71,6 +73,7 @@
    - NuGet 패키지 : NHibernate 낮은 버전을 사용하기 위해 .NET Frmaeowkr 4.8을 사용한다.
      - NHibernate : **4.0.4.4000**
      - FluentNHibernate : **2.0.3**
+     - Iesi.Collections : **4.0.4**
    - SessionFactory 클래스 구현
      - 테이블 작성 규칙
      - Id 생성 규칙 : Hi/Lo 알고리즘
