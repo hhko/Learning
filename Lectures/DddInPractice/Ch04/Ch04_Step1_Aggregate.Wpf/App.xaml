@@ -1,0 +1,15 @@
+﻿<Application x:Class="Ch04_Step1_Aggregate.Wpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Ch04_Step1_Aggregate.Wpf"
+             StartupUri="MainView.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfCommon;component/Images.xaml"/>
+                <ResourceDictionary Source="SnackMachineViewModel.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\WpfCommon\WpfCommon.csproj" />
+    <ProjectReference Include="..\Ch04_Step1_Aggregate\Ch04_Step1_Aggregate.csproj" />
+  </ItemGroup>
+
+</Project>

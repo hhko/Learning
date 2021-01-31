@@ -19,7 +19,6 @@ namespace Ch03_Step2_PersistenceLayer.Wpf
             // DB 접속
             //
             Initer.Init(@"Server=.;Database=DddInPractice;Trusted_Connection=True;");
-            //Initer.Init(@"Server =.;Database=DddInPractice;Trusted_Connection=true");
         }
     }
 }
