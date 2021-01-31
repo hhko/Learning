@@ -1,4 +1,4 @@
-## Chaper 1. DDD 개요
+## 1장. DDD Introduction
 
 ## 개념 정리
 ![](./Ch01_Summary.png)

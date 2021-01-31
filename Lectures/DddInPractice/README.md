@@ -1,24 +1,10 @@
 # [Domain-Driven Design in Practice](https://app.pluralsight.com/library/courses/domain-driven-design-in-practice/table-of-contents?aid=7010a000002LUv7AAG)
 
 ## 목차
-- [Chapter 1. DDD 개요](./Ch01)
-- [Chapter 2. Value Object vs. Entity](./Ch02)
-- [Chapter 3. UI아 DB 연동하기](./Ch03)
-
-<br/>
-
-## TODO
-- [x] Ch01 | PPT 정리
-- [x] Ch02 | Pluralsights 구현
-- [x] Ch02 | Abp, Msdn, Akkatecture 구현
-- [x] Ch02 | PPT 정리
-- [ ] Ch02 | "Hands On Domain Driven Design with .NET Core" 기반 작성
-- [ ] Ch02 | Msdn 소스에서 제공하는 단위 테스트 추가
-- [ ] Ch02 | 단위 테스트 이름 규칙 정리
-- [x] Ch03 | PPT 정리
-- [ ] Ch03 | Pluralsights 구현
-- [ ] Ch03 | MS SQL Docker 기반 환경 구축
-- [ ] Ch03 | Abp, Msdn, Akkatecture, HandsOn 구현
+- [1장. DDD Introduction](./Ch01)
+- [2장. Value Object vs. Entity](./Ch02)
+- [3장. UI & Persistence Layer](./Ch03)
+- [4장. Aggregate](./Ch04)
 
 <br/>
 

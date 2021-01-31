@@ -1,4 +1,4 @@
-# [Domain-Driven Design in Practice](https://app.pluralsight.com/library/courses/domain-driven-design-in-practice/table-of-contents?aid=7010a000002LUv7AAG)
+# 2장. Value Object vs. Entity
 
 ## 목차
 1. 요약

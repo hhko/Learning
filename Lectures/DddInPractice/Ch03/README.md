@@ -1,4 +1,4 @@
-## Chaper 3. UI와 DB 연동하기
+## 3장. UI & Persistence Layer
 
 ## 목차
 1. 요약

@@ -1,4 +1,4 @@
-## Chaper 4. Aggregate & Repository
+## 4장. Aggregate
 
 ## 목차
 1. 요약
