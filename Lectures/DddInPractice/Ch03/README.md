@@ -55,6 +55,9 @@
    - `To_string_returns_correct_string_representation` : 돈의 단위 표현(동전 또는 지폐)을 확인한다.
 
 ### Step 2. 데이터베이스
+1. MS SQL Server 개발 환경 구성
+   - Developer 다운로드 : [링크](https://www.microsoft.com/ko-kr/sql-server/sql-server-downloads)
+   - [SQL Server 2019 Express 외부 접속을 위한 처리](https://www.098.co.kr/sql-server-2019-express-%EC%99%B8%EB%B6%80-%EC%A0%91%EC%86%8D%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%B2%98%EB%A6%AC/)
 1. Entity와 Value Object 테이블
    - Value Object는 Entity와 통합 시킨다.
      - Value Object는 Id을 갖기 않기 때문이다.
@@ -65,9 +68,9 @@
    - Guid : O
    - Hi/Lo 알고리즘 : O
 1. NHibernate ORM
-   - NuGet 패키지
-     - NHibernate 5.3.5
-     - FluentNHibernate 3.1.0
+   - NuGet 패키지 : NHibernate 낮은 버전을 사용하기 위해 .NET Frmaeowkr 4.8을 사용한다.
+     - NHibernate : **4.0.4.4000**
+     - FluentNHibernate : **2.0.3**
    - SessionFactory 클래스 구현
      - 테이블 작성 규칙
      - Id 생성 규칙 : Hi/Lo 알고리즘
@@ -84,6 +87,3 @@
    - `Entity` 클래스
      - 모든 규칙 적용 
      - Equal 메서드 개선 : NHibernateProxyHelper.GetClassWithoutInitializingProxy
-
-
-- [SQL Server 2019 Express 외부 접속을 위한 처리](https://www.098.co.kr/sql-server-2019-express-%EC%99%B8%EB%B6%80-%EC%A0%91%EC%86%8D%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%B2%98%EB%A6%AC/)
