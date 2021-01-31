@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NHibernate;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using WpfCommon;
@@ -52,12 +53,16 @@ namespace Ch03_Step2_ApplicaionService.Desktop
         private void BuySnack()
         {
             _snackMachine.BuySnack();
-            //using (ISession session = SessionFactory.OpenSession())
-            //using (ITransaction transaction = session.BeginTransaction())
-            //{
-            //    session.SaveOrUpdate(_snackMachine);
-            //    transaction.Commit();
-            //}
+
+            //
+            // DB에 데이터 저장
+            //
+            using (ISession session = SessionFactory.OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                session.SaveOrUpdate(_snackMachine);
+                transaction.Commit();
+            }
             NotifyClient("You have bought a snack");
         }
 

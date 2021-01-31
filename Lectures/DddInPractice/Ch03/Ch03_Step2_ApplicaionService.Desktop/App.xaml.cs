@@ -15,7 +15,11 @@ namespace Ch03_Step2_ApplicaionService.Desktop
     {
         public App()
         {
-            //Initer.Init(@"Server=.;Database=DddInPractice;Trusted_Connection=true");
+            //
+            // DB 접속
+            //
+            Initer.Init(@"Server=localhost\SQLEXPRESS;Database=DddInPractice;Trusted_Connection=True;");
+            //Initer.Init(@"Server =.;Database=DddInPractice;Trusted_Connection=true");
         }
     }
 }

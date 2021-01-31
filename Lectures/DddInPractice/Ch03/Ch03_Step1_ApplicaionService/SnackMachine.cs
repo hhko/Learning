@@ -6,8 +6,8 @@ namespace Ch03_Step1_ApplicaionService
 {
     public sealed class SnackMachine : Entity
     {
-        public Money MoneyInside { get; set; } = None;
-        public Money MoneyInTransaction { get; set; } = None;
+        public Money MoneyInside { get; private set; } = None;
+        public Money MoneyInTransaction { get; private set; } = None;
 
         public void InsertMoney(Money money)
         {

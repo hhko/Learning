@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NHibernate;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using WpfCommon;
@@ -10,12 +11,15 @@ namespace Ch03_Step2_ApplicaionService.Desktop
     {
         public MainViewModel()
         {
-            //SnackMachine snackMachine;
-            //using (ISession session = SessionFactory.OpenSession())
-            //{
-            //    snackMachine = session.Get<SnackMachine>(1L);
-            //}
-            SnackMachine snackMachine = new SnackMachine();
+            //
+            // DB에서 데이터 복원
+            //
+            SnackMachine snackMachine;
+            using (ISession session = SessionFactory.OpenSession())
+            {
+                snackMachine = session.Get<SnackMachine>(1L);
+            }
+            //SnackMachine snackMachine = new SnackMachine();
             var viewModel = new SnackMachineViewModel(snackMachine);
             _dialogService.ShowDialog(viewModel);
         }

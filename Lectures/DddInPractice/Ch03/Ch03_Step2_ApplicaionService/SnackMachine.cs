@@ -4,12 +4,20 @@ using static Ch03_Step2_ApplicaionService.Money;
 
 namespace Ch03_Step2_ApplicaionService
 {
-    public sealed class SnackMachine : Entity
-    {
-        public Money MoneyInside { get; set; } = None;
-        public Money MoneyInTransaction { get; set; } = None;
+    // 1. sealed
+    // 2. virtual
+    // 3. private -> protected
+    // 4. private constructor
+    // 5. Entity 적용 
+    // 6. Entity Equal Type : NHibernateProxyHelper.GetClassWithoutInitializingProxy
 
-        public void InsertMoney(Money money)
+    public class SnackMachine : Entity
+    //public sealed class SnackMachine : Entity
+    {
+        public virtual Money MoneyInside { get; protected set; } = None;
+        public virtual Money MoneyInTransaction { get; protected set; } = None;
+
+        public virtual void InsertMoney(Money money)
         {
             Money[] coinsAndNotes =
                 {
@@ -21,12 +29,12 @@ namespace Ch03_Step2_ApplicaionService
             MoneyInTransaction += money;
         }
 
-        public void ReturnMoney()
+        public virtual void ReturnMoney()
         {
             MoneyInTransaction = None;
         }
 
-        public void BuySnack()
+        public virtual void BuySnack()
         {
             MoneyInside += MoneyInTransaction;
             MoneyInTransaction = None;

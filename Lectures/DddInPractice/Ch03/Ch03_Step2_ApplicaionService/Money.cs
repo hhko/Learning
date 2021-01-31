@@ -27,6 +27,11 @@ namespace Ch03_Step2_ApplicaionService
             FiveDollarCount * 5 +
             TwentyDollarCount * 20;
 
+        private Money()
+        {
+
+        }
+
         public Money(
             int oneCentCount,
             int tenCentCount,

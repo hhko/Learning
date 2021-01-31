@@ -1,10 +1,12 @@
-﻿using System;
+﻿using NHibernate.Proxy;
+using System;
 
 namespace Ch03_Step2_ApplicaionService
 {
     public abstract class Entity
     {
-        public long Id { get; private set; }
+        //public long Id { get; private set; }
+        public virtual long Id { get; protected set; }
 
         public override bool Equals(object obj)
         {
@@ -19,14 +21,17 @@ namespace Ch03_Step2_ApplicaionService
             if (ReferenceEquals(this, other))
                 return true;
 
-            if (GetType() != other.GetType())
-                return false;
+            // NHibernate Proxy 객체를 리턴한다.
+            //if (GetType() != other.GetType())
+            //    return false;
+            if (GetRealType() != other.GetRealType())
+               return false;
 
             //
             // Indentifier equality을 구현한다.
             //
             if (Id == 0 || other.Id == 0)
-                return false;
+            return false;
 
             return Id == other.Id;
         }
@@ -54,6 +59,11 @@ namespace Ch03_Step2_ApplicaionService
         public override int GetHashCode()
         {
             return (GetType().ToString() + Id).GetHashCode();
+        }
+
+        private Type GetRealType()
+        {
+            return NHibernateProxyHelper.GetClassWithoutInitializingProxy(this);
         }
     }
 }
