@@ -34,7 +34,7 @@ namespace Ch04_Step1_Aggregate.Wpf
         public Command InsertFiveDollarCommand { get; private set; }
         public Command InsertTwentyDollarCommand { get; private set; }
         public Command ReturnMoneyCommand { get; private set; }
-        public Command BuySnackCommand { get; private set; }
+        public Command<string> BuySnackCommand { get; private set; }
 
         public SnackMachineViewModel(SnackMachine snackMachine)
         {
@@ -47,12 +47,13 @@ namespace Ch04_Step1_Aggregate.Wpf
             InsertFiveDollarCommand = new Command(() => InsertMoney(Money.FiveDollar));
             InsertTwentyDollarCommand = new Command(() => InsertMoney(Money.TwentyDollar));
             ReturnMoneyCommand = new Command(() => ReturnMoney());
-            BuySnackCommand = new Command(() => BuySnack());
+            BuySnackCommand = new Command<string>(BuySnack);
         }
 
-        private void BuySnack()
+        private void BuySnack(string positionString)
         {
-            _snackMachine.BuySnack();
+            int position = int.Parse(positionString);
+            _snackMachine.BuySnack(position);
 
             //
             // DB에 데이터 저장
