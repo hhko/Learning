@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\WpfCommon\WpfCommon.csproj" />
+    <ProjectReference Include="..\Ch04_Step2_MoreAbstract\Ch04_Step2_MoreAbstract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="SnackMachineViewModel.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
