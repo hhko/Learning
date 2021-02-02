@@ -27,7 +27,7 @@
    - [x] Slot은 최대 3개이다(Slot 단위로 스낵이 위치한다).  
          3 slots of snacks
 1. 단위 테스트 시나리오
-   - _`Money_in_transaction_goes_to_money_inside_after_purchase`_ -> `BuySnack_trades_inserted_money_for_a_snack`
+   - ~~`Money_in_transaction_goes_to_money_inside_after_purchase`~~ -> `BuySnack_trades_inserted_money_for_a_snack`
 1. Aggregate Root 정의
    - 하나의 추상화 아래 여러 Entity을 모여 도메인 모델을 단순화시키는 디자인 패턴이다.
      - 응집(Root Entity) : 개념적 전체이다.
