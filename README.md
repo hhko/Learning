@@ -28,6 +28,7 @@
      - [3장. 생애주기를 갖는 객체 '앤티티'](./Books/DDDGuide/Ch03)
 1. 강의
    - 설계
+     - [ ] [Domain-Driven Design in Practice](./Lectures/DddInPractice)
      - [ ] [Advanced Defensive Programming Techniques](./Lectures/DefensiveProgramming)
      - [ ] [Writing Purely Functional Code in C#](./Lectures/WritingPurelyFunctionalCodeInCSharp)
      - [ ] Making Your C# Code More Functional
