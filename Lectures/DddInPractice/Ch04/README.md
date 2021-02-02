@@ -24,7 +24,7 @@
 
 ### Step 1. Aggregate Root
 1. 요구사항 구현
-   - [x] Slot은 최대 3개이다(Slot 단위로 스낵이 위치한다).  
+   - [x] 스낵머신 Slot은 최대 3개이다(Slot 단위로 스낵이 위치한다).  
          3 slots of snacks
 1. 단위 테스트 시나리오
    - ~~`Money_in_transaction_goes_to_money_inside_after_purchase`~~ -> `BuySnack_trades_inserted_money_for_a_snack`
@@ -42,12 +42,12 @@
 1. Aggregate Root 설계
    - SnackMachine 
      - 문제점 : `public IList<Slot> Slots { get; protected set; }`  
-       `Slot` Entity가 노출되어 있다.
-   - Snack
+       가변 도메인 객체 `Slot` Entity가 노출되어 있다.  
+       불변 규칙을 준수할 수 없게된다.
 
 ### Step 2. More Abstraction
 1. 요구사항 구현
-   - [ ] 잔액을 반환한다.  
+   - [ ] 스낵을 구매한 후 잔액을 반환한다.  
          Return the change
    - [ ] 스낵 구매를 위해 입금한 돈이 충분한지 확인한다.  
          Check if inserted money is enough.

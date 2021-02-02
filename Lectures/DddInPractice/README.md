@@ -6,6 +6,21 @@
 - [3장. UI & Persistence Layer](./Ch03)
 - [4장. Aggregate](./Ch04)
 
+## 요구사항
+- 스낵머신에 돈을 투입한다.
+- 스낵머신에서 스낵을 구매한다.
+- 스낵머신에서 돈을 반환한다.
+- 스낵머신 Slot은 최대 3개이다(Slot 단위로 스낵이 위치한다).  
+  3 slots of snacks
+- 스낵을 구매한 후 잔액을 반환한다.  
+  Return the change
+- 스낵 구매를 위해 입금한 돈이 충분한지 확인한다.  
+  Check if inserted money is enough.
+- Slot에 스낵이 비워졌는지 확인하다.  
+  Check if the slot isn’t empty.
+- 충분한 잔액이 있는지 확인한다.  
+  Check if there’s enough change.
+
 <br/>
 
 ## DDD 패키지

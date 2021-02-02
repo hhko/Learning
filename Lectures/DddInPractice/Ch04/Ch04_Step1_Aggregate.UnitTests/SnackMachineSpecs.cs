@@ -73,11 +73,5 @@ namespace Ch04_Step1_Aggregate.UnitTests
             snackMachine.Slots.Single(x => x.Position == 1).Quantity.Should().Be(9);
         }
         #endregion
-
-        //[Fact]
-        //public void Money_in_transaction_goes_to_money_inside_after_purchase()
-        //{
-
-        //}
     }
 }
