@@ -12,11 +12,9 @@
 
 <br/>
 
-- [x] 3개 Slot
-- [ ] Aggregate Root 문제점 해결하기 : Entity 노출, `public IList<Slot> Slots { get; protected set; }`  
-
 ## 2. 목표
-1. ...
+1. Aggregate Root 정의 및 설계
+1. Entity 노출 문제 개선(More Abstraction : Entity와 Value Object 발굴)
 
 <br/>
 
