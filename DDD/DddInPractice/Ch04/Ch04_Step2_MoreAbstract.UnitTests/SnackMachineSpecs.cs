@@ -70,7 +70,14 @@ namespace Ch04_Step2_MoreAbstract.UnitTests
 
             snackMachine.MoneyInTransaction.Should().Be(None);
             snackMachine.MoneyInside.Amount.Should().Be(1m);
-            snackMachine.Slots.Single(x => x.Position == 1).Quantity.Should().Be(9);
+
+            // 에러 : Aggregate Root에서 Slots 엔티티를 직접 접근할 수 없어 에러가 발생한다.
+            //snackMachine.Slots.Single(x => x.Position == 1).Quantity.Should().Be(9);
+
+            // 문제점 : Aggregate Root에서 Slots 엔티티를 간접 접근하기 위해 개별 메서드를 만들어야 한다.
+            //snackMachine.GetQuantityOfSnacksInSlot(1).Should().Be(9);
+            //snackMachine.GetSnacksInSlot(1).Should().Be(9);
+            //snackMachine.GetPriceInSlot(1).Should().Be(9);
         }
         #endregion
     }
