@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:Ch04_Step2_MoreAbstract.Wpf"
              StartupUri="MainView.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfCommon;component/Images.xaml"/>
+                <ResourceDictionary Source="SnackMachineViewModel.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
