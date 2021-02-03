@@ -2,11 +2,18 @@
 - 배움은 설렘이다 for developers.
 
 ## 목차
-1. Domain-Driven Design
-   - [도메인 주도 설계 철저 입문](./DDD/DDDGuide)
-   - [Domain-Driven Design in Practice](./DDD/DddInPractice)
-   - [Designing with Types](./DDD/DesigningWithTypes)
-   - [DDD EF Core Preserving Encapsulation](./DDD/DddEfCorePreservingEncapsulation)
+1. 도메인 주도 설계(DDD : Domain-Driven Design)
+   - [ ] [도메인 주도 설계 철저 입문](./DDD/DDDGuide)
+   - [ ] [Domain-Driven Design in Practice](./DDD/DddInPractice)
+   - [ ] [Designing with Types](./DDD/DesigningWithTypes)
+   - [ ] [DDD EF Core Preserving Encapsulation](./DDD/DddEfCorePreservingEncapsulation)
+1. 함수형 패러다임(Functional Paradigm)   
+   - [ ] [Defensive Programming](./Functional/DefensiveProgramming)
+   - [ ] [Writing Purely Functional Code In C#](./Functional/WritingPurelyFunctionalCodeInCSharp)
+   - [ ] [Functional Programming in C#](./Functional/FPinCSharp)
+1. 로그(Log)
+   - [x] [NLog](./Log/NLog)
+---
 1. 블로그
    - [Mark Seemann](./Blogs/MarkSeemann)
      - [Refactoring to Aggregate Services](./Blogs/MarkSeemann/RefactoringToAggregateServices)
