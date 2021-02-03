@@ -1,5 +1,4 @@
-# Learning is exciting for developers.
-- 배움은 설렘이다 for developers.
+# 배움은 설렘이다 for developers.
 
 ## 목차
 1. 도메인 주도 설계(DDD : Domain-Driven Design)
