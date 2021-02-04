@@ -35,10 +35,24 @@ namespace Ch04_Step2_MoreAbstract
 
             Slots = new List<Slot>
             {
-                new Slot(this, 1, null, 0, 0m),
-                new Slot(this, 2, null, 0, 0m),
-                new Slot(this, 3, null, 0, 0m)
+                //new Slot(this, 1, null, 0, 0m),
+                //new Slot(this, 2, null, 0, 0m),
+                //new Slot(this, 3, null, 0, 0m)
+                new Slot(this, 1),
+                new Slot(this, 2),
+                new Slot(this, 3)
             };
+        }
+
+        public virtual SnackPile GetSnackPile(int position)
+        {
+            //return Slots.Single(x => x.Position == position).SnackPile;
+            return GetSlot(position).SnackPile;
+        }
+
+        private Slot GetSlot(int position)
+        {
+            return Slots.Single(x => x.Position == position);
         }
 
         public virtual void InsertMoney(Money money)
@@ -60,19 +74,32 @@ namespace Ch04_Step2_MoreAbstract
 
         public virtual void BuySnack(int position)
         {
-            Slot slot = Slots.Single(x => x.Position == position);
-            slot.Quantity--;
+            //Slot slot = Slots.Single(x => x.Position == position);
+            Slot slot = GetSlot(position);
+
+            //
+            // 불변 값 객체
+            //
+            //slot.Quantity--;
+            slot.SnackPile = slot.SnackPile.SubtractOne();
 
             MoneyInside += MoneyInTransaction;
             MoneyInTransaction = None;
         }
 
-        public virtual void LoadSnacks(int position, Snack snack, int quantity, decimal price)
+        //public virtual void LoadSnacks(int position, Snack snack, int quantity, decimal price)
+        //{
+        //    Slot slot = Slots.Single(x => x.Position == position);
+        //    slot.Snack = snack;
+        //    slot.Quantity = quantity;
+        //    slot.Price = price;
+        //}
+
+        public virtual void LoadSnacks(int position, SnackPile snackPile)
         {
-            Slot slot = Slots.Single(x => x.Position == position);
-            slot.Snack = snack;
-            slot.Quantity = quantity;
-            slot.Price = price;
+            //Slot slot = Slots.Single(x => x.Position == position);
+            Slot slot = GetSlot(position);
+            slot.SnackPile = snackPile;
         }
     }
 }

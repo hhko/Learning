@@ -62,7 +62,8 @@ namespace Ch04_Step2_MoreAbstract.UnitTests
         public void BuySnack_trades_inserted_money_for_a_snack()
         {
             var snackMachine = new SnackMachine();
-            snackMachine.LoadSnacks(1, new Snack("Some snack"), 10, 1m);
+            //snackMachine.LoadSnacks(1, new Snack("Some snack"), 10, 1m);
+            snackMachine.LoadSnacks(1, new SnackPile(new Snack("Some snack"), 10, 1m));
 
             snackMachine.InsertMoney(Dollar);
 
@@ -78,6 +79,11 @@ namespace Ch04_Step2_MoreAbstract.UnitTests
             //snackMachine.GetQuantityOfSnacksInSlot(1).Should().Be(9);
             //snackMachine.GetSnacksInSlot(1).Should().Be(9);
             //snackMachine.GetPriceInSlot(1).Should().Be(9);
+
+            // 
+            // SnackPile 값 객체를 노출한다.
+            //
+            snackMachine.GetSnackPile(1).Quantity.Should().Be(9);
         }
         #endregion
     }

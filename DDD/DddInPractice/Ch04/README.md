@@ -44,6 +44,55 @@
        가변 도메인 객체가 노출되면 불변 규칙을 준수할 수 없다.
 
 ### Step 2. More Abstraction
+1. 추상화하기
+   - 리팩토링 전
+     ```cs
+     public class Slot : Entity
+     {
+          public virtual Snack Snack { get; set; }
+          public virtual int Quantity { get; set; }
+          public virtual decimal Price { get; set; }
+          ...
+     }
+     ```
+   - 리팩토링 후
+     ```cs
+     public class Slot : Entity
+     {
+          public virtual SnackPile SnackPile { get; set; }
+     }
+
+     public sealed class SnackPile : ValueObject<SnackPile>
+     {
+          public Snack Snack { get; }
+          public int Quantity { get; }
+          public decimal Price { get; }
+          ...
+     }
+     ```
+1. 값 객체는 불변이다
+   - 대입을 통해 교환한다(변경한다).
+   - 리팩토링 전
+     ```cs
+     slot.Quantity--;
+     ```
+   - 리팩토링 후
+     ```cs
+     
+     slot.SnackPile = slot.SnackPile.SubtractOne();
+
+     public sealed class SnackPile : ValueObject<SnackPile>
+     {
+          public SnackPile SubtractOne()
+          {
+               // 새로 생성한다.
+               return new SnackPile(Snack, Quantity - 1, Price);
+          }
+          ...
+     }
+     ```
+
+### Step 3. 
 1. 요구사항 구현
    - [ ] 스낵을 구매한 후 잔액을 반환한다.  
          Return the change

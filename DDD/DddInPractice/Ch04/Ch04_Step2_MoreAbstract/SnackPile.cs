@@ -12,16 +12,28 @@ namespace Ch04_Step2_MoreAbstract
         public int Quantity { get; }
         public decimal Price { get; }
 
-        protected SnackPile()
+        private SnackPile()
         {
 
         }
 
         public SnackPile(Snack snack, int quantity, decimal price)
         {
+            if (quantity < 0)
+                throw new InvalidOperationException(nameof(quantity));
+            if (price < 0)
+                throw new InvalidOperationException(nameof(price));
+            if (price % 0.01m > 0)
+                throw new InvalidOperationException(nameof(price));
+
             Snack = snack;
             Quantity = quantity;
             Price = price;
+        }
+
+        public SnackPile SubtractOne()
+        {
+            return new SnackPile(Snack, Quantity - 1, Price);
         }
 
         protected override bool EqualsCore(SnackPile other)
