@@ -11,7 +11,8 @@
    - [ ] [Writing Purely Functional Code In C#](./Functional/WritingPurelyFunctionalCodeInCSharp)
    - [ ] [Functional Programming in C#](./Functional/FPinCSharp)
 1. 로그(Log)
-   - [x] [NLog](./Log/NLog)
+   - [x] [NLog](./Infra/NLog)
+   - [ ] [Serilog](./Infra/Serilog)
 ---
 1. 블로그
    - [Mark Seemann](./Blogs/MarkSeemann)
