@@ -9,15 +9,19 @@ namespace Step_016_SpecificMinimumLevel
         static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-                            // 
-                            // 전역 최소 로그 수준
-                            //
-                            // 1. 전역 최소 수준 로그는 Information이다.
-                            //    "Information < Warning < Error < Fatal"만 로그를 출력한다.
-                            //.MinimumLevel.Verbose() 
                             .MinimumLevel.Verbose()
+
+                            // 
+                            // 출력 단위 로그 최소 수준
+                            //
+                            // 1. 전역 최소 수준에서 출력 단위로 로그 최소 수준을 지정한다.
+                            // 2. 출력 단위 로그 최소 수준은 Verbose.
+                            //    "Verbose < Debug < Information < Warning < Error < Fatal"
+                            //    전역 로그 취소 수준을 반영할 수 있는 기본 설정이다.
+                            //
                             .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Error)
-                            .WriteTo.File(path: "./Logs/LogFile.json")
+
+                            .WriteTo.File(path: "./Logs/LogFile.txt")
                             .CreateLogger();
 
             // Verbose < Debug < Information < Warning < Error < Fatal

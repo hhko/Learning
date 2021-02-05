@@ -1,7 +1,8 @@
 ﻿현재 우리는?
-1. 텍스트 형식만 있는 로그 내용(정규식 등을 이용한 검색)	-> 구조화
-1. 여러 로그 파일														-> 통합
-1. 운영 데이터베이스에 로그 저장									-> 분리
+1. 텍스트 형식만 있는 로그 내용(정규식 등을 이용한 검색) -> 구조화
+1. 여러 로그 파일										 -> 통합
+1. 운영 데이터베이스에 로그 저장						 -> 전용 저장소
+1. Fault Investigation/Resolution
 
 저장소
 	Elasticsearch
@@ -95,6 +96,9 @@ Visual Studio 도구
 
 사용자 정의 데이터(Enrichers)
 
+시간 UTC -> KST
+
+성능 Async Logging
 
 - [ ] 구조적 로그 | Kafka 토픽 항목 추가
 - [ ] Sink | Serilog.Sinks.Console 매뉴얼 확인
@@ -132,13 +136,30 @@ Visual Studio 도구
 - [ ] LoggerConfiguration | MinimumLevel |Is?
 - [ ] LoggerConfiguration | MinimumLevel |Override?
 - [ ] LoggerConfiguration | MinimumLevel |ControlledBy 동적 변경
+- [x] LoggerConfiguration | Filter | ByExcluding
+- [x] LoggerConfiguration | Filter | ByIncludingOnly
+- [ ] LoggerConfiguration | Filter | With
+- [ ] LoggerConfiguration | Filter | With<T>
+- [x] LoggerConfiguration | Filter | Matching | FromSource<T>   : ForContext
+- [x] LoggerConfiguration | Filter | Matching | FromSource		: ForContext
+- [x] LoggerConfiguration | Filter | Matching | WithProperty	: 키
+- [x] LoggerConfiguration | Filter | Matching | WithProperty	: 키, 값
+- [ ] LoggerConfiguration | Filter | Matching | WithProperty<T>
+- [x] LoggerConfiguration | Enrich | WithProperty
+- [ ] LoggerConfiguration | Enrich | Wrap
+- [ ] LoggerConfiguration | Enrich | AtLevel
+- [ ] LoggerConfiguration | Enrich | FromLogContext
+- [ ] LoggerConfiguration | Enrich | When
+- [ ] LoggerConfiguration | Enrich | With
+- [ ] LoggerConfiguration | Enrich | With<T>
+
 ---
 - [x] WriteTo
 - [x] Destructure
 - [x] MinimumLevel
 - [ ] ReadFrom
-- [ ] Filter
-- [ ] Enrich
+- [x] Filter
+- [x] Enrich
 - [ ] AuditTo
 
 
@@ -146,3 +167,44 @@ Visual Studio 도구
 최소 수준 : 출력 단위
 
 출력 구분
+
+의존성 주입(단위 테스트)
+
+
+- [ ] Modern Structured Logging With Serilog and Seq
+- [ ] Implementing Cross-cutting Concerns for ASP.NET Core Microservices
+- [ ] Effective Logging in ASP.NET Core
+- [ ] .NET Logging Done Right: An Opinionated Approach Using Serilog
+- [ ] Serilog Enrichers: Getting Common Information into Log Entries
+- [ ] Routing Serilog Log Entries with Filters and Formatters
+- [ ] Securely Handling Errors and Logging Security Events in ASP.NET and ASP.NET Core
+
+- [ ] Logging into Elasticsearch using Serilog and viewing logs in Kibana | .NET Core Tutorial
+- [ ] Keep Calm And Serilog Elasticsearch Kibana on .NET Core - 132. Spotkanie WG.NET
+- [ ] Centralized (and structured) logging with Serilog + Elastic
+- [ ] Structured Logging with AspNet Core using Serilog and Seq
+- [ ] Logging, Metrics and Events in ASP NET Core
+- [ ] Elasticsearch for Dot Net Developers
+- [ ] Start using simple logging mechanism in C# using a powerful Serilog framework.
+- [ ] Application Diagnostics in .NET Core 3.1
+- [ ] Microservices Logging
+- [ ] C# Logging with Serilog and Seq - Structured Logging Made Easy
+- [ ] Serilog: Instrumentation that Works for You
+- [ ] Diving into Elasticsearch with .NET
+- [ ] Getting started with Elasticsearch and .NET
+- [ ] Elasticsearch Suggesters
+
+- [ ] Serilog.Formatting.Compact.Reader
+- [ ] Analogy.LogViewer.Serilog Json
+
+- [ ] Serilog.Sinks.Http -> Logstash
+- [ ] Elastic.CommonSchema.Serilog
+
+NLog
+
+Discover
+Dashboard
+
+Serilog Wiki
+
+- http://blog.romanpavlov.me/logging-serilog-elk/

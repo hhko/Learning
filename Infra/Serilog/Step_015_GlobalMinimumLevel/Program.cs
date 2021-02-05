@@ -8,15 +8,18 @@ namespace Step_015_GlobalMinimumLevel
         static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
+                            
                             // 
-                            // 전역 최소 로그 수준
+                            // 전역 로그 최소 수준
                             //
-                            // 1. 전역 최소 수준 로그는 Information이다.
+                            // 1. 전역 로그 최소 수준은 Information이다.
                             //    "Information < Warning < Error < Fatal"만 로그를 출력한다.
+                            //
                             //.MinimumLevel.Verbose() 
                             .MinimumLevel.Error()
+
                             .WriteTo.Console()
-                            .WriteTo.File(path: "./Logs/LogFile.json")
+                            .WriteTo.File(path: "./Logs/LogFile.txt")
                             .CreateLogger();
 
             // Verbose < Debug < Information < Warning < Error < Fatal
