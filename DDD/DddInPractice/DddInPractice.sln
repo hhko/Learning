@@ -56,29 +56,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch04", "Ch04", "{C054C6BB-6
 		Ch04\README.md = Ch04\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step1_Aggregate", "Ch04\Ch04_Step1_Aggregate\Ch04_Step1_Aggregate.csproj", "{235B6683-D6E9-46CB-8634-851F9FC4CD69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch04_Step1_Aggregate", "Ch04\Ch04_Step1_Aggregate\Ch04_Step1_Aggregate.csproj", "{235B6683-D6E9-46CB-8634-851F9FC4CD69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step1_Aggregate.UnitTests", "Ch04\Ch04_Step1_Aggregate.UnitTests\Ch04_Step1_Aggregate.UnitTests.csproj", "{6D70A7CA-8FF0-47FA-A8D8-BB7688133918}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch04_Step1_Aggregate.UnitTests", "Ch04\Ch04_Step1_Aggregate.UnitTests\Ch04_Step1_Aggregate.UnitTests.csproj", "{6D70A7CA-8FF0-47FA-A8D8-BB7688133918}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03_Step1_UiLayer", "Ch03\Ch03_Step1_UiLayer\Ch03_Step1_UiLayer.csproj", "{28FB9EF7-7B4E-4BF0-971C-62B7A4375E86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03_Step1_UiLayer", "Ch03\Ch03_Step1_UiLayer\Ch03_Step1_UiLayer.csproj", "{28FB9EF7-7B4E-4BF0-971C-62B7A4375E86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03_Step1_UiLayer.UnitTests", "Ch03\Ch03_Step1_UiLayer.UnitTests\Ch03_Step1_UiLayer.UnitTests.csproj", "{FE330020-9F13-4C19-82C6-876C056DAD98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03_Step1_UiLayer.UnitTests", "Ch03\Ch03_Step1_UiLayer.UnitTests\Ch03_Step1_UiLayer.UnitTests.csproj", "{FE330020-9F13-4C19-82C6-876C056DAD98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03_Step1_UiLayer.Wpf", "Ch03\Ch03_Step1_UiLayer.Wpf\Ch03_Step1_UiLayer.Wpf.csproj", "{C1EB4AC5-2302-4BF5-8EAD-196909F171F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03_Step1_UiLayer.Wpf", "Ch03\Ch03_Step1_UiLayer.Wpf\Ch03_Step1_UiLayer.Wpf.csproj", "{C1EB4AC5-2302-4BF5-8EAD-196909F171F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03_Step2_PersistenceLayer.Wpf", "Ch03\Ch03_Step2_PersistenceLayer.Wpf\Ch03_Step2_PersistenceLayer.Wpf.csproj", "{A617BCF2-F607-485C-9D4D-9A9E39CFA2E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03_Step2_PersistenceLayer.Wpf", "Ch03\Ch03_Step2_PersistenceLayer.Wpf\Ch03_Step2_PersistenceLayer.Wpf.csproj", "{A617BCF2-F607-485C-9D4D-9A9E39CFA2E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03_Step2_PersistenceLayer.UnitTests", "Ch03\Ch03_Step2_PersistenceLayer.UnitTests\Ch03_Step2_PersistenceLayer.UnitTests.csproj", "{8C2ED192-5F94-4C78-9FB6-8289466B2FB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03_Step2_PersistenceLayer.UnitTests", "Ch03\Ch03_Step2_PersistenceLayer.UnitTests\Ch03_Step2_PersistenceLayer.UnitTests.csproj", "{8C2ED192-5F94-4C78-9FB6-8289466B2FB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03_Step2_PersistenceLayer", "Ch03\Ch03_Step2_PersistenceLayer\Ch03_Step2_PersistenceLayer.csproj", "{01915A1B-3F49-47BD-8DAB-6071BD03706C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03_Step2_PersistenceLayer", "Ch03\Ch03_Step2_PersistenceLayer\Ch03_Step2_PersistenceLayer.csproj", "{01915A1B-3F49-47BD-8DAB-6071BD03706C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step1_Aggregate.Wpf", "Ch04\Ch04_Step1_Aggregate.Wpf\Ch04_Step1_Aggregate.Wpf.csproj", "{D50186DF-C289-4E57-93D8-DBCF86AD8612}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch04_Step1_Aggregate.Wpf", "Ch04\Ch04_Step1_Aggregate.Wpf\Ch04_Step1_Aggregate.Wpf.csproj", "{D50186DF-C289-4E57-93D8-DBCF86AD8612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step2_MoreAbstract.Wpf", "Ch04\Ch04_Step2_MoreAbstract.Wpf\Ch04_Step2_MoreAbstract.Wpf.csproj", "{0753198B-4772-4AB0-8E5A-8687A24ACBCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch04_Step2_MoreAbstract.Wpf", "Ch04\Ch04_Step2_MoreAbstract.Wpf\Ch04_Step2_MoreAbstract.Wpf.csproj", "{0753198B-4772-4AB0-8E5A-8687A24ACBCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step2_MoreAbstract", "Ch04\Ch04_Step2_MoreAbstract\Ch04_Step2_MoreAbstract.csproj", "{6A78A1BD-A404-4A0E-99DA-F080E6BC6713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch04_Step2_MoreAbstract", "Ch04\Ch04_Step2_MoreAbstract\Ch04_Step2_MoreAbstract.csproj", "{6A78A1BD-A404-4A0E-99DA-F080E6BC6713}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step2_MoreAbstract.UnitTests", "Ch04\Ch04_Step2_MoreAbstract.UnitTests\Ch04_Step2_MoreAbstract.UnitTests.csproj", "{C289F0E7-108C-455F-9D4C-3FD0D974F737}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch04_Step2_MoreAbstract.UnitTests", "Ch04\Ch04_Step2_MoreAbstract.UnitTests\Ch04_Step2_MoreAbstract.UnitTests.csproj", "{C289F0E7-108C-455F-9D4C-3FD0D974F737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step3_MissingVoc", "Ch04\Ch04_Step3_MissingVoc\Ch04_Step3_MissingVoc.csproj", "{F967D6ED-3052-4258-A68C-4B653011BF4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step3_MissingVoc.UnitTests", "Ch04\Ch04_Step3_MissingVoc.UnitTests\Ch04_Step3_MissingVoc.UnitTests.csproj", "{E6136681-F9A8-4823-A5F3-1B245E31A20C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04_Step3_MissingVoc.Wpf", "Ch04\Ch04_Step3_MissingVoc.Wpf\Ch04_Step3_MissingVoc.Wpf.csproj", "{ED59A7F7-648D-4368-9B57-BA251CA9690C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -190,6 +196,18 @@ Global
 		{C289F0E7-108C-455F-9D4C-3FD0D974F737}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C289F0E7-108C-455F-9D4C-3FD0D974F737}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C289F0E7-108C-455F-9D4C-3FD0D974F737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F967D6ED-3052-4258-A68C-4B653011BF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F967D6ED-3052-4258-A68C-4B653011BF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F967D6ED-3052-4258-A68C-4B653011BF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F967D6ED-3052-4258-A68C-4B653011BF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6136681-F9A8-4823-A5F3-1B245E31A20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6136681-F9A8-4823-A5F3-1B245E31A20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6136681-F9A8-4823-A5F3-1B245E31A20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6136681-F9A8-4823-A5F3-1B245E31A20C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED59A7F7-648D-4368-9B57-BA251CA9690C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED59A7F7-648D-4368-9B57-BA251CA9690C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED59A7F7-648D-4368-9B57-BA251CA9690C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED59A7F7-648D-4368-9B57-BA251CA9690C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -221,6 +239,9 @@ Global
 		{0753198B-4772-4AB0-8E5A-8687A24ACBCE} = {C054C6BB-6BB8-4BCD-BEE0-B9A943580889}
 		{6A78A1BD-A404-4A0E-99DA-F080E6BC6713} = {C054C6BB-6BB8-4BCD-BEE0-B9A943580889}
 		{C289F0E7-108C-455F-9D4C-3FD0D974F737} = {C054C6BB-6BB8-4BCD-BEE0-B9A943580889}
+		{F967D6ED-3052-4258-A68C-4B653011BF4A} = {C054C6BB-6BB8-4BCD-BEE0-B9A943580889}
+		{E6136681-F9A8-4823-A5F3-1B245E31A20C} = {C054C6BB-6BB8-4BCD-BEE0-B9A943580889}
+		{ED59A7F7-648D-4368-9B57-BA251CA9690C} = {C054C6BB-6BB8-4BCD-BEE0-B9A943580889}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {57A3DFC7-3ABC-49C9-BC69-B0A2B6D03FD7}

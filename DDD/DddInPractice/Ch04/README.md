@@ -33,7 +33,12 @@
      - 접근(불변식 보호) : Root Entity을 통해서 자식 Entity을 접근해야 한다(Value Object는 불변 객체이기 때문에 노출 가능하다).
        - 추상화가 더 필요할 때 : Entity의 개별 속성 접근을 위한 메서드를 정의한다.
        - 추상화 방법 : 새로운 Value Object 발굴을 고려해야 한다.
-     - 저장소 최소 단위(데이터 일관성 유지) : 
+     - 저장소 최소 단위(데이터 일관성 유지) 
+   - 규칙
+     - 개념적 묶음이다 : Fully encapsulated aggregate
+     - Entitiy을 노출하지 않는다 : Not exposing internal Slot entity
+     - Value Object는 노출할 수 있다 : Exposing SnackPile value object instead
+     - Biz.을 추상화한다 : New abstraction to resolve the awkwardness
 1. Aggregate Root 선별 기준
    - Entity 수명(Lifespan)의 부모다.
    - 일관성(불변식, 트랜잭션)이 최소 단위다.
@@ -92,16 +97,39 @@
      }
      ```
 
-### Step 3. 
+### Step 3. 요구사항
 1. 요구사항 구현
-   - [ ] 스낵을 구매한 후 잔액을 반환한다.  
-         Return the change
-   - [ ] 스낵 구매를 위해 입금한 돈이 충분한지 확인한다.  
-         Check if inserted money is enough.
-   - [ ] Slot에 스낵이 비워졌는지 확인하다.  
-         Check if the slot isn’t empty.
-   - [ ] 충분한 잔액이 있는지 확인한다.  
-         Check if there’s enough change.
+   - 구매할 수 있는 Snack이 있어야 한다.  
+     Check if the slot isn’t empty.  
+     Snack pile is not empty.  
+     - 단위 테스트 : `Cannot_make_purchage_when_there_is_no_snacks`
+   - 스낵 구매를 위한 충분한 돈이 투입되어야 한다.  
+     Check if inserted money is enough.  
+     Inserted money is sufficient.  
+     - 단위 테스트 : `Cannot_make_purchase_if_not_enough_money_inserted`
+   - 스낵을 구매한 후 잔액을 반환할 수 있다.  
+     Return the change  
+     - 단위 테스트 : `Snack_machine_returns_money_with_highest_denomination_first`
+     - 단위 테스트 : `After_purchase_change_is_returned`
+   - 충분한 잔액이 있어야 한다.  
+     Check if there’s enough change.  
+     The amount of money inside is sufficient to return the change.  
+     - 단위 테스트 : `Cannot_buy_snack_if_not_enough_change`
+   - **발굴한 새 요구사항 : 작은 동전과 지폐를 보유해야 한다.**    
+     Retain small conins and notes
+1. 돈
+   - 잔액 vs. ~~투입한 금액~~ => 잔액 vs. 투입한 **동일한** 금액
+   - 리팩토링 전
+     ```cs
+     public virtual Money MoneyInside { get; protected set; }
+     public virtual Money MoneyInTransaction { get; protected set; }
+     ```
+   - 리팩토링 후
+     ```cs
+     public virtual Money MoneyInside { get; protected set; }
+     public virtual decimal MoneyInTransaction { get; protected set; }
+     ```
+
 
 
 ### Step 2.

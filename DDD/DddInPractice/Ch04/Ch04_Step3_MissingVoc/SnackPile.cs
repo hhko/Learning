@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ch04_Step2_MoreAbstract
+namespace Ch04_Step3_MissingVoc
 {
     public sealed class SnackPile : ValueObject<SnackPile>
     {

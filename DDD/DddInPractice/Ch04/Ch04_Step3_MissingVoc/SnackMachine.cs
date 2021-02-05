@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using static Ch04_Step2_MoreAbstract.Money;
+using static Ch04_Step3_MissingVoc.Money;
 
-namespace Ch04_Step2_MoreAbstract
+namespace Ch04_Step3_MissingVoc
 {
     // 1. sealed
     // 2. virtual
@@ -17,27 +17,26 @@ namespace Ch04_Step2_MoreAbstract
     public class SnackMachine : AggregateRoot
     {
         public virtual Money MoneyInside { get; protected set; }
-        public virtual Money MoneyInTransaction { get; protected set; }
 
         //
-        // 문제점
+        // 투입한 금액 반환 vs. 투입한 "동일한" 금액 반환
+        //                     - 잔액을 최우선적으로 보관한다.
+        //                     - 투입한 동일한 단위로 반환할 필요가 없다(동일한 금액이면 된다).
         //
-        // - IList가 노출되면 Slot은 3개만 존재한다(불변 규칙)을 위반할 수 있다.  
-        // - Aggregate Root을 거치지 않고 가변 객체 Slot `Entity`가 노출된다.
-        //   가변 도메인 객체가 노출되면 불변 규칙을 준수할 수 없다.
+        //public virtual Money MoneyInTransaction { get; protected set; }
+        public virtual decimal MoneyInTransaction { get; protected set; }
+
         //public virtual IList<Slot> Slots { get; protected set; }
         protected virtual IList<Slot> Slots { get; }
 
         public SnackMachine()
         {
             MoneyInside = None;
-            MoneyInTransaction = None;
+            //MoneyInTransaction = None;
+            MoneyInTransaction = 0;
 
             Slots = new List<Slot>
             {
-                //new Slot(this, 1, null, 0, 0m),
-                //new Slot(this, 2, null, 0, 0m),
-                //new Slot(this, 3, null, 0, 0m)
                 new Slot(this, 1),
                 new Slot(this, 2),
                 new Slot(this, 3)
@@ -46,7 +45,6 @@ namespace Ch04_Step2_MoreAbstract
 
         public virtual SnackPile GetSnackPile(int position)
         {
-            //return Slots.Single(x => x.Position == position).SnackPile;
             return GetSlot(position).SnackPile;
         }
 
@@ -64,18 +62,27 @@ namespace Ch04_Step2_MoreAbstract
             if (!coinsAndNotes.Contains(money))
                 throw new InvalidOperationException();
 
-            MoneyInTransaction += money;
+            //MoneyInTransaction += money;
+            MoneyInTransaction += money.Amount;
+            MoneyInside += money;
         }
 
         public virtual void ReturnMoney()
         {
-            MoneyInTransaction = None;
+            ////MoneyInTransaction = None;
+            //MoneyInTransaction = 0;
+
+            Money moneyToReturn = MoneyInside.Allocate(MoneyInTransaction);
+            MoneyInside -= moneyToReturn;
+            MoneyInTransaction = 0;
         }
 
         public virtual void BuySnack(int position)
         {
-            //Slot slot = Slots.Single(x => x.Position == position);
             Slot slot = GetSlot(position);
+            //if (slot.SnackPile.Price > MoneyInTransaction.Amount)
+            if (slot.SnackPile.Price > MoneyInTransaction)
+                throw new InvalidOperationException();
 
             //
             // 불변 값 객체
@@ -83,23 +90,26 @@ namespace Ch04_Step2_MoreAbstract
             //slot.Quantity--;
             slot.SnackPile = slot.SnackPile.SubtractOne();
 
-            MoneyInside += MoneyInTransaction;
-            MoneyInTransaction = None;
-        }
+            Money change = MoneyInside.Allocate(MoneyInTransaction - slot.SnackPile.Price);
+            if (change.Amount < MoneyInTransaction - slot.SnackPile.Price)
+                throw new InvalidOperationException();
 
-        //public virtual void LoadSnacks(int position, Snack snack, int quantity, decimal price)
-        //{
-        //    Slot slot = Slots.Single(x => x.Position == position);
-        //    slot.Snack = snack;
-        //    slot.Quantity = quantity;
-        //    slot.Price = price;
-        //}
+            MoneyInside -= change;
+
+            //MoneyInside += MoneyInTransaction;
+            //MoneyInTransaction = None;
+            MoneyInTransaction = 0;
+        }
 
         public virtual void LoadSnacks(int position, SnackPile snackPile)
         {
-            //Slot slot = Slots.Single(x => x.Position == position);
             Slot slot = GetSlot(position);
             slot.SnackPile = snackPile;
+        }
+
+        public virtual void LoadMoney(Money money)
+        {
+            MoneyInside += money;
         }
     }
 }
