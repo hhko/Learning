@@ -5,6 +5,7 @@
 - [2장. Value Object vs. Entity](./Ch02)
 - [3장. UI & Persistence Layer](./Ch03)
 - [4장. Aggregate](./Ch04)
+- [5장. Repository](./Ch05)
 
 ## 요구사항
 - 스낵머신에 돈을 투입한다.
