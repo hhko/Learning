@@ -21,8 +21,7 @@ namespace Ch05_Step1_Repo
                 y.Map(x => x.Price);
 
                 //
-                // 다른 영역의 AggregateRoot이다.
-                // 함께 데이터를 읽어 들이지 않는다.
+                // 다른 영역의 AggregateRoot는 함께 읽어 들이지 않는다.
                 //
                 y.References(x => x.Snack).Not.LazyLoad();
             });
