@@ -1,210 +1,163 @@
-﻿현재 우리는?
-1. 텍스트 형식만 있는 로그 내용(정규식 등을 이용한 검색) -> 구조화
-1. 여러 로그 파일										 -> 통합
-1. 운영 데이터베이스에 로그 저장						 -> 전용 저장소
-1. Fault Investigation/Resolution
+# learning-serilog
+Serilog 배움 그리고 설렘
 
-저장소
-	Elasticsearch
-	RavenDB
-	Loki?
-	influxdb
-	SQLite : https://marketplace.visualstudio.com/items?itemName=ErikEJ.SQLServerCompactSQLiteToolbox
+- [x] Formatter 이해하기(Json, Ealsticsearch) : [Writing logs to Elasticsearch with Fluentd using Serilog in ASP.NET Core](https://andrewlock.net/writing-logs-to-elasticsearch-with-fluentd-using-serilog-in-asp-net-core/)
+  - CompactJsonFormatter
+  - ElasticsearchJsonFormatter
+- [ ]   
+  - logstash 플러그인 : `RUN logstash-plugin install logstash-input-http`
+  - logst
+- [ ] 로그 Level 단위로 출력 파일 분리하기 : [Serilog and ASP.NET Core: Split Log Data Using Serilog FilterExpression](https://vmsdurano.com/serilog-and-asp-net-core-split-log-data-using-filterexpression/)
 
-로그 타입
-	ILogger
-	Log.Logger		// 싱글톤
+## 목차
+1. **[데이터](#1-데이터)**
+1. **[기능](#2-기능)**
+1. **[단위 테스트](#3-단위-테스트)**
+1. **[패키지](#4-패키지)**
+1. **[참고 사이트](#5-참고-사이트)**
 
-로거 만들기
-new LoggerConfiguration()
-                .CreateLogger();
+<br/>
 
-출력
-	콘솔 .WriteTo.Console()
-	파일 .WriteTo.File("./Logs/LogFile.txt")
-	Http
-	
-출력 템플릿 내재화
-	outputTemplate
-	
-출력 제한 조건
-	파일 크기 fileSizeLimitBytes : (1GB)
-	파일 생성 rollingInterval : (Infinite), Year, Month, Day, Hour, Minute
-	파일 개수 retainedFileCountLimit : (31)
-	
-환경 설정
-	코드
-	파일
-		Serilog.Settings.Configuration 
-			var configuration = new ConfigurationBuilder()
-				.AddJsonFile("appsettings.json")
-				.Build();
-			.ReadFrom.Configuration(configuration)
+## 1. 데이터
+### 형식
+- [x] Json : Serilog
+- [ ] Json : NLog
 
-		Serilog.Settings.AppSettings 
-			.ReadFrom.AppSettings() 
-			App.config
+### Encode
+- [x] UTF-8 : 기본
+- [ ] UTF-8 그 외
 
-데이터 타입
-	Scalar 데이터 타입 : nullable?
-	Collection/Object 
-		IEnumerable
-		Dictionary<Scalar 타입, ?>
-		ToString()
-	
-	destructuring operator
+### 전송
+- [x] Console : Serilog.Sinks.Console
+- [x] File : Serilog.Sinks.File
+- [x] HTTP : Serilog.Sinks.Http
+- [ ] TCP
 
-수준
-수준 필터
+### 시간
+- [x] UTC `@timestamp`
+- [x] KST `events[0]:@timestamp`
+- [ ] 사용자 정의
+- [ ] 기본 시간 변경
 
-형식
-	{Named Property} <- Property Value : RenderedMessage : .... 구조.구조.Xyz:"값"
+### Host
+- [x] IP : host
+- [x] MachineName : `events[0]:host:name`, **WithMachineName**
+- [x] UserName : `events[0]:_metadata:user_name`, **WithUserName**
 
+### 프로세스
+- [x] Process Name : `events[0]:process:name` (WithProcessName)
+- [x] Process Id : `events[0]:process:pid` (WithProcessId)
+- [x] Thread Name : (WithProcessName, WithProperty(ThreadNameEnricher.ThreadNamePropertyName, ...))
+- [x] Thread Id : `events[0]:process:thread:id` (WithProcessId)
+- [x] Log Level : `events[0]:log.evel`
+- [x] Log Message : `events[0]:message`, `_metadata:...` [+소문자+]
+  ```json
+  "_metadata" => {
+     "person" => {
+        "age" => "2020",
+        "$type" => "Person"
+     }
+  }
+  ```
+- [x] Exception : `events[0]:error:...` (WithExceptionDetails)
 
+### 필드
+- [x] 전역 변수 | 시스템 환경 변수 : `events[0]:_metadata:xxx`, **WithEnvironment**
+- [x] 전역 변수 | 사용자 변수 : `events[0]:_metadata:xxx`, **WithProperty**
+- [x] 전역 변수 | 함수 : `events[0]:_metadata:xxx`, **WithFunction**
+- [x] 전역 변수 | LogEvent 사용자 함수 : `events[0]:_metadata:xxx`, **WithFunction**
+- [x] 전역 변수 | 직접 구현 : [Creating custom serilog enrichers](https://www.ctrlaltdan.com/2018/08/14/custom-serilog-enrichers/)
+- [x] 영역 변수 | 구분 : `events[0]:_metadata:구분키`, **Enrich.FromLogContext(), using (LogContext.PushProperty("구분키", 구분값))**
+- [x] 영역 변수 | 성능(시간) : `events[0]:_metadata:outcome`, **using (Operation.Time("Submitting payment for {OrderId}", "1234"))**
+- [ ] 영역 변수 | 공통
 
+<br/>
 
-버전
-	.NET Framework
-	.NET Core
-	.NET 					5
+## 2. 기능
+### 서비스
+- [x] 로그 Elasticsearch 출력 형식 : **new EcsTextFormatter**
+- [ ] **[+진행 : 로그 콘솔/파일 출력 형식+]**
+- [ ] **[+진행 : 필드 추가+]**
+- [ ] 환경 설정 읽기
+- [ ] 환경 설정 다시 읽기
+- [ ] 로그 수준 활성화
+- [ ] 로그 수준 per Sinks 활성화 
+- [ ] 로그 수준 동적 활성화 : https://nblumhardt.com/2017/10/logging-filter-switch/
+- [ ] 전송 실패 확인?
+- [ ] 동적 로그 파일 이름
+- [ ] 로그 파일 출력 형식 : 콘솔, 파일
+- [ ] 로그 파일 구분
+- [ ] 로그 파일 전송 구분 : 로그, 작업, 연산 결과
 
-	
-단위 테스트
+### Collectbeat
+- [x] Pipeline 구분 : beats, serilogs  
+  - pipelines.yml : `7700-listen-beats`, `7701-listen-serilogs`
+    ```yml
+    - pipeline.id: 7700-listen-beats
+      pipeline.workers: 4
+      queue.type: persisted
+      queue.max_bytes: 1gb
+      path.config: "/usr/share/logstash/pipeline/7700-listen-beats.conf"
+    - pipeline.id: 7701-listen-serilogs
+      pipeline.workers: 4
+      queue.type: persisted
+      queue.max_bytes: 1gb
+      path.config: "/usr/share/logstash/pipeline/7701-listen-serilogs.conf"
+    - pipeline.id: alive
+      pipeline.workers: 1
+      path.config: "/usr/share/logstash/pipeline/alive.conf"
+    ```
+  - 7701-listen-serilogs.conf
+- [x] Pipeline 실행 확인  
+  ![image](/uploads/d034750b05ae050cf788ba49841a89f6/image.png)
+- [ ] **[+진행 : Kafka 토픽 구분+]** : `serilog.{솔루션명}.{버전}`
+  - serilog.daq.45
 
+### Kafka
+### Logstash-consumer
 
-로그 Level 가이드
+### Elasticsearch
+### Kibana
 
-코드 템플릿
-	프로그램 기본 코드(환경 설정 포함)
-	Actor 반복
-	클래스 반복
-	Fody or Source Generator
+<br/>
 
+## 3. 단위 테스트
+- [Elastic.CommonSchema.Serilog.Tests](https://github.com/elastic/ecs-dotnet/tree/master/tests/Elastic.CommonSchema.Serilog.Tests)
+- [Elasticsearch.Extensions.Logging.IntegrationTests](https://github.com/elastic/ecs-dotnet/tree/master/tests/Elasticsearch.Extensions.Logging.IntegrationTests)
 
+<br/>
 
-- [x] Serilog, 2.10.0
-- [x] Serilog.Sinks.Console, 3.1.1
-- [x] Serilog.Sinks.File, 4.1.0
-- [ ] Serilog.Sinks.SQLite, 5.0.0
-- [ ] Serilog.Formatting.Compact, 1.1.0
-
-
-Visual Studio 도구 
-- https://github.com/Suchiman/SerilogAnalyzer
-
-사용자 정의 출력(Sinks)  
-
-사용자 정의 데이터(Enrichers)
-
-시간 UTC -> KST
-
-성능 Async Logging
-
-- [ ] 구조적 로그 | Kafka 토픽 항목 추가
-- [ ] Sink | Serilog.Sinks.Console 매뉴얼 확인
-- [ ] Sink | Serilog.Sinks.File 매뉴얼 확인
-- [ ] Sink | Serilog.Sinks.File 로그 파일명 동적 지정?
-- [ ] Sink | Serilog.Sinks.File Rolling 로그 파일명 동적 지정?
-- [ ] Sink | Serilog.Sinks.SQLite 내용 확인 불가?
-- [ ] Tool | SerilogAnalyzer 세부 내용 확인
-- [x] 출력 매개변수 | string path,
-- [x] 출력 매개변수 | string outputTemplate = "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
-- [x] 출력 매개변수 | RollingInterval rollingInterval = RollingInterval.Infinite,
-- [x] 출력 매개변수 | int? retainedFileCountLimit = 31,
-- [x] 출력 매개변수 | ITextFormatter formatter, // JsonFormatter
-- [ ] 출력 매개변수 | LogEventLevel restrictedToMinimumLevel = LogEventLevel.Verbose,
-- [ ] 출력 매개변수 | IFormatProvider formatProvider = null,
-- [ ] 출력 매개변수 | long? fileSizeLimitBytes = 1073741824,
-- [ ] 출력 매개변수 | LoggingLevelSwitch levelSwitch = null,
-- [ ] 출력 매개변수 | bool buffered = false,
-- [ ] 출력 매개변수 | bool shared = false,
-- [ ] 출력 매개변수 | TimeSpan? flushToDiskInterval = null,
-- [ ] 출력 매개변수 | bool rollOnFileSizeLimit = false,
-- [ ] 출력 매개변수 | Encoding encoding = null,
-- [ ] 출력 매개변수 | FileLifecycleHooks hooks = null);
-- [x] LoggerConfiguration | Destructure | ByTransforming
-- [ ] LoggerConfiguration | Destructure | ByTransforming<T>
-- [ ] LoggerConfiguration | Destructure | ByTransformingWhere<T>
-- [ ] LoggerConfiguration | Destructure | ToMaximumCollectionCount
-- [ ] LoggerConfiguration | Destructure | ToMaximumDepth
-- [ ] LoggerConfiguration | Destructure | ToMaximumStringLength
-- [ ] LoggerConfiguration | Destructure | With
-- [ ] LoggerConfiguration | Destructure | With<T>
-- [ ] LoggerConfiguration | Destructure | 형식(:l, :0.00, ...)
-- [ ] LoggerConfiguration | MinimumLevel | 전역 최소 수준
-- [ ] LoggerConfiguration | MinimumLevel | 특정 최소 수준
-- [ ] LoggerConfiguration | MinimumLevel |Is?
-- [ ] LoggerConfiguration | MinimumLevel |Override?
-- [ ] LoggerConfiguration | MinimumLevel |ControlledBy 동적 변경
-- [x] LoggerConfiguration | Filter | ByExcluding
-- [x] LoggerConfiguration | Filter | ByIncludingOnly
-- [ ] LoggerConfiguration | Filter | With
-- [ ] LoggerConfiguration | Filter | With<T>
-- [x] LoggerConfiguration | Filter | Matching | FromSource<T>   : ForContext
-- [x] LoggerConfiguration | Filter | Matching | FromSource		: ForContext
-- [x] LoggerConfiguration | Filter | Matching | WithProperty	: 키
-- [x] LoggerConfiguration | Filter | Matching | WithProperty	: 키, 값
-- [ ] LoggerConfiguration | Filter | Matching | WithProperty<T>
-- [x] LoggerConfiguration | Enrich | WithProperty
-- [ ] LoggerConfiguration | Enrich | Wrap
-- [ ] LoggerConfiguration | Enrich | AtLevel
-- [ ] LoggerConfiguration | Enrich | FromLogContext
-- [ ] LoggerConfiguration | Enrich | When
-- [ ] LoggerConfiguration | Enrich | With
-- [ ] LoggerConfiguration | Enrich | With<T>
-
+## 4. 패키지
+- [x] Serilog
+- [x] Serilog.Enrichers.Context
+- [x] Serilog.Sinks.Console
+- [x] Serilog.Sinks.File
+- [ ] Serilog.Sinks.Http
+  - [x] Http
+  - [ ] DurableHttpUsingTimeRolledBuffers
+  - [ ] DurableHttpUsingFileSizeRolledBuffers
+  - [ ] ExponentialBackoffConnectionSchedule
+- [x] Elastic.CommonSchema.Serilog : Serilog.Enrichers.Process, Serilog.Enrichers.Thread, Serilog.Exceptions
+- [x] SerilogTimings : SerilogMetrics
+- [ ] ~~Elastic.Apm.SerilogEnricher~~ : 출력 안됨
+- [ ] ~~Serilog.Enrichers.CorrelationId~~ : 출력 안됨
+- [ ] ~~Serilog.Enrichers.Span~~ : 출력 안됨(.NET 5.0 이상)
+- [ ] ~~Serilog.Exceptions~~
+- [ ] ~~SerilogMetrics~~
 ---
-- [x] WriteTo
-- [x] Destructure
-- [x] MinimumLevel
-- [ ] ReadFrom
-- [x] Filter
-- [x] Enrich
-- [ ] AuditTo
+- [ ] Serilog.Sinks.Async
+- [ ] Serilog.Sinks.PeriodicBatching
+- [ ] Serilog.Sinks.XUnit
+- [ ] Serilog.Sinks.TestCorrelator
+- [ ] Elastic.Elasticsearch.Xunit
 
+<br/>
 
-최소 수준 : 전역
-최소 수준 : 출력 단위
-
-출력 구분
-
-의존성 주입(단위 테스트)
-
-
-- [ ] Modern Structured Logging With Serilog and Seq
-- [ ] Implementing Cross-cutting Concerns for ASP.NET Core Microservices
-- [ ] Effective Logging in ASP.NET Core
-- [ ] .NET Logging Done Right: An Opinionated Approach Using Serilog
-- [ ] Serilog Enrichers: Getting Common Information into Log Entries
-- [ ] Routing Serilog Log Entries with Filters and Formatters
-- [ ] Securely Handling Errors and Logging Security Events in ASP.NET and ASP.NET Core
-
-- [ ] Logging into Elasticsearch using Serilog and viewing logs in Kibana | .NET Core Tutorial
-- [ ] Keep Calm And Serilog Elasticsearch Kibana on .NET Core - 132. Spotkanie WG.NET
-- [ ] Centralized (and structured) logging with Serilog + Elastic
-- [ ] Structured Logging with AspNet Core using Serilog and Seq
-- [ ] Logging, Metrics and Events in ASP NET Core
-- [ ] Elasticsearch for Dot Net Developers
-- [ ] Start using simple logging mechanism in C# using a powerful Serilog framework.
-- [ ] Application Diagnostics in .NET Core 3.1
-- [ ] Microservices Logging
-- [ ] C# Logging with Serilog and Seq - Structured Logging Made Easy
-- [ ] Serilog: Instrumentation that Works for You
-- [ ] Diving into Elasticsearch with .NET
-- [ ] Getting started with Elasticsearch and .NET
-- [ ] Elasticsearch Suggesters
-
-- [ ] Serilog.Formatting.Compact.Reader
-- [ ] Analogy.LogViewer.Serilog Json
-
-- [ ] Serilog.Sinks.Http -> Logstash
-- [ ] Elastic.CommonSchema.Serilog
-
-NLog
-
-Discover
-Dashboard
-
-Serilog Wiki
-
-- http://blog.romanpavlov.me/logging-serilog-elk/
+## 5. 참고 사이트
+- [Andrew Lock | .NET Escapades](https://andrewlock.net/)
+---
+- [Nicholas Blumhardt](https://nblumhardt.com/)
+---
+- [x] [Creating custom serilog enrichers](https://www.ctrlaltdan.com/2018/08/14/custom-serilog-enrichers/)
+  - LoggerEnrichmentConfiguration 확장 메서드
+  - ILogEventEnricher 인터페이스 구현
