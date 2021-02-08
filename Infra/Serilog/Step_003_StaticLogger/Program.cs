@@ -16,6 +16,11 @@ namespace Step_003_StaticLogger
             //
             Log.Logger = log;
             Log.Information("Hello World");
+
+            //
+            // 로그 인스턴스 파괴
+            //
+            Log.CloseAndFlush();
         }
     }
 }

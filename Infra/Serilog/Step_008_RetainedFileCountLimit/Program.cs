@@ -28,6 +28,8 @@ namespace Step_008_RetainedFileCountLimit
 
             Log.Logger = log;
             Log.Information("Hello World");
+
+            Log.CloseAndFlush();
         }
     }
 }

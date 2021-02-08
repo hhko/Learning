@@ -62,6 +62,8 @@ namespace Step_010_CollectionAndObject
                 Blue = 19
             };
             Log.Information("Favorites : {Color}", faveColor);
+
+            Log.CloseAndFlush();
         }
     }
 

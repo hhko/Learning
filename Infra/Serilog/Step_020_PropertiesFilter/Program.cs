@@ -70,6 +70,8 @@ namespace Step_019_PropertiesFilter
 
             Foo foo = new Foo();
             foo.DoSomething();
+
+            Log.CloseAndFlush();
         }
     }
 

@@ -87,6 +87,8 @@ namespace Step_018_MatchingFilter
 
             Foo foo = new Foo();
             foo.DoSomething();
+
+            Log.CloseAndFlush();
         }
     }
 

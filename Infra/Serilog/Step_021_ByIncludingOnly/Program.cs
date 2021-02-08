@@ -71,6 +71,8 @@ namespace Step_020_ByIncludingOnly
 
             Foo foo = new Foo();
             foo.DoSomething();
+
+            Log.CloseAndFlush();
         }
     }
 

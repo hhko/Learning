@@ -39,6 +39,8 @@ namespace Step_016_SpecificMinimumLevel
             Log.Warning("This is Warning with {Name}", 4);
             Log.Error("This is Error with {Name}", 5);
             Log.Fatal("This is Fatal with {Name}", 6);
+
+            Log.CloseAndFlush();
         }
     }
 }

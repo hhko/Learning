@@ -18,6 +18,8 @@ namespace Step_005_OutputTemplate
 
             Log.Logger = log;
             Log.Information("Hello World");
+
+            Log.CloseAndFlush();
         }
     }
 }

@@ -48,6 +48,8 @@ namespace Step_018_ContextValue
 
             Foo foo = new Foo();
             foo.DoSomething();
+
+            Log.CloseAndFlush();
         }
     }
 

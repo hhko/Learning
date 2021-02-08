@@ -17,6 +17,8 @@ namespace Step_004_File
 
             Log.Logger = log;
             Log.Information("Hello World");
+
+            Log.CloseAndFlush();
         }
     }
 }

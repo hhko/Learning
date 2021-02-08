@@ -38,6 +38,8 @@ namespace Step_014_SQLite
             // Will be logged, This is a message 2021 - 02 - 04 14:19:37.258 + 09:00[INF] Favorites: { "Red":121,"Green":24,"Blue":19,"Name":"Hi","$type":"Color"}
 
             Log.Information("Favorites : {@Color}", faveColor);
+
+            Log.CloseAndFlush();
         }
     }
 

@@ -57,6 +57,8 @@ namespace Step_011_DestructureOperator
             // 
             // [13:11:33 INF] Favorites : {"Red": 122, "Green": 24, "Blue": 19, "$type": "Color"}
             Log.Information("Favorites : {@Color}", faveColor);
+
+            Log.CloseAndFlush();
         }
     }
 

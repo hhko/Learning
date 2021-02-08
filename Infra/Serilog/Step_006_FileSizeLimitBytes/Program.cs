@@ -31,6 +31,8 @@ namespace Step_006_FileSizeLimitBytes
 
             Log.Logger = log;
             Log.Information("Hello World");
+
+            Log.CloseAndFlush();
         }
     }
 }

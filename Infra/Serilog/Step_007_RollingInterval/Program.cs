@@ -29,6 +29,8 @@ namespace Step_007_RollingInterval
 
             Log.Logger = log;
             Log.Information("Hello World");
+
+            Log.CloseAndFlush();
         }
     }
 }

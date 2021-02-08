@@ -64,6 +64,8 @@ namespace Step_012_DestructureByTransforming
             // .Destructure.ByTransforming<Color>
             // [13:26:24 INF] Favorites : {"Red": 122, "Green": 24}
             Log.Information("Favorites : {@Color}", faveColor);
+
+            Log.CloseAndFlush();
         }
     }
 

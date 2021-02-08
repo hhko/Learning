@@ -69,6 +69,8 @@ namespace Step_013_Json
             // }
             Log.Information("Favorites : {PI}", Math.PI);
             Log.Information("Favorites : {PI:0.00}", Math.PI);
+
+            Log.CloseAndFlush();
         }
     }
 }

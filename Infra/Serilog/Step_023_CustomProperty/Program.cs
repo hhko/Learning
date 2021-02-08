@@ -51,6 +51,8 @@ namespace Step_023_CustomProperty
 
             Foo foo = new Foo();
             foo.DoSomething();
+
+            Log.CloseAndFlush();
         }
     }
 

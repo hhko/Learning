@@ -44,6 +44,8 @@ namespace Step_022_WithProperty
 
             Foo foo = new Foo();
             foo.DoSomething();
+
+            Log.CloseAndFlush();
         }
     }
 
