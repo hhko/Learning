@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch 01. Fluent Builder Pattern", "Ch 01. Fluent Builder Pattern", "{A5936E70-D06F-4E99-A5B3-DD661EAE7416}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Fluent Builder", "01. Fluent Builder", "{25897225-08C3-4367-8B79-81547AEF5F45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBuilder_01_Basics", "Ch 01. Fluent Builder Pattern\01. Fluent Builder\FluentBuilder_01_Basics\FluentBuilder_01_Basics.csproj", "{83921465-AEEF-43A7-9501-32AA9002449B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBuilder_02_RecursiveGenerics", "Ch 01. Fluent Builder Pattern\01. Fluent Builder\FluentBuilder_02_RecursiveGenerics\FluentBuilder_02_RecursiveGenerics.csproj", "{2FE0A91B-67FB-4316-B622-666661772EC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBuilder_03_Faceted", "Ch 01. Fluent Builder Pattern\01. Fluent Builder\FluentBuilder_03_Faceted\FluentBuilder_03_Faceted.csproj", "{C3F01A74-DF76-4061-A628-57499BD7D5BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Grammer", "02. Grammer", "{CEB6A4D1-9232-4F80-B2E2-7A6FFBB9D035}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalLanguageSyntax", "Ch 01. Fluent Builder Pattern\02. Grammer\NaturalLanguageSyntax\NaturalLanguageSyntax.csproj", "{08D52202-B814-4BAB-9EC1-575D42EE0A5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83921465-AEEF-43A7-9501-32AA9002449B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83921465-AEEF-43A7-9501-32AA9002449B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83921465-AEEF-43A7-9501-32AA9002449B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83921465-AEEF-43A7-9501-32AA9002449B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE0A91B-67FB-4316-B622-666661772EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE0A91B-67FB-4316-B622-666661772EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE0A91B-67FB-4316-B622-666661772EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE0A91B-67FB-4316-B622-666661772EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3F01A74-DF76-4061-A628-57499BD7D5BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F01A74-DF76-4061-A628-57499BD7D5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F01A74-DF76-4061-A628-57499BD7D5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F01A74-DF76-4061-A628-57499BD7D5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08D52202-B814-4BAB-9EC1-575D42EE0A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D52202-B814-4BAB-9EC1-575D42EE0A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D52202-B814-4BAB-9EC1-575D42EE0A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D52202-B814-4BAB-9EC1-575D42EE0A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25897225-08C3-4367-8B79-81547AEF5F45} = {A5936E70-D06F-4E99-A5B3-DD661EAE7416}
+		{83921465-AEEF-43A7-9501-32AA9002449B} = {25897225-08C3-4367-8B79-81547AEF5F45}
+		{2FE0A91B-67FB-4316-B622-666661772EC5} = {25897225-08C3-4367-8B79-81547AEF5F45}
+		{C3F01A74-DF76-4061-A628-57499BD7D5BD} = {25897225-08C3-4367-8B79-81547AEF5F45}
+		{CEB6A4D1-9232-4F80-B2E2-7A6FFBB9D035} = {A5936E70-D06F-4E99-A5B3-DD661EAE7416}
+		{08D52202-B814-4BAB-9EC1-575D42EE0A5E} = {CEB6A4D1-9232-4F80-B2E2-7A6FFBB9D035}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB2539B1-4771-40DE-9820-780297B3F9BD}
+	EndGlobalSection
+EndGlobal
