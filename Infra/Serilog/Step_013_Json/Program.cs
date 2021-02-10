@@ -1,4 +1,5 @@
 ﻿using Serilog;
+using Serilog.Formatting.Compact;
 using Serilog.Formatting.Json;
 using System;
 
@@ -14,6 +15,7 @@ namespace Step_013_Json
                                 //
                                 .WriteTo.Console(formatter: new JsonFormatter())
                                 .WriteTo.File(path: "./Logs/LogFile.json", formatter: new JsonFormatter())
+                                .WriteTo.File(path: "./Logs/LogFileCompact.json", formatter: new CompactJsonFormatter())
                                 .CreateLogger();
 
             // {

@@ -1,0 +1,114 @@
+body {
+    background-color:#eee;
+}
+
+#empty-state {
+    border: 4px dashed #bbb;
+    background-color: #f6f6f6;
+    border-radius: 2px;
+    margin:10px;
+    padding:20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 20px);
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+#empty-state.is-dragover {
+    background-color: #e6e4e4;
+}
+
+#loader {
+    background-color: #f6f6f6;
+    border-radius: 2px;
+    margin:10px;
+    padding:20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 20px);
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+#log-viewer {
+    padding:10px 0;
+}
+
+#error-count-container {
+    background:#f26666;
+    color:#a52020;
+    text-align: center;
+    cursor: pointer;
+}
+
+log-types tr {
+    cursor:pointer;
+}
+
+message-templates tr {
+    cursor:pointer;
+}
+
+log-items .table {
+    word-break: break-all;
+}
+
+log-items tr.item {
+    cursor:pointer;
+}
+
+log-items tr.item.open {
+    background:rgba(0,0,0,0.075);
+}
+
+log-items .details {
+    background:rgba(0,0,0,0.075);
+}
+
+log-items .exception {
+    border-left: 3px solid #dc3545;
+    padding-left: 10px;
+}
+
+log-items .exception h3 {
+    color:#dc3545;
+}
+
+log-items .exception p {
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+.square {
+    height:12px;
+    width:12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.verbose {
+    background-color:#6c757d;
+}
+
+.debug {
+    background-color:#20c997 ;
+}
+
+.information {
+    background-color:#17a2b8;
+}
+
+.warning {
+    background-color:#ffc107;
+}
+
+.error {
+    background-color:#fd7e14;
+}
+
+.fatal {
+    background-color:#dc3545;
+}
