@@ -38,7 +38,7 @@
 1. Dynamci log level
 1. Sub logger (조건)
 1. AudioTo?
-1. Timed
+1. Timed, https://github.com/nblumhardt/serilog-timings
 1. Destructure 깊이
 1. Destructure 너비
 1. .NET 최소 버전
