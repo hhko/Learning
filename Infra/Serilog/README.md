@@ -64,7 +64,12 @@
 1. **대시보드 : Job**
 1. **검증 : 대량, 대용량, 전송실패(재시도), 장시간, 데이터손실 처리?**
 
-
+- https://www.devground.co/blog/posts/serilog-sending-logs-to-logstash/
+- https://medium.com/@letienthanh0212/building-logging-system-in-microservice-architecture-with-elk-stack-and-serilog-net-core-part-2-2643dbbf3c2c
+- https://dev.to/hasdrubal/structure-logging-with-serilog-and-seq-and-elasticsearch-under-docker-16dk
+- https://oksala.net/2020/01/24/configure-serilog-with-logstash-and-elasticsearch/
+- https://github.com/tsimbalar/serilog-settings-comparison/blob/master/docs/README.md
+- https://m.youtube.com/watch?v=f3pposukOSE&feature=youtu.be
 
 ```
 https://github.com/datalust/clef-tool/releases
