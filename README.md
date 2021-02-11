@@ -16,17 +16,17 @@
 1. 블러그
    - DDD
      - [Designing with Types](./3.Blogs/DDD/DesigningWithTypes_2)
-   - Refactoring
-	 - [Refactoring to Aggregate Services](./3.Blogs/Refactoring/RefactoringToAggregateServices)
-   - IoC
+   - OOD
      - [.NET Core Console App with Dependency Injection, Logging, and Settings](./3.Blogs/OOD/BetterConsoleApp/ConsoleUI)
-   - Unit Test
-     - [How to Use and Unit Test ILogger](./3.Blogs/UnitTest/HowToUseAndUnitTestILogger)
    - Functional
      - [How To Debug LINQ Queries in C#](./3.Blogs/Functional/HowToDebugLINQQueriesInCSharp)
+   - Refactoring
+     - [Refactoring to Aggregate Services](./3.Blogs/Refactoring/RefactoringToAggregateServices)
+   - Unit Test
+     - [How to Use and Unit Test ILogger](./3.Blogs/UnitTest/HowToUseAndUnitTestILogger)
    - Awesome
      - [함수형 프로그래밍](./3.Blogs/Awesome/FP)
 1. Self
-   - Logs
+   - Log
      - [x] [NLog](./0.Self/Log_/NLog)
      - [ ] [Serilog](./0.Self/Log_/Serilog)
