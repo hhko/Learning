@@ -1,0 +1,64 @@
+{
+    "appId": "com.warrenbuckley.compact.logviewer",
+    "productName": "Compact Log Viewer",
+    "directories": {
+        "output": "../output"
+    },
+    "files": [
+        "!**/.vscode",
+        "!tsconfig.json",
+        "!tslint.json"
+    ],
+    "extraResources": {
+        "from": "../LogViewer.Server/bin/dist/",
+        "to": "LogViewer.Server/bin/dist/",
+        "filter": [
+            "**/*"
+        ]
+    },
+    "win": {
+        "target": [
+            "nsis",
+            "appx"
+        ],
+        "icon": "logo.png"
+    },
+    "mac": {
+        "category": "public.app-category.developer-tools",
+        "target": [
+            "dmg",
+            //"mas-dev",
+            "mas"
+        ],
+        "bundleVersion": 20190724,
+        "icon": "logo.png",
+        //"provisioningProfile": "Compact_Log_Viewer_App__Mac_Development_Profile.provisionprofile"
+        "provisioningProfile": "Compact_Log_Viewer_App__Mac_Production_Profile.provisionprofile"
+    },
+    "nsis": {
+        "deleteAppDataOnUninstall": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "shortcutName": "Compact Log Viewer",
+        "artifactName": "Compact.Log.Viewer.Setup.${version}.${ext}",
+        "uninstallDisplayName": "Compact Log Viewer (${version})"
+    },
+    "appx": {
+        "applicationId": "Compact.Log.Viewer",
+        "backgroundColor": "#3544b1",
+        "displayName": "Compact Log Viewer",
+        "identityName": "64819WarrenBuckley.CompactLogFormatViewer",
+        "publisher": "CN=4629CEC3-93A2-4080-86C0-63487B897B1F",
+        "publisherDisplayName": "Warren Buckley"
+    },
+    "dmg": {
+        "backgroundColor": "#3544b1"
+    },
+    "mas": {
+        "binaries": [
+            //"../LogViewer.Server/bin/dist/osx/LogViewer.Server",
+            //"/Users/warrenbuckley/Projects/LogViewer/output/mas-dev/Compact Log Viewer.app/Contents/Resources/LogViewer.Server/bin/dist/osx/LogViewer.Server",
+            "/Users/warrenbuckley/Projects/LogViewer/output/mas/Compact Log Viewer.app/Contents/Resources/LogViewer.Server/bin/dist/osx/LogViewer.Server"
+        ]
+    }
+}
