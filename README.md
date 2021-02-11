@@ -19,7 +19,7 @@
    - Refactoring
 	 - [Refactoring to Aggregate Services](./3.Blogs/Refactoring/RefactoringToAggregateServices)
    - IoC
-     - [.NET Core Console App with Dependency Injection, Logging, and Settings](./3.Blogs/IoC/BetterConsoleApp/ConsoleUI)
+     - [.NET Core Console App with Dependency Injection, Logging, and Settings](./3.Blogs/OOD/BetterConsoleApp/ConsoleUI)
    - Unit Test
      - [How to Use and Unit Test ILogger](./3.Blogs/UnitTest/HowToUseAndUnitTestILogger)
    - Functional
@@ -28,5 +28,5 @@
      - [함수형 프로그래밍](./3.Blogs/Awesome/FP)
 1. Self
    - Logs
-     - [x] [NLog](./0.Self/Logs/NLog)
-     - [ ] [Serilog](./0.Self/Logs/Serilog)
+     - [x] [NLog](./0.Self/Log_/NLog)
+     - [ ] [Serilog](./0.Self/Log_/Serilog)
