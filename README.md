@@ -13,7 +13,6 @@
    - Functional
      - [Defensive Programming](./2.Lectures/Functional/DefensiveProgramming)
      - [Writing Purely Functional Code In C#](./2.Lectures/Functional/WritingPurelyFunctionalCodeInCSharp)
-     - [Functional Programming in C#](./2.Lectures/Functional/FPinCSharp)
 1. 블러그
    - DDD
      - [Designing with Types](./3.Blogs/DDD/DesigningWithTypes_2)
