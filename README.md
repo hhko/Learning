@@ -28,5 +28,5 @@
      - [함수형 프로그래밍](./3.Blogs/Awesome/FP)
 1. Self
    - Log
-     - [x] [NLog](./0.Self/Log_/NLog)
-     - [ ] [Serilog](./0.Self/Log_/Serilog)
+     - [NLog](./0.Self/Log_/NLog)
+     - [Serilog](./0.Self/Log_/Serilog)
