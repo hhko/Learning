@@ -9,6 +9,7 @@
 
 ## 책(영어)
 - [ ] [Domain Modeling Made Functional](https://www.amazon.com/Domain-Modeling-Made-Functional-Domain-Driven/dp/1680502549)
+- [ ] [Hands On Domain Driven Design with .NET Core](https://github.com/PacktPublishing/Hands-On-Domain-Driven-Design-with-.NET-Core)
 
 ## 블러그(한글)
 - [x] [DDD 했더니 비대해지는 엔티티, 좋은 대책은 ?](http://jaynewho.com/post/45)
@@ -21,17 +22,24 @@
 - [ ] [DDD - CQRS](https://nesoy.github.io/articles/2018-07/DDD-CQRS)
 - [ ] [도메인 주도 설계(Domain-Driven Design) in Real Project](https://medium.com/react-native-seoul/%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%A3%BC%EB%8F%84-%EC%84%A4%EA%B3%84-domain-driven-design-in-real-project-bounded-context-e2bee96deeb2)
 - [ ] [Domain Modeling Made Functional - Scott Wlaschin](https://github.com/eunmin/domain-modeling-made-functional)
+- [ ] [값 개체 구현(MSDN)](https://docs.microsoft.com/ko-kr/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects)
 
 ## 블러그(영문)
-- [] [Part 1: Domain Driven Design like a pro](https://medium.com/raa-labs/part-1-domain-driven-design-like-a-pro-f9e78d081f10)
+- [ ] [Part 1: Domain Driven Design like a pro](https://medium.com/raa-labs/part-1-domain-driven-design-like-a-pro-f9e78d081f10)
 - [ ] [DDD 폴란드어](https://itlibrium.com/blog/)
 
 ## 동영상(한글)
 - [x] [도메인 주도 설계란 무엇인가?](https://www.youtube.com/watch?v=U8DIk-AQlWY)
+- [ ] [VO, Value Object, 값 객체](https://www.youtube.com/watch?v=kVtfQrkDC94)
 - [ ] [“도메인 주도 설계” 1장](https://www.youtube.com/watch?v=clEEt_-KNwQ)
 
 ## 동영상(영어)
 - [ ] [8 Lines of Code ](https://www.infoq.com/presentations/8-lines-code-refactoring/)
 
 ## NuGet
-- [ ] [xBehave.net](https://github.com/adamralph/xbehave.net)
+- [xBehave.net](https://github.com/adamralph/xbehave.net)
+- [ABP Framework](https://github.com/abpframework/abp)
+- [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+- [Akkatecture](https://github.com/Lutando/Akkatecture)
+- [Hands On Domain Driven Design with .NET Core](https://github.com/PacktPublishing/Hands-On-Domain-Driven-Design-with-.NET-Core)
+
