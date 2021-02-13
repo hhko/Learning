@@ -30,7 +30,7 @@
 - [ ] [“도메인 주도 설계” 1장](https://www.youtube.com/watch?v=clEEt_-KNwQ)
 
 ## 동영상(영어)
-- [] [8 Lines of Code ](https://www.infoq.com/presentations/8-lines-code-refactoring/)
+- [ ] [8 Lines of Code ](https://www.infoq.com/presentations/8-lines-code-refactoring/)
 
 ## NuGet
 - [ ] [xBehave.net](https://github.com/adamralph/xbehave.net)
