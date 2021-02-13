@@ -12,6 +12,7 @@
 
 ## 블러그(한글)
 - [x] [DDD 했더니 비대해지는 엔티티, 좋은 대책은 ?](http://jaynewho.com/post/45)
+- [ ] [도메인 주도 설계 철저 입문 by Python](https://dailyheumsi.tistory.com/category/%EC%B7%A8%EC%97%85%EA%B3%BC%20%EA%B8%B0%EB%B3%B8%EA%B8%B0%20%ED%8A%BC%ED%8A%BC/%EB%B9%BD%20%ED%88%AC%EB%8D%94%20%EA%B8%B0%EB%B3%B8%EA%B8%B0)
 - [ ] [Clean Architecture : Part 1 — Database vs Domain](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%8C%ED%8A%B81-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-vs-%EB%8F%84%EB%A9%94%EC%9D%B8-236c7008ac83)
 - [ ] [Clean Architecture : Part 2 — The Clean Architecture](https://justwrite99.medium.com/clean-architecture-part-2-the-clean-architecture-3e2666cdce83)
 - [ ] [클린 아키텍처 by 엉클 밥, 강의](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-by-%EC%97%89%ED%81%B4-%EB%B0%A5-a6a917ff6afc)
