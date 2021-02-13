@@ -1,4 +1,4 @@
-﻿using Ch06_Step1_Structural.SharedKernel;
+﻿using Ch06_Step2_Atm.SharedKernel;
 using NHibernate;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using WpfCommon;
 
-namespace Ch06_Step1_Structural.Wpf
+namespace Ch06_Step2_Atm.Wpf
 {
     public class SnackMachineViewModel : ViewModel
     {

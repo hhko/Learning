@@ -51,6 +51,7 @@ namespace Ch05_Step1_Repo.Wpf
         public SnackMachineViewModel(SnackMachine snackMachine)
         {
             _snackMachine = snackMachine;
+            _repository = new SnackMachineRepository();
 
             InsertCentCommand = new Command(() => InsertMoney(Money.Cent));
             InsertTenCentCommand = new Command(() => InsertMoney(Money.TenCent));

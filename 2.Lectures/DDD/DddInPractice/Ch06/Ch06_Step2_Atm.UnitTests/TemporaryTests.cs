@@ -1,8 +1,9 @@
-﻿using NHibernate;
+﻿using Ch06_Step2_Atm.SharedUtils;
+using NHibernate;
 using System;
 using Xunit;
 
-namespace Ch05_Step1_Repo.UnitTests
+namespace Ch06_Step2_Atm.UnitTests
 {
     public class TemporaryTests
     {

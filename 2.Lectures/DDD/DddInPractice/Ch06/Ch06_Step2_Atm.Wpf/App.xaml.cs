@@ -1,7 +1,13 @@
-﻿using Ch06_Step1_Structural.SharedUtils;
+﻿using Ch06_Step2_Atm.SharedUtils;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 
-namespace Ch06_Step1_Structural.Wpf
+namespace Ch06_Step2_Atm.Wpf
 {
     /// <summary>
     /// Interaction logic for App.xaml
