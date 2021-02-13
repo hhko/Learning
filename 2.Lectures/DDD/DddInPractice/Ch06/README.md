@@ -22,3 +22,12 @@
 ## 3. 개발
 
 ### Step 1. Structural Solution Explorer
+1. 솔루션 탐색기 리팩토링
+   - 리팩토링 전  
+     ![](./SolutionExplorer.png)
+   - 리팩토링 후
+     - **`Shared Kernel`** : 재사용 도메인 객체(예. Entity, Value Object, ...)
+     - `Shared Base` : 재사용 부모 클래스
+     - `Shared Utils` : 재사용 기능 클래스  
+     ![](./StructuralSolutionExplorer.png)
+
