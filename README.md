@@ -11,7 +11,6 @@
 1. 강의
    - DDD
      - [Domain-Driven Design in Practice](./2.Lectures/DDD/DddInPractice)
-	 - [DDD EF Core Preserving Encapsulation](./2.Lectures/DDD/DddEfCorePreservingEncapsulation)
    - Functional
      - [Defensive Programming](./2.Lectures/FP/DefensiveProgramming)
      - [Writing Purely Functional Code In C#](./2.Lectures/FP/WritingPurelyFunctionalCodeInCSharp)
