@@ -23,7 +23,7 @@
 - [ ] [썬한코딩, 함수형 프로그래밍 - 2부](https://www.youtube.com/watch?v=FGpm-mIsbuU)
 - [ ] [컴퓨터과학이 여는 세계](https://www.youtube.com/watch?v=HTWSPoDLmHI&list=PL0Nf1KJu6Ui7yoc9RQ2TiiYL9Z0MKoggH)
 
-## 참고 자료(한국어)
+## 블러그(한국어)
 - [ ] [모나드와 함수형 아키텍처](https://teamdable.github.io/techblog/Moand-and-Functional-Architecture)
 - [ ] [기존의 사고 방식을 깨부수는 함수형 사고](https://evan-moon.github.io/2019/12/15/about-functional-thinking/)
 - [ ] [수학에서 기원한 프로그래밍 패러다임, 순수 함수](https://evan-moon.github.io/2019/12/29/about-pure-functions/)
@@ -75,7 +75,7 @@
 - [ ] [Category theory and life](https://www.youtube.com/watch?v=ho7oagHeqNc)
 - [ ] [Software Design: Functional Programming in C#](https://www.udemy.com/course/functional-csharp/)
 
-## 참고 자료(영어)
+## 블로그(영어)
 - [x] [Mark Seemann - Refactoring to Aggregate Services](https://github.com/hhko/Learning/tree/master/Blogs/MarkSeemann/RefactoringToAggregateServices)
 - [x] [How to Debug LINQ queries in C#](https://github.com/hhko/Learning/tree/master/Blogs/Others/HowToDebugLINQQueriesInCSharp)
 - [ ] [Paul Louth - How do I use Try<T> with an existing method?](https://github.com/louthy/language-ext/issues/507#issuecomment-432023820)
