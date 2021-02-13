@@ -43,7 +43,7 @@
      <img src="./StructuralSolutionExplorer.png" width="40%"/>
 
 ### Step 2. ATM(Bounded Context)
-1. Context Map(Shared Kernel)
+1. Context Map(Shared Kernel)  
    <img src="./ContextMap.png" width="40%"/>
 1. 요구사항
    - ATM | 요청한 현금을 제공한다.
