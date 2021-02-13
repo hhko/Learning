@@ -15,16 +15,18 @@
 <br/>
 
 ## 2. 목표
-1. ...
-
-<br/>
-
-## 3. Bounded Context
-- Bounded Contexts : **`Separation of the model into smaller ones`**
-  - Boundary for the ubiquitous language : 한정된 맥락에서만 일관되게 통일된 용어를 사용한다.
-  - Span across all layers in the onion architecture : 모든 계층에 걸쳐 있다(가로 지르다).
-    - 동일한 개념의 아키텍처가 Bounded Contexts 개수와 동일하게 N개 존재하게 된다.
-  - Explicit relationships between different bounded contexts : 관계를 명시적(Context Mapping)으로 정의한다.
+1. Sub-domain vs. Bounded Context 관계 이해
+   - 1 : 1 관계를 유지한다.
+1. Bounded Context 크기
+   - 이해하는데 어려움이 없어야 한다(명확해야 한다 : 제한된 영역).
+   - Sub-domain 관계(1 : 1)을 지킨다.
+   - 한 팀이 관리한다.
+1. Bounded Context 이해
+   - Bounded Contexts : **`Separation of the model into smaller ones`**
+     - Boundary for the ubiquitous language : 한정된 맥락에서만 일관되게 통일된 용어를 사용한다.
+     - Span across all layers in the onion architecture : 모든 계층에 걸쳐 있다(가로 지르다).
+       - 동일한 개념의 아키텍처가 Bounded Contexts 개수와 동일하게 N개 존재하게 된다.
+     - Explicit relationships between different bounded contexts : 관계를 명시적(Context Mapping)으로 정의한다.
 
 ## 3. 개발
 
@@ -49,4 +51,14 @@
    - ATM | 청구된 모든 금액을 추적한다.
      - Keep track of all money charged
 1. 단위 테스트
-   - ...
+   - `Take_money_exchanges_money_with_commission`
+   - `Commission_is_at_least_one_cent` : % 0.01
+   - `Commission_is_rounded_up_to_the_next_cent` : 0.01 절상
+1. 데이터베이스
+   - ATM 테이블  
+     <img src="./AtmTableDesign.png"/>  
+     <img src="./AtmTableValues.png"/>  
+   - Ids 테이블 값  
+     <img src="./IdsTableValues.png"/>  
+1. WPF Binding
+   ![](./AtmWpfBinding.png)

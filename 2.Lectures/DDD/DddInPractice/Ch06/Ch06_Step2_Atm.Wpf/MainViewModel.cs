@@ -24,10 +24,26 @@ namespace Ch06_Step2_Atm.Wpf
         //    _dialogService.ShowDialog(viewModel);
         //}
 
+        public Command ShowSnackMachineCommand { get; private set; }
+        public Command ShowAtmCommand { get; private set; }
+
         public MainViewModel()
+        {
+            ShowSnackMachineCommand = new Command(ShowSnackMachine);
+            ShowAtmCommand = new Command(ShowAtm);
+        }
+
+        private void ShowSnackMachine()
         {
             SnackMachine snackMachine = new SnackMachineRepository().GetById(1);
             var viewModel = new SnackMachineViewModel(snackMachine);
+            _dialogService.ShowDialog(viewModel);
+        }
+
+        private void ShowAtm()
+        {
+            Atm atm = new AtmRepository().GetById(1);
+            var viewModel = new AtmViewModel(atm);
             _dialogService.ShowDialog(viewModel);
         }
     }
