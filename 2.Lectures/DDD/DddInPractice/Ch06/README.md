@@ -10,7 +10,6 @@
 ## 1. 요약
 ![](./Ch06_Summary1.png)
 ![](./Ch06_Summary2.png)
-![](./Ch06_Summary3.png)
 
 <br/>
 
@@ -35,16 +34,16 @@
 ### Step 1. Structural Solution Explorer
 1. 솔루션 탐색기 리팩토링
    - 리팩토링 전  
-     <img src="./SolutionExplorer.png" width="40%"/>
+     <img src="./Images/SolutionExplorer.png" width="40%"/>
    - 리팩토링 후
      - **`Shared Kernel(Context Map)`** : 재사용 도메인 객체(예. Entity, Value Object, ...)
      - `Shared Base` : 재사용 부모 클래스
      - `Shared Utils` : 재사용 기능 클래스  
-     <img src="./StructuralSolutionExplorer.png" width="40%"/>
+     <img src="./Images/StructuralSolutionExplorer.png" width="40%"/>
 
 ### Step 2. ATM(Bounded Context)
 1. Context Map(Shared Kernel)  
-   <img src="./ContextMap.png" width="40%"/>
+   <img src="./Images/ContextMap.png" width="40%"/>
 1. 요구사항
    - ATM | 요청한 현금을 제공한다.
      - Dispense cash
@@ -58,9 +57,9 @@
    - `Commission_is_rounded_up_to_the_next_cent` : 0.01 절상
 1. 데이터베이스
    - ATM 테이블  
-     <img src="./AtmTableDesign.png"/>  
-     <img src="./AtmTableValues.png"/>  
+     <img src="./Images/AtmTableDesign.png"/>  
+     <img src="./Images/AtmTableValues.png"/>  
    - Ids 테이블 값  
-     <img src="./IdsTableValues.png"/>  
+     <img src="./Images/IdsTableValues.png"/>  
 1. WPF Binding
-   ![](./AtmWpfBinding.png)
+   ![](./Images/AtmWpfBinding.png)
