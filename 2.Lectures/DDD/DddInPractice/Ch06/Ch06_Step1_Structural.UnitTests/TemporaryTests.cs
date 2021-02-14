@@ -1,4 +1,4 @@
-﻿using Ch06_Step1_Structural.SharedUtils;
+﻿using Ch06_Step1_Structural.Utils;
 using NHibernate;
 using System;
 using Xunit;

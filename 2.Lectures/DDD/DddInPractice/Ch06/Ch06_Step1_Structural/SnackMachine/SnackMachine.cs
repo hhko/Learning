@@ -1,4 +1,4 @@
-﻿using Ch06_Step1_Structural.SharedBase;
+﻿using Ch06_Step1_Structural.Common;
 using Ch06_Step1_Structural.SharedKernel;
 using System;
 using System.Collections.Generic;

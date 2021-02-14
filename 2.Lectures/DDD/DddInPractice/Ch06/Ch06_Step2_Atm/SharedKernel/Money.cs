@@ -1,4 +1,4 @@
-﻿using Ch06_Step2_Atm.SharedBase;
+﻿using Ch06_Step2_Atm.Common;
 using System;
 
 namespace Ch06_Step2_Atm.SharedKernel

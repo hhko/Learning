@@ -1,4 +1,4 @@
-﻿using Ch06_Step2_Atm.SharedBase;
+﻿using Ch06_Step2_Atm.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
