@@ -37,8 +37,8 @@
      <img src="./Images/SolutionExplorer.png" width="40%"/>
    - 리팩토링 후
      - **`Shared Kernel(Context Map)`** : 재사용 도메인 객체(예. Entity, Value Object, ...)
-     - `Shared Base` : 재사용 부모 클래스
-     - `Shared Utils` : 재사용 기능 클래스  
+     - `Common` : 재사용 부모 클래스
+     - `Utils` : 재사용 기능 클래스  
      <img src="./Images/StructuralSolutionExplorer.png" width="40%"/>
 
 ### Step 2. ATM(Bounded Context)
