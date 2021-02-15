@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Step_012_DestructureByTransforming
+namespace Step_013_DestructureToMaximum
 {
     class Program
     {
@@ -21,9 +21,23 @@ namespace Step_012_DestructureByTransforming
                                     retainedFileCountLimit: 2)
 
                                 //
-                                // Destructuring operator을 재정의한다.
+                                // ToMaximumCollectionCount(2)는 2개까지만 출력한다.
                                 //
-                                .Destructure.ByTransforming<Color>(x => new { x.Red, x.Green })
+                                // [17:21:04 INF] Favorites:["red-1", "red-2"]
+                                // [17:21:04 INF] Counteries: { "red-1": 5, "red-2": 2}
+                                .Destructure.ToMaximumCollectionCount(2)
+
+                                //
+                                // ToMaximumStringLength(3) 문자열 2자까지만 출력한다. 그외는 "..."으로 출력한다.
+                                //
+                                // [17:21:04 INF] Favorites: { "Name": "My…", ... }
+                                .Destructure.ToMaximumStringLength(3)
+
+                                //
+                                // ToMaximumDepth(2) 1수준까지 값을 출력한다. 2수준 값은 NULL로 출력한다. 그 이상은 출력하지 않는다.
+                                // 
+                                // [17:22:15 INF] Favorites : {"Red": 122, "Green": 24, "Blue": 19, "Name": "My…", "Items": [null, null], "SubItems": [null], "$type": "Color"}
+                                .Destructure.ToMaximumDepth(2)
                                 .CreateLogger();
 
             string name = "Foo";
@@ -52,7 +66,17 @@ namespace Step_012_DestructureByTransforming
             {
                 Red = 122,
                 Green = 24,
-                Blue = 19
+                Blue = 19,
+                Name = "My favorite color is red.",
+                Items = new List<string> { "1", "2", "3" },
+                SubItems = new List<SubItem> 
+                { 
+                    new SubItem 
+                    { 
+                        Name = "1", 
+                        Items = new List<string> { "1", "2", "3"} 
+                    } 
+                }
             };
             Log.Information("Favorites : {Color}", faveColor);
 
@@ -72,10 +96,27 @@ namespace Step_012_DestructureByTransforming
         public int Red { get; set; }
         public int Green { get; set; }
         public int Blue { get; set; }
+        public string Name { get; set; }
+
+        public List<string> Items {get; set; }
+
+        public List<SubItem> SubItems { get; set; }
 
         public override string ToString()
         {
             return $"R : {Red}, G : {Green}, B : {Blue}";
         }
     }
+
+    public class SubItem
+    {
+        public string Name { get; set; }
+        public List<string> Items { get; set; }
+
+        public override string ToString()
+        {
+            return $"SubItem : {Name}";
+        }
+    }
 }
+

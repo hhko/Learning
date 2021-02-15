@@ -11,7 +11,7 @@ namespace Step_011_DestructureOperator
         {
             const string customTemplate = "Will be logged, This is a message {Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}";
 
-            ILogger log = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                                 .WriteTo.Console()
                                 .WriteTo.File(
                                     path: "./Logs/LogFile.txt",
@@ -20,8 +20,6 @@ namespace Step_011_DestructureOperator
                                     rollingInterval: RollingInterval.Day,
                                     retainedFileCountLimit: 2)
                                 .CreateLogger();
-
-            Log.Logger = log;
 
             string name = "Foo";
             int age = 2021;

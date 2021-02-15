@@ -9,7 +9,7 @@ namespace Step_006_FileSizeLimitBytes
         {
             const string customTemplate = "Not logged, This is a message {Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}";
 
-            ILogger log = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                                 .WriteTo.Console()
 
                                 // fileSizeLimitBytes: 1073741824 (1GB)
@@ -29,7 +29,6 @@ namespace Step_006_FileSizeLimitBytes
 
                                 .CreateLogger();
 
-            Log.Logger = log;
             Log.Information("Hello World");
 
             Log.CloseAndFlush();

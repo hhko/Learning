@@ -9,7 +9,7 @@ namespace Step_007_RollingInterval
         {
             const string customTemplate = "Will be logged, This is a message {Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}";
 
-            ILogger log = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                                 .WriteTo.Console()
 
                                 // rollingInterval
@@ -27,7 +27,6 @@ namespace Step_007_RollingInterval
 
                                 .CreateLogger();
 
-            Log.Logger = log;
             Log.Information("Hello World");
 
             Log.CloseAndFlush();

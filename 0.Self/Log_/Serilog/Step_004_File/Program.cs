@@ -7,7 +7,7 @@ namespace Step_004_File
     {
         static void Main(string[] args)
         {
-            ILogger log = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                                 .WriteTo.Console()
                                 //
                                 // 파일 출력
@@ -15,7 +15,6 @@ namespace Step_004_File
                                 .WriteTo.File("./Logs/LogFile.txt")
                                 .CreateLogger();
 
-            Log.Logger = log;
             Log.Information("Hello World");
 
             Log.CloseAndFlush();

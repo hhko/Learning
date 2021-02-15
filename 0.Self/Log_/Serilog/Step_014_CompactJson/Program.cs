@@ -1,8 +1,9 @@
 ﻿using Serilog;
+using Serilog.Formatting.Compact;
 using Serilog.Formatting.Json;
 using System;
 
-namespace Step_013_Json
+namespace Step_014_CompactJson
 {
     class Program
     {
@@ -14,10 +15,19 @@ namespace Step_013_Json
                                 //
                                 .WriteTo.Console(formatter: new JsonFormatter())
                                 .WriteTo.File(path: "./Logs/LogFile.json", formatter: new JsonFormatter())
+                                .WriteTo.File(path: "./Logs/LogFileCompact.json", formatter: new CompactJsonFormatter())
                                 .CreateLogger();
 
+            // Compact Json
             // {
-            //     "Timestamp": "2021-02-04T14:36:57.7090387+09:00",
+            //     "@t": "2021-02-15T05:00:04.0379846Z",
+            //     "@mt": "Favorites : {UserName}",
+            //     "UserName": "Foo"
+            // }
+            //
+            // Json
+            // {
+            //     "Timestamp": "2021-02-15T14:00:04.0379846+09:00",
             //     "Level": "Information",
             //     "MessageTemplate": "Favorites : {UserName}",
             //     "Properties": {
@@ -26,8 +36,19 @@ namespace Step_013_Json
             // }
             Log.Information("Favorites : {UserName}", "Foo");
 
+            // Compact Json
             // {
-            //     "Timestamp": "2021-02-04T14:36:57.7245105+09:00",
+            //     "@t": "2021-02-15T05:00:04.0562787Z",
+            //     "@mt": "Favorites : {UserName:l}",
+            //     "@r": [
+            //         "Foo"
+            //     ],
+            //     "UserName": "Foo"
+            // }
+            //
+            // Json
+            // {
+            //     "Timestamp": "2021-02-15T14:00:04.0562787+09:00",
             //     "Level": "Information",
             //     "MessageTemplate": "Favorites : {UserName:l}",
             //     "Properties": {
@@ -44,8 +65,16 @@ namespace Step_013_Json
             // }
             Log.Information("Favorites : {UserName:l}", "Foo");
 
+            // Compact Json
             // {
-            //     "Timestamp": "2021-02-04T14:36:57.7266077+09:00",
+            //     "@t": "2021-02-15T05:00:04.0593361Z",
+            //     "@mt": "Favorites : {PI}",
+            //     "PI": 3.141592653589793
+            // }
+            //
+            // Json
+            // {
+            //     "Timestamp": "2021-02-15T14:00:04.0593361+09:00",
             //     "Level": "Information",
             //     "MessageTemplate": "Favorites : {PI}",
             //     "Properties": {
@@ -54,8 +83,19 @@ namespace Step_013_Json
             // }
             Log.Information("Favorites : {PI}", Math.PI);
 
+            // Compact Json
             // {
-            //     "Timestamp": "2021-02-04T14:36:57.7271197+09:00",
+            //     "@t": "2021-02-15T05:00:04.0599895Z",
+            //     "@mt": "Favorites : {PI:0.00}",
+            //     "@r": [
+            //         "3.14"
+            //     ],
+            //     "PI": 3.141592653589793
+            // }
+            //
+            // Json
+            // {
+            //     "Timestamp": "2021-02-15T14:00:04.0599895+09:00",
             //     "Level": "Information",
             //     "MessageTemplate": "Favorites : {PI:0.00}",
             //     "Properties": {
