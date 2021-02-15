@@ -1,5 +1,8 @@
 # 배움은 설렘이다 for developers.
 
+![](./ArchitecturalPrinciples.png)
+- 아키텍처 원칙 : [링크](https://docs.microsoft.com/ko-kr/dotnet/architecture/modern-web-apps-azure/architectural-principles)
+
 ## 목차
 1. 도서
    - DDD
