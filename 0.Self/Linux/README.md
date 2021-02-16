@@ -20,7 +20,7 @@
    apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --no-conflicts --no-breaks --no-replaces --no-enhances [패키지명] | grep "^\w" | sort -u)
    ```
 1. vim 패키지 Offline 다운로드 예.
-   ```console
+   ```shell
    // 패키지 다운로드
    apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --no-conflicts --no-breaks --no-replaces --no-enhances vim | grep "^\w" | sort -u)
    
