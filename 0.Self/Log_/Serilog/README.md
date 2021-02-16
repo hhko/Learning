@@ -3,16 +3,20 @@
   - ToMaximumCollectionCount
   - ToMaximumStringLength
   - ToMaximumDepth
+- [ ] ControlledBy 코드
+- [ ] With Property : Thread, ...  
+---
+- [ ] Sub Logger
+- [ ] Sub Logger Dynamic.
+---
 - [ ] MVP
-  - Logstash 전송
+  - Logstash 전송 : Http
   - Fixed 필드, Kafka
   - Logstash pipeline
   - Elasticsearch/Kibana 확인
+---  
 - [ ] Raw 기본 출력 형식
 - [ ] Visual Studio Serilog 확장 도구 https://github.com/Suchiman/SerilogAnalyzer
-- [ ] DestructureToMaximum
-- [ ] Sub Logger
-- [ ] Sub Logger Dynamic.
 - [ ] NET 최소 버전
 - [ ] { } 표준화?
 - [ ] { :? } 형식
