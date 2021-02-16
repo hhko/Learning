@@ -5,6 +5,7 @@
 - AutoFixture
 - Dependency injection
 - ASP.NET Integration
+- bUnit
 - FsCheck 
 - BenchmarkDotNet
 - Nbench
