@@ -11,35 +11,36 @@
 <br/>
 
 ## 목차
+1. 튜토리얼
+  - Log
+    - [NLog](./1.Tutorials/Log_/NLog)
+    - [Serilog](./1.Tutorials/Log_/Serilog)
 1. 도서
    - DDD
-     - [도메인 주도 설계 철저 입문](./1.Books/DDD/DDDGuide) 
+     - [도메인 주도 설계 철저 입문](./2.Books/DDD/DDDGuide) 
    - Functional Programming
-     - [Functional Programming in C#](./1.Books/FP/FPinCSharp)
+     - [Functional Programming in C#](./2.Books/FP/FPinCSharp)
    - Microservice
-     - [Practical Microservices with Dapr and .NET](./1.Books/Microservice/DaprDotNet)
+     - [Practical Microservices with Dapr and .NET](./2.Books/Microservice/DaprDotNet)
 1. 강의
    - DDD
-     - [Domain-Driven Design in Practice](./2.Lectures/DDD/DddInPractice)
+     - [Domain-Driven Design in Practice](./3.Lectures/DDD/DddInPractice)
    - Functional
-     - [Defensive Programming](./2.Lectures/FP/DefensiveProgramming)
-     - [Writing Purely Functional Code In C#](./2.Lectures/FP/WritingPurelyFunctionalCodeInCSharp)
+     - [Defensive Programming](./3.Lectures/FP/DefensiveProgramming)
+     - [Writing Purely Functional Code In C#](./3.Lectures/FP/WritingPurelyFunctionalCodeInCSharp)
 1. 블러그
    - DDD
-     - [Designing with Types](./3.Blogs/DDD/DesigningWithTypes_2)
+     - [Designing with Types](./4.Blogs/DDD/DesigningWithTypes_2)
    - OOD
-     - [.NET Core Console App with Dependency Injection, Logging, and Settings](./3.Blogs/OOD/BetterConsoleApp/ConsoleUI)
+     - [.NET Core Console App with Dependency Injection, Logging, and Settings](./4.Blogs/OOD/BetterConsoleApp/ConsoleUI)
    - Functional Programming
-     - [How To Debug LINQ Queries in C#](./3.Blogs/FP/HowToDebugLINQQueriesInCSharp)
+     - [How To Debug LINQ Queries in C#](./4.Blogs/FP/HowToDebugLINQQueriesInCSharp)
    - Refactoring
-     - [Refactoring to Aggregate Services](./3.Blogs/Refactoring/RefactoringToAggregateServices)
+     - [Refactoring to Aggregate Services](./4.Blogs/Refactoring/RefactoringToAggregateServices)
    - Unit Test
-     - [How to Use and Unit Test ILogger](./3.Blogs/UnitTest/HowToUseAndUnitTestILogger)
+     - [How to Use and Unit Test ILogger](./4.Blogs/UnitTest/HowToUseAndUnitTestILogger)
    - Awesome
-     - [도메인 주도 설계](./3.Blogs/Awesome/DDD)
-     - [함수형 프로그래밍](./3.Blogs/Awesome/FP)
----
-- Self
-  - Log
-    - [NLog](./0.Self/Log_/NLog)
-    - [Serilog](./0.Self/Log_/Serilog)
+     - [도메인 주도 설계](./4.Blogs/Awesome/DDD)
+     - [함수형 프로그래밍](./4.Blogs/Awesome/FP)
+
+
