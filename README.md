@@ -1,6 +1,10 @@
 # 배움은 설렘이다 for developers.
 
 ## 아키텍처 원칙
+> 건축업자가 프로그래머의 프로그램 작성 방식에 따라 건물을 짓는다면 가장 먼저 도착하는 딱따구리가 문명을 파괴할 것입니다.  
+> If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization.  
+> &nbsp;- Gerald Weinberg
+
 ![](./ArchitecturalPrinciples.png)
 - 아키텍처 원칙 : [한국어](https://docs.microsoft.com/ko-kr/dotnet/architecture/modern-web-apps-azure/architectural-principles), [English](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles)
 
