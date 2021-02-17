@@ -61,6 +61,7 @@
   - ToString()
   - destructuring operator
 - [ ] 로그 Level 가이드
+- [ ] Docker?
 
 <br/>
 
@@ -184,10 +185,30 @@
 - [ ] Elastic.Elasticsearch.Xunit
 - [ ] Serilog.Sinks.SQLite, 5.0.0
 - [ ] Serilog.Expressions
-- [ ] Zip
+- [ ] serilog-sinks-file-header
+- [ ] serilog-sinks-file-gzip
+- [ ] serilog-sinks-file-archive
 - [ ] Serilog.Formatting.Compact.Reader
 - [ ] Analogy.LogViewer.Serilog Json
 - [ ] Elastic.CommonSchema.Serilog
+- [ ] Serilog.Extensions.Hosting
+- [ ] Serilog.Enrichers.Environment
+- [ ] Serilog.Enrichers.Thread
+- [ ] Serilog.Enrichers.Process
+- [ ] Serilog.Enrichers.AssemblyName
+- [ ] serilog-enrichers-memory
+- [ ] Serilog.Filters.Expressions
+- [ ] serilog-extensions-logging
+- [ ] Serilog.Sinks.Debug
+- [ ] Serilog.Sinks.RollingFile
+- [ ] Serilog.Sinks.Elasticsearch
+- [ ] Serilog.Formatting.Elasticsearch
+- [ ] Serilog.Exceptions
+- [ ] Serilog.Sinks.Map
+- [ ] Destructurama.Attributed
+
+
+
 
 <br/>
 
@@ -217,6 +238,9 @@
 <br/>
 
 ## 블러그
+- [x] How to destruct objects and log | [](https://ranjeet.dev/getting-started-with-serilog/)
+- Sub Logger | [Serilog and ASP.NET Core: Split Log Data Using Serilog FilterExpression](https://vmsdurano.com/serilog-and-asp-net-core-split-log-data-using-filterexpression/)
+- FromLogContext, MessageTemplate(HashCode) | https://blog.datalust.co/serilog-tutorial/
 ---
 - [전문가 | Nicholas Blumhardt](https://nblumhardt.com/)
 - [전문가 | Andrew Lock](https://andrewlock.net/tag/logging/)
@@ -241,7 +265,11 @@
 - https://github.com/warrenbuckley/Compact-Log-Format-Viewer/releases
 - http://blog.romanpavlov.me/logging-serilog-elk/
 - [Writing logs to Elasticsearch with Fluentd using Serilog in ASP.NET Core](https://andrewlock.net/writing-logs-to-elasticsearch-with-fluentd-using-serilog-in-asp-net-core/)
-- [Serilog and ASP.NET Core: Split Log Data Using Serilog FilterExpression](https://vmsdurano.com/serilog-and-asp-net-core-split-log-data-using-filterexpression/)
+- https://blumhardt2.rssing.com/chan-6339977/latest.php
+- https://medium.com/oldbeedev/c-how-to-monitor-cpu-memory-disk-usage-in-windows-a06fc2f05ad5
+- https://github.com/serilog/serilog/wiki/Provided-Sinks
+- https://blog.datalust.co/serilog-tutorial/
+- http://merbla.com/2018/04/25/exploring-serilog-v2---using-the-http-client-factory/
 
 <br/>
 

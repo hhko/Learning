@@ -91,6 +91,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_018_ElasticCommonSchem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_014_DestructureToMaximum", "Step_014_DestructureToMaximum\Step_014_DestructureToMaximum.csproj", "{B99F29AD-2C5E-442A-86B6-6B8EAC2E6B86}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Sublogger", "10. Sublogger", "{DE1A8C2C-D78F-4122-8EEE-86FC0BD364D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

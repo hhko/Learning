@@ -1,4 +1,5 @@
 ﻿using Serilog;
+using Serilog.Core;
 using System;
 
 namespace Step_003_StaticLogger
@@ -7,7 +8,7 @@ namespace Step_003_StaticLogger
     {
         static void Main(string[] args)
         {
-            ILogger log = new LoggerConfiguration()
+            Logger log = new LoggerConfiguration()
                                 .WriteTo.Console()
                                 .CreateLogger();
 
@@ -15,7 +16,13 @@ namespace Step_003_StaticLogger
             // 정적 로그 인스턴스
             //
             Log.Logger = log;
+
+            Log.Verbose("Hello World");
+            Log.Debug("Hello World");
             Log.Information("Hello World");
+            Log.Warning("Hello World");
+            Log.Error("Hello World");
+            Log.Fatal("Hello World");
 
             //
             // 로그 인스턴스 파괴

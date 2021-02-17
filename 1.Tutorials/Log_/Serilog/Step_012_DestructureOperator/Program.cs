@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Step_011_DestructureOperator
 {
@@ -51,7 +52,7 @@ namespace Step_011_DestructureOperator
             };
             Log.Information("Favorites : {Color}", faveColor);
 
-            // Destructuring operator : @
+            // Destructuring operator : @이름
             // 
             // [13:11:33 INF] Favorites : {"Red": 122, "Green": 24, "Blue": 19, "$type": "Color"}
             Log.Information("Favorites : {@Color}", faveColor);
@@ -63,7 +64,9 @@ namespace Step_011_DestructureOperator
     public class Color
     {
         public int Red { get; set; }
+
         public int Green { get; set; }
+
         public int Blue { get; set; }
 
         public override string ToString()
