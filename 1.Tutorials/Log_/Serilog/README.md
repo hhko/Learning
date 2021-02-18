@@ -270,6 +270,7 @@
 - https://github.com/serilog/serilog/wiki/Provided-Sinks
 - https://blog.datalust.co/serilog-tutorial/
 - http://merbla.com/2018/04/25/exploring-serilog-v2---using-the-http-client-factory/
+- https://www.honeycomb.io/blog/simple-structured-logging-with-nlog/
 
 <br/>
 
