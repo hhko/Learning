@@ -1,0 +1,9 @@
+{
+    "plantuml.commandArgs": [
+        "-DGRAPHVIZ_DOT=C:/Program Files (x86)/Graphviz2.38/bin/dot.exe"
+    ],
+    "files.exclude": {
+        "**/obj": true,
+        "**/bin": true
+    }
+}

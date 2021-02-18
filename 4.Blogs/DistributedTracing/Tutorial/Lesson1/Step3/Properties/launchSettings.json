@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Step3": {
+      "commandName": "Project",
+      "commandLineArgs": "Foo"
+    }
+  }
+}

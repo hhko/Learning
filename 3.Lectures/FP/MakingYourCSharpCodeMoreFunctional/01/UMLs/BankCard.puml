@@ -1,0 +1,8 @@
+@startuml
+class BankCard {
+    + ValidBefore : Month <<get>>
+    + BankCard(validBefore:Month)
+    + <<override>> Withdraw(currency:Currency, amount:decimal) : decimal
+}
+Money <|-- BankCard
+@enduml

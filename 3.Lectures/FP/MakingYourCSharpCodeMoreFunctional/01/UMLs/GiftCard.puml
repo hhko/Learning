@@ -1,0 +1,8 @@
+@startuml
+class GiftCard {
+    + ValidBefore : Date <<get>>
+    + GiftCard(currency:Currency, amount:decimal, validBefore:Date)
+    + <<override>> Withdraw(currency:Currency, amount:decimal) : decimal
+}
+FixedMoney <|-- GiftCard
+@enduml

@@ -27,7 +27,7 @@
 1. 강의
    - DDD
      - [Domain-Driven Design in Practice](./3.Lectures/DDD/DddInPractice)
-   - Functional
+   - Functional Programming
      - [Defensive Programming](./3.Lectures/FP/DefensiveProgramming)
      - [Writing Purely Functional Code In C#](./3.Lectures/FP/WritingPurelyFunctionalCodeInCSharp)
 1. 블러그

@@ -1,0 +1,5 @@
+@startuml
+abstract class Money {
+    + {abstract} Withdraw(currency:Currency, amount:decimal) : decimal
+}
+@enduml

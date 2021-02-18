@@ -1,0 +1,26 @@
+@startuml
+
+participant Main 
+participant SayHello << **Parent** Span >>
+participant FormatHello << Child Span >>
+participant PrintHello << Child Span >>
+
+Main -> SayHello
+activate SayHello
+
+SayHello -> FormatHello
+activate FormatHello
+
+FormatHello -> PrintHello
+activate PrintHello
+
+PrintHello -> FormatHello
+deactivate PrintHello
+
+FormatHello -> SayHello
+deactivate FormatHello
+
+SayHello -> Main
+deactivate SayHello
+
+@enduml

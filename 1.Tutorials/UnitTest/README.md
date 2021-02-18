@@ -1,6 +1,7 @@
 ## NuGet 패키지
 - xUnit
 - Fluent Assertions
+- ApiApprover
 - Moq
 - AutoFixture
 - Dependency injection

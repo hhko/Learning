@@ -1,33 +1,81 @@
 # 함수형 프로그래밍 in C# 스터디
 1. 도서: [Functional Programming in C#](https://www.manning.com/books/functional-programming-in-c-sharp?query=functional%20programming%20in%20C#), [소스](https://github.com/la-yumba/functional-csharp-code)  
+   - Book: https://www.manning.com/books/functional-programming-in-c-sharp
+   - GitHub: https://github.com/la-yumba/functional-csharp-code
+   - NuGet: https://www.nuget.org/packages/LaYumba.Functional
 1. 목차
-   - Chapter 01. Introducing functional programming
-   - [Chapter 02. Why function purity matters](./Ch02)
-   - [Chapter 03. Designing function signatures and types](./Ch03)
-   - Chapter 04. Patterns in functional programming
-   - Chapter 05. Designing programs with function composition
-   - Chapter 06. Functional error handling
-   - Chapter 07. Structuring an application with functions
-   - Chapter 08. Working effectively with multi-argument functions
-   - Chapter 09. Thinking about data functionally
-   - Chapter 10. Event sourcing: a functional approach to persistence
-   - Chapter 11. Lazy computations, continuations, and the beauty of monadic composition
-   - Chapter 12. Stateful programs and stateful computations
-   - Chapter 13. Working with asynchronous computations
-   - Chapter 14. Data streams and the Reactive Extensions
-   - Chapter 15. An introduction to message-passing concurrency
+   - [00장. Development Environmet](./Ch00)
+   - [01장. Introducing functional programming](./Ch01)
+   - [02장. Why function purity matters](./Ch02)
+   - [03장. Designing function signatures and types](./Ch03)
+   - 04장. Patterns in functional programming
+   - 05장. Designing programs with function composition
+   - 06장. Functional error handling
+   - 07장. Structuring an application with functions
+   - 08장. Working effectively with multi-argument functions
+   - 09장. Thinking about data functionally
+   - 10장. Event sourcing: a functional approach to persistence
+   - 11장. Lazy computations, continuations, and the beauty of monadic composition
+   - 12장. Stateful programs and stateful computations
+   - 13장. Working with asynchronous computations
+   - 14장. Data streams and the Reactive Extensions
+   - 15장. An introduction to message-passing concurrency
    
 ## 용어
-- 순수 함수(Pure Function)
+1. Functional programming
+   - In computer science, functional programming is a **programming paradigm**—a style of building the structure and elements of computer programs—that treats computation as the evaluation of **mathematical functions** and **avoids changing-state and mutable data**. 
+   - It is a **declarative programming paradigm** in that programming is done with **expressions or declarations** instead of statements. 
+   - In functional code, the output value of a function **depends only on its arguments**, so calling a function with the same value for an argument always produces the same result. 
+   - This is in contrast to **imperative programming** where, in addition to a function's arguments, global program state can affect a function's resulting value. 
+   - One of the key motivations for the development of functional programming is making **a program easier to understand** by eliminating changes in state that do not depend on function inputs which are called **side effects**.
+   - 함수형 프로그래밍(functional programming)은 자료 처리를 **수학적 함수**의 계산으로 취급하고 **상태와 가변 데이터를 멀리**하는 **프로그래밍 패러다임**의 하나이다.
+   - **명령형 프로그래밍**에서는 상태를 바꾸는 것을 강조하는 것과는 달리, 함수형 프로그래밍은 **함수의 응용**을 강조한다. 
+   - 프로그래밍이 **문**이 아닌 **식이나 선언**으로 수행되는 **선언형 프로그래밍 패러다임**을 따르고 있다.
+- Declarative programming
+- Imperative programming
+- First-class citizen
+  - First-class function, First-class class
+- Immutabe 
+- Mutable
+- Pure fnction 
   - The output depends entirely on the input arguments.
   - Cause no side effects.
-- 불순 함수(Impure Function)
+- Impure function
   - Factors other than input arguments may affect the output.
   - May cause side effects.
+- Side effects
+- Referential Transparency
+- Expression 
+- Statement
+- Higher-order function
+- Strategy Pattern
+- Template Method Pattern
+- Lambda Function
+- Closure
+- Lazy Evaluation
+  - Only evaluate values as needed
+  - Expression not evaluated before result is required
+- Recursive
+- Category Theory
+- Composite Function
+- Functor
+- Applicative Functor
+- Monoid
+- Monad
+- Free Monad
+- Pattern matching
+  - Match object against patterns as flow control
+- Covariance 
+- Contravariance
+- Currying
+- Abstraction
+- Morphism
+- Identity
+- Associated law
+  - 이항연산이 만족하거나 만족하지 않는 성질이다.
+  - 한 식에서 연산이 두 번 이상 연속될 때, 앞쪽의 연산을 먼저 계산한 값과 뒤쪽의 연산을 먼저 계산한 결과가 항상 같을 경우 그 연산은 결합법칙을 만족한다고 한다.
 - Parallelization
   - Different threads carry out tasks in parallel
-- Lazy evaluation
-  - Only evaluate values as needed
 - Memoization
   - Cache the result of a function so it’s only computed once
 

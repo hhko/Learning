@@ -1,0 +1,9 @@
+@startuml
+class FixedMoney {
+    + Currency : Currency <<get>>
+    + Amount : decimal <<get>>
+    # FixedMoney(currency:Currency, amount:decimal)
+    + <<override>> Withdraw(currency:Currency, amount:decimal) : decimal
+}
+Money <|-- FixedMoney
+@enduml

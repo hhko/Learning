@@ -1,0 +1,28 @@
+@startuml
+class BankCard {
+    + ValidBefore : Month <<get>>
+    + BankCard(validBefore:Month)
+    + <<override>> Withdraw(currency:Currency, amount:decimal) : decimal
+}
+Money <|-- BankCard
+class Cash {
+}
+class FixedMoney {
+    + Currency : Currency <<get>>
+    + Amount : decimal <<get>>
+    # FixedMoney(currency:Currency, amount:decimal)
+    + <<override>> Withdraw(currency:Currency, amount:decimal) : decimal
+}
+Money <|-- FixedMoney
+class GiftCard {
+    + ValidBefore : Date <<get>>
+    + GiftCard(currency:Currency, amount:decimal, validBefore:Date)
+    + <<override>> Withdraw(currency:Currency, amount:decimal) : decimal
+}
+FixedMoney <|-- GiftCard
+abstract class Money {
+    + {abstract} Withdraw(currency:Currency, amount:decimal) : decimal
+}
+class Wallet {
+}
+@enduml
