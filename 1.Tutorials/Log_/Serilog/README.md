@@ -5,17 +5,27 @@
   - ToMaximumCollectionCount
   - ToMaximumStringLength
   - ToMaximumDepth
+- [ ] Destructurama.Attributed
 - [ ] ControlledBy 코드
-- [ ] With Property : Thread, ...  
+- [ ] Serilog.Exceptions
+- [ ] Serilog.Enrichers.Environment
+- [ ] Serilog.Enrichers.Thread
+- [ ] Serilog.Enrichers.Process
+- [ ] Serilog.Enrichers.AssemblyName
 ---
 - [ ] Sub Logger
 - [ ] Sub Logger Dynamic.
+---
+- [ ] 시간
 ---
 - [ ] MVP
   - Logstash 전송 : Http
   - Fixed 필드, Kafka
   - Logstash pipeline
   - Elasticsearch/Kibana 확인
+- [ ] 대시보드 네임스페이스, 클래스, 메서드 Top 수행 시간
+- [ ] 대시보드 네임스페이스, 클래스, 메서드 Top 호출 횟수
+- [ ] 대시보드 네임스페이스, 클래스, 메서드 Top 수행 결과(성공/실패/예외)
 ---  
 - [ ] Raw 기본 출력 형식
 - [ ] Visual Studio Serilog 확장 도구 https://github.com/Suchiman/SerilogAnalyzer
@@ -202,7 +212,7 @@
 - [ ] Serilog.Sinks.Debug
 - [ ] Serilog.Sinks.RollingFile
 - [ ] Serilog.Sinks.Elasticsearch
-- [ ] Serilog.Formatting.Elasticsearch
+- [x] Serilog.Formatting.Elasticsearch
 - [ ] Serilog.Exceptions
 - [ ] Serilog.Sinks.Map
 - [ ] Destructurama.Attributed
