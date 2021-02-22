@@ -1,6 +1,7 @@
 ﻿# Serilog Tutorial
 
 ## TODO
+- [ ] https://github.com/FantasticFiasco/serilog-sinks-http-sample-elastic-stack
 - [ ] 기본값 확인
   - ToMaximumCollectionCount
   - ToMaximumStringLength
