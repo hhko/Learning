@@ -8,11 +8,11 @@
 > &nbsp; - Gerald Weinberg
 
 ![](./ArchitecturalPrinciples.png)
-- 아키텍처 원칙 : [한국어](https://docs.microsoft.com/ko-kr/dotnet/architecture/modern-web-apps-azure/architectural-principles), [English](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles)
+- Link : [한국어](https://docs.microsoft.com/ko-kr/dotnet/architecture/modern-web-apps-azure/architectural-principles), [English](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles)
 
 <br/>
 
-## 목차
+## Contents
 1. Tutorials
    - Log
      - [NLog](./1.Tutorials/Log_/NLog)
