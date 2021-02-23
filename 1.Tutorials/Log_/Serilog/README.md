@@ -1,14 +1,61 @@
 ﻿# Serilog Tutorial
 
+## NuGet 패키지
+- [x] Serilog
+- [x] Serilog.Sinks.Console
+- [x] Serilog.Sinks.File
+- [x] Destructurama.Attributed
+- [x] Serilog.Formatting.Compact 
+  - CKEF(Compact Log Event Format Tool)
+- [x] Serilog.Exceptions
+- [x] Serilog.Formatting.Elasticsearch
+- [x] Elastic.CommonSchema.Serilog
+- [x] Serilog.Settings.Configuration
+  - Microsoft.Extensions.Configuration
+  - Microsoft.Extensions.Configuration.FileExtensions
+  - Microsoft.Extensions.Configuration.Json
+- [x] Serilog.Settings.AppSettings
+---
+- [ ] Serilog.Sinks.Debug
+- [ ] Serilog.Sinks.Map
+- [ ] Serilog.Sinks.Http
+- [ ] Serilog.Sinks.Async
+- [ ] Serilog.Sinks.Elasticsearch
+- [ ] Serilog.Sinks.PeriodicBatching
+- [ ] Serilog.Sinks.TestCorrelator
+- [ ] Serilog.Sinks.SQLite, 5.0.0
+- [ ] Serilog.Sinks.file-header
+- [ ] Serilog.Sinks.file-gzip
+- [ ] Serilog.Sinks.file-archive
+- [ ] ~~Serilog.Sinks.RollingFile~~
+---
+- [ ] Serilog.Enrichers.Context
+- [ ] Serilog.Enrichers.Environment
+- [ ] Serilog.Enrichers.Thread
+- [ ] Serilog.Enrichers.Process
+- [ ] Serilog.Enrichers.AssemblyName
+- [ ] Serilog.Enrichers.Memory
+- [ ] ~~Serilog.Enrichers.CorrelationId~~ : 출력 안됨
+- [ ] ~~Serilog.Enrichers.Span~~ : 출력 안됨(.NET 5.0 이상)
+---
+- [ ] Serilog.Extensions.Hosting
+- [ ] Serilog.Extensions.Logging
+---
+- [ ] Serilog.Filters.Expressions
+- [ ] SerilogTimings : SerilogMetrics
+- [ ] ~~Elastic.Apm.SerilogEnricher~~ : 출력 안됨
+- [ ] ~~SerilogMetrics~~
+---
+- [ ] Serilog.Sinks.XUnit
+- [ ] Elastic.Elasticsearch.Xunit
+---
+- [ ] Serilog.Formatting.Compact.Reader
+- [ ] Analogy.LogViewer.Serilog Json
+
+<br/>
+
 ## TODO
 - [ ] https://github.com/FantasticFiasco/serilog-sinks-http-sample-elastic-stack
-- [ ] 기본값 확인
-  - ToMaximumCollectionCount
-  - ToMaximumStringLength
-  - ToMaximumDepth
-- [ ] Destructurama.Attributed
-- [ ] ControlledBy 코드
-- [ ] Serilog.Exceptions
 - [ ] Serilog.Enrichers.Environment
 - [ ] Serilog.Enrichers.Thread
 - [ ] Serilog.Enrichers.Process
@@ -166,60 +213,6 @@
 - [x] 직접 구현 : [Creating custom serilog enrichers](https://www.ctrlaltdan.com/2018/08/14/custom-serilog-enrichers/)
 - [x] 구분 : `events[0]:_metadata:구분키`, **Enrich.FromLogContext(), using (LogContext.PushProperty("구분키", 구분값))**
 - [x] 성능(시간) : `events[0]:_metadata:outcome`, **using (Operation.Time("Submitting payment for {OrderId}", "1234"))**
-
-<br/>
-
-## 패키지
-- [x] Serilog, 2.10.0
-- [x] Serilog.Sinks.Console, 3.1.1
-- [x] Serilog.Sinks.File, 4.1.0
-- [x] Serilog.Settings.Configuration, 3.1.0
-- [x] Serilog.Settings.AppSettings, 2.2.2
-- [x] Serilog.Formatting.Compact, 1.1.0			--> CKEF(Compact Log Event Format Tool)
-- [x] Serilog.Enrichers.Context
-- [ ] Serilog.Sinks.Http
-  - [x] Http
-  - [ ] DurableHttpUsingTimeRolledBuffers
-  - [ ] DurableHttpUsingFileSizeRolledBuffers
-  - [ ] ExponentialBackoffConnectionSchedule
-- [x] Elastic.CommonSchema.Serilog : Serilog.Enrichers.Process, Serilog.Enrichers.Thread, Serilog.Exceptions
-- [x] SerilogTimings : SerilogMetrics
-- [ ] ~~Elastic.Apm.SerilogEnricher~~ : 출력 안됨
-- [ ] ~~Serilog.Enrichers.CorrelationId~~ : 출력 안됨
-- [ ] ~~Serilog.Enrichers.Span~~ : 출력 안됨(.NET 5.0 이상)
-- [ ] ~~Serilog.Exceptions~~
-- [ ] ~~SerilogMetrics~~
-- [ ] Serilog.Sinks.Async
-- [ ] Serilog.Sinks.PeriodicBatching
-- [ ] Serilog.Sinks.XUnit
-- [ ] Serilog.Sinks.TestCorrelator
-- [ ] Elastic.Elasticsearch.Xunit
-- [ ] Serilog.Sinks.SQLite, 5.0.0
-- [ ] Serilog.Expressions
-- [ ] serilog-sinks-file-header
-- [ ] serilog-sinks-file-gzip
-- [ ] serilog-sinks-file-archive
-- [ ] Serilog.Formatting.Compact.Reader
-- [ ] Analogy.LogViewer.Serilog Json
-- [ ] Elastic.CommonSchema.Serilog
-- [ ] Serilog.Extensions.Hosting
-- [ ] Serilog.Enrichers.Environment
-- [ ] Serilog.Enrichers.Thread
-- [ ] Serilog.Enrichers.Process
-- [ ] Serilog.Enrichers.AssemblyName
-- [ ] serilog-enrichers-memory
-- [ ] Serilog.Filters.Expressions
-- [ ] serilog-extensions-logging
-- [ ] Serilog.Sinks.Debug
-- [ ] Serilog.Sinks.RollingFile
-- [ ] Serilog.Sinks.Elasticsearch
-- [x] Serilog.Formatting.Elasticsearch
-- [ ] Serilog.Exceptions
-- [ ] Serilog.Sinks.Map
-- [ ] Destructurama.Attributed
-
-
-
 
 <br/>
 

@@ -10,16 +10,9 @@ namespace Step_011_DestructureOperator
     {
         static void Main(string[] args)
         {
-            const string customTemplate = "Will be logged, This is a message {Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}";
-
             Log.Logger = new LoggerConfiguration()
                                 .WriteTo.Console()
-                                .WriteTo.File(
-                                    path: "./Logs/LogFile.txt",
-                                    outputTemplate: customTemplate,
-                                    fileSizeLimitBytes: null,
-                                    rollingInterval: RollingInterval.Day,
-                                    retainedFileCountLimit: 2)
+                                .WriteTo.File(path: "./Logs/LogFile.txt")
                                 .CreateLogger();
 
             string name = "Foo";

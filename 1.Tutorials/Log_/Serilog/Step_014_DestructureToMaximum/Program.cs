@@ -9,18 +9,11 @@ namespace Step_013_DestructureToMaximum
     {
         static void Main(string[] args)
         {
-            const string customTemplate = "Will be logged, This is a message {Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}";
-
             Log.Logger = new LoggerConfiguration()
                                 .WriteTo.Console()
-                                .WriteTo.File(
-                                    path: "./Logs/LogFile.txt",
-                                    outputTemplate: customTemplate,
-                                    fileSizeLimitBytes: null,
-                                    rollingInterval: RollingInterval.Day,
-                                    retainedFileCountLimit: 2)
+                                .WriteTo.File(path: "./Logs/LogFile.txt")
 
-                                //
+                                // ToMaximumCollectionCount 0 이상 값을 전달해야 한다.
                                 // ToMaximumCollectionCount(2)는 2개까지만 출력한다.
                                 //
                                 // [17:21:04 INF] Favorites:["red-1", "red-2"]
@@ -28,12 +21,14 @@ namespace Step_013_DestructureToMaximum
                                 .Destructure.ToMaximumCollectionCount(2)
 
                                 //
+                                // ToMaximumStringLength 0 이상 값을 전달해야 한다.
                                 // ToMaximumStringLength(3) 문자열 2자까지만 출력한다. 그외는 "..."으로 출력한다.
                                 //
                                 // [17:21:04 INF] Favorites: { "Name": "My…", ... }
                                 .Destructure.ToMaximumStringLength(3)
 
                                 //
+                                // ToMaximumDepth 0 이상 값을 전달해야 한다.
                                 // ToMaximumDepth(2) 1수준까지 값을 출력한다. 2수준 값은 NULL로 출력한다. 그 이상은 출력하지 않는다.
                                 // 
                                 // [17:22:15 INF] Favorites : {"Red": 122, "Green": 24, "Blue": 19, "Name": "My…", "Items": [null, null], "SubItems": [null], "$type": "Color"}
@@ -69,9 +64,9 @@ namespace Step_013_DestructureToMaximum
                 Blue = 19,
                 Name = "My favorite color is red.",
                 Items = new List<string> { "1", "2", "3" },
-                SubItems = new List<SubItem> 
+                SubColors = new List<SubColor> 
                 { 
-                    new SubItem 
+                    new SubColor 
                     { 
                         Name = "1", 
                         Items = new List<string> { "1", "2", "3"} 
@@ -100,7 +95,7 @@ namespace Step_013_DestructureToMaximum
 
         public List<string> Items {get; set; }
 
-        public List<SubItem> SubItems { get; set; }
+        public List<SubColor> SubColors { get; set; }
 
         public override string ToString()
         {
@@ -108,14 +103,14 @@ namespace Step_013_DestructureToMaximum
         }
     }
 
-    public class SubItem
+    public class SubColor
     {
         public string Name { get; set; }
         public List<string> Items { get; set; }
 
         public override string ToString()
         {
-            return $"SubItem : {Name}";
+            return $"SubColor : {Name}";
         }
     }
 }
