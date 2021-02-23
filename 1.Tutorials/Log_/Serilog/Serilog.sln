@@ -34,11 +34,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_012_DestructureOperato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_013_DestructureByTransforming", "Step_013_DestructureByTransforming\Step_013_DestructureByTransforming.csproj", "{4689A247-63E7-4E2C-B378-82B76464168F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Structural", "03. Structural", "{A27C05D0-F96D-4D84-9452-1E281824D60E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Destructure - Structural", "03. Destructure - Structural", "{A27C05D0-F96D-4D84-9452-1E281824D60E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Limit", "02. Limit", "{6443B798-4061-4285-B4D4-93F402C951B9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. WriteTo - Limit", "02. WriteTo - Limit", "{6443B798-4061-4285-B4D4-93F402C951B9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Getting Started", "01. Getting Started", "{A25808FA-83E0-4AAC-8349-C9CB3000C9D5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. WriteTo - Getting Started", "01. WriteTo - Getting Started", "{A25808FA-83E0-4AAC-8349-C9CB3000C9D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_016_Json", "Step_016_Json\Step_016_Json.csproj", "{E4CDB38B-681E-46FE-8FC3-0E0DDF489875}"
 EndProject
@@ -70,7 +70,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_035_CustomProperty", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_006_SelfLog", "Step_006_SelfLog\Step_006_SelfLog.csproj", "{91721A35-F922-4AA3-B5EB-65A90B91E514}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Configuration", "05. Configuration", "{ACA26A06-5797-4365-829C-18AEBED1EED9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. ReadFrom - Configuration", "05. ReadFrom - Configuration", "{ACA26A06-5797-4365-829C-18AEBED1EED9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_021_JsonConfiguration", "Step_021_JsonConfiguration\Step_021_JsonConfiguration.csproj", "{3C2A71AC-2C15-4A90-9602-AFF738B1ED14}"
 EndProject
@@ -78,7 +78,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_022_XmlConfiguration",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_028_MinimumLevelSourceContext", "Step_028_MinimumLevelSourceContext\Step_028_MinimumLevelSourceContext.csproj", "{4BF62522-99E7-44F8-9F6E-35469802DC04}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Format", "04. Format", "{EC847B06-B32B-45A8-93D7-73ABAFAF9B54}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. WriteTo - Format", "04. WriteTo - Format", "{EC847B06-B32B-45A8-93D7-73ABAFAF9B54}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_017_CompactJson", "Step_017_CompactJson\Step_017_CompactJson.csproj", "{626B472D-83C5-440C-8AF9-AEF9A85D38F7}"
 EndProject
@@ -92,7 +92,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_014_DestructureToMaxim
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Sublogger", "10. Sublogger", "{DE1A8C2C-D78F-4122-8EEE-86FC0BD364D7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. Http", "11. Http", "{EEB6F027-4759-4586-A817-CCDEE95DE530}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. WriteTo - Http", "11. WriteTo - Http", "{EEB6F027-4759-4586-A817-CCDEE95DE530}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_038_SendLogstash", "Step_038_SendLogstash\Step_038_SendLogstash.csproj", "{86C3E425-20CC-4EB5-AFB7-9162277748CD}"
 EndProject

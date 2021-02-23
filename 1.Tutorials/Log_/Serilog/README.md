@@ -15,10 +15,11 @@
   - Microsoft.Extensions.Configuration.FileExtensions
   - Microsoft.Extensions.Configuration.Json
 - [x] Serilog.Settings.AppSettings
+- [x] Serilog.Sinks.Http
+  - [Kibana Query Language](https://www.elastic.co/guide/en/kibana/7.9/kuery-query.html)
 ---
 - [ ] Serilog.Sinks.Debug
 - [ ] Serilog.Sinks.Map
-- [ ] Serilog.Sinks.Http
 - [ ] Serilog.Sinks.Async
 - [ ] Serilog.Sinks.Elasticsearch
 - [ ] Serilog.Sinks.PeriodicBatching
