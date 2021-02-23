@@ -42,7 +42,7 @@
    - Unit Test
      - [How to Use and Unit Test ILogger](./4.Blogs/UnitTest/HowToUseAndUnitTestILogger)
    - Awesome
-     - [Domain-Driven Design(./4.Blogs/Awesome/DDD)
+     - [Domain-Driven Design](./4.Blogs/Awesome/DDD)
      - [Functional Programming](./4.Blogs/Awesome/FP)
 
 
