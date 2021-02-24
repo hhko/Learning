@@ -46,6 +46,7 @@
 - [ ] Serilog.Filters.Expressions
 - [ ] ~~Elastic.Apm.SerilogEnricher~~ : 출력 안됨
 - [ ] ~~SerilogMetrics~~
+- [ ] serilog-generator 
 ---
 - [ ] Serilog.Sinks.XUnit
 - [ ] Elastic.Elasticsearch.Xunit
