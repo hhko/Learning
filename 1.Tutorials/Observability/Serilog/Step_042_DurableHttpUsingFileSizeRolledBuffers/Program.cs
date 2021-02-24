@@ -34,7 +34,7 @@ namespace Step_042_DurableHttpUsingFileSizeRolledBuffers
                             .WriteTo.Console()
                             .CreateLogger();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Log.Information("Hello World >-- {Number}", i);
 

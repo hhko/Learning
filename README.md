@@ -15,25 +15,25 @@
 ## Contents
 1. Tutorials
    - Log
-     - [NLog](./1.Tutorials/Log_/NLog)
-     - [Serilog](./1.Tutorials/Log_/Serilog)
+     - [NLog](./1.Tutorials/Observability/NLog)
+     - [Serilog](./1.Tutorials/Observability/Serilog)
 1. Books
-   - DDD
+   - Domain-Driven Design
      - [도메인 주도 설계 철저 입문](./2.Books/DDD/DDDGuide) 
    - Functional Programming
      - [Functional Programming in C#](./2.Books/FP/FPinCSharp)
    - Microservice
      - [Practical Microservices with Dapr and .NET](./2.Books/Microservice/DaprDotNet)
 1. Lectures
-   - DDD
+   - Domain-Driven Design
      - [Domain-Driven Design in Practice](./3.Lectures/DDD/DddInPractice)
    - Functional Programming
      - [Defensive Programming](./3.Lectures/FP/DefensiveProgramming)
      - [Writing Purely Functional Code In C#](./3.Lectures/FP/WritingPurelyFunctionalCodeInCSharp)
 1. Blogs
-   - DDD
+   - Domain-Driven Design
      - [Designing with Types](./4.Blogs/DDD/DesigningWithTypes_2)
-   - OOD
+   - Object-Oriented Design
      - [.NET Core Console App with Dependency Injection, Logging, and Settings](./4.Blogs/OOD/BetterConsoleApp/ConsoleUI)
    - Functional Programming
      - [How To Debug LINQ Queries in C#](./4.Blogs/FP/HowToDebugLINQQueriesInCSharp)
