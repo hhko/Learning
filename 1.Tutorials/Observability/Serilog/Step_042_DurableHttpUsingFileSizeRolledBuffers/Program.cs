@@ -36,7 +36,7 @@ namespace Step_042_DurableHttpUsingFileSizeRolledBuffers
 
             for (int i = 0; i < 3; i++)
             {
-                Log.Information("Hello World >-- {Number}", i);
+                Log.Information("Hello World {Number}", i);
 
                 Thread.Sleep(1000);
             }

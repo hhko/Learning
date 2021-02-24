@@ -39,7 +39,7 @@ namespace Step_041_HttpDiagnostics
             Directory.CreateDirectory("./Logs");
             SelfLog.Enable(
                 TextWriter.Synchronized(
-                    File.CreateText("./Logs/Serilog.log")));
+                    File.CreateText("./Logs/Serilog.txt")));
 
             // Serilog 내부 예외 발생을 콘솔에 출력한다.
             SelfLog.Enable(Console.Error);

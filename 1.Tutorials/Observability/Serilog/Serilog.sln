@@ -90,9 +90,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_020_ElasticCommonSchem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_014_DestructureToMaximum", "Step_014_DestructureToMaximum\Step_014_DestructureToMaximum.csproj", "{B99F29AD-2C5E-442A-86B6-6B8EAC2E6B86}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Sublogger", "10. Sublogger", "{DE1A8C2C-D78F-4122-8EEE-86FC0BD364D7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. WriteTo - Logger", "10. WriteTo - Logger", "{DE1A8C2C-D78F-4122-8EEE-86FC0BD364D7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. WriteTo - Http", "11. WriteTo - Http", "{EEB6F027-4759-4586-A817-CCDEE95DE530}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "12. WriteTo - Http", "12. WriteTo - Http", "{EEB6F027-4759-4586-A817-CCDEE95DE530}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_038_HttpLogstash", "Step_038_HttpLogstash\Step_038_HttpLogstash.csproj", "{86C3E425-20CC-4EB5-AFB7-9162277748CD}"
 EndProject
@@ -108,9 +108,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_039_HttpNamespacedText
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_040_HttpException", "Step_040_HttpException\Step_040_HttpException.csproj", "{BCC6683F-FA1E-498A-98C0-3DC5789A019C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_041_HttpDiagnostics", "Step_041_HttpDiagnostics\Step_041_HttpDiagnostics.csproj", "{9B2383E2-CB91-4038-8E00-3152B433F8E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_041_HttpDiagnostics", "Step_041_HttpDiagnostics\Step_041_HttpDiagnostics.csproj", "{9B2383E2-CB91-4038-8E00-3152B433F8E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_042_DurableHttpUsingFileSizeRolledBuffers", "Step_042_DurableHttpUsingFileSizeRolledBuffers\Step_042_DurableHttpUsingFileSizeRolledBuffers.csproj", "{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_042_DurableHttpUsingFileSizeRolledBuffers", "Step_042_DurableHttpUsingFileSizeRolledBuffers\Step_042_DurableHttpUsingFileSizeRolledBuffers.csproj", "{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_036_MultipleLogers", "Step_036_MultipleLogers\Step_036_MultipleLogers.csproj", "{A3EB3DED-B07C-4B10-8616-E049EB298037}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. WriteTo - Time", "11. WriteTo - Time", "{479A1A4F-6BA9-4F0A-B3B5-76BD9CEE5125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_037_OperationTime", "Step_037_OperationTime\Step_037_OperationTime.csproj", "{2FE40312-6F24-4EEA-8DE7-FD2DFD819E0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -278,6 +284,14 @@ Global
 		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3EB3DED-B07C-4B10-8616-E049EB298037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3EB3DED-B07C-4B10-8616-E049EB298037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3EB3DED-B07C-4B10-8616-E049EB298037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3EB3DED-B07C-4B10-8616-E049EB298037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE40312-6F24-4EEA-8DE7-FD2DFD819E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE40312-6F24-4EEA-8DE7-FD2DFD819E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE40312-6F24-4EEA-8DE7-FD2DFD819E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE40312-6F24-4EEA-8DE7-FD2DFD819E0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -323,6 +337,8 @@ Global
 		{BCC6683F-FA1E-498A-98C0-3DC5789A019C} = {EEB6F027-4759-4586-A817-CCDEE95DE530}
 		{9B2383E2-CB91-4038-8E00-3152B433F8E0} = {EEB6F027-4759-4586-A817-CCDEE95DE530}
 		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A} = {EEB6F027-4759-4586-A817-CCDEE95DE530}
+		{A3EB3DED-B07C-4B10-8616-E049EB298037} = {DE1A8C2C-D78F-4122-8EEE-86FC0BD364D7}
+		{2FE40312-6F24-4EEA-8DE7-FD2DFD819E0F} = {479A1A4F-6BA9-4F0A-B3B5-76BD9CEE5125}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71EE70B-138B-4A77-9211-73DACECF0057}

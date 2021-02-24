@@ -17,6 +17,7 @@
 - [x] Serilog.Settings.AppSettings
 - [x] Serilog.Sinks.Http
   - [Kibana Query Language](https://www.elastic.co/guide/en/kibana/7.9/kuery-query.html)
+- [x] SerilogTimings
 ---
 - [ ] Serilog.Sinks.Debug
 - [ ] Serilog.Sinks.Map
@@ -43,7 +44,6 @@
 - [ ] Serilog.Extensions.Logging
 ---
 - [ ] Serilog.Filters.Expressions
-- [ ] SerilogTimings : SerilogMetrics
 - [ ] ~~Elastic.Apm.SerilogEnricher~~ : 출력 안됨
 - [ ] ~~SerilogMetrics~~
 ---
@@ -62,19 +62,11 @@
 - [ ] Serilog.Enrichers.Process
 - [ ] Serilog.Enrichers.AssemblyName
 ---
-- [ ] Sub Logger
-- [ ] Sub Logger Dynamic.
----
+- Elasticsearch/Kibana 확인
+- [ ] 횟수 : 네임스페이스 > 클래스 > 메서드, 수준(Error : 예외 포함)
+- [ ] 내용 : 성공/실패
 - [ ] 시간
----
-- [ ] MVP
-  - Logstash 전송 : Http
-  - Fixed 필드, Kafka
-  - Logstash pipeline
-  - Elasticsearch/Kibana 확인
-- [ ] 대시보드 네임스페이스, 클래스, 메서드 Top 수행 시간
-- [ ] 대시보드 네임스페이스, 클래스, 메서드 Top 호출 횟수
-- [ ] 대시보드 네임스페이스, 클래스, 메서드 Top 수행 결과(성공/실패/예외)
+- [ ] 흐름 : 관계?
 ---  
 - [ ] Raw 기본 출력 형식
 - [ ] Visual Studio Serilog 확장 도구 https://github.com/Suchiman/SerilogAnalyzer
@@ -244,7 +236,7 @@
 
 ## 블러그
 - [x] How to destruct objects and log | [](https://ranjeet.dev/getting-started-with-serilog/)
-- Sub Logger | [Serilog and ASP.NET Core: Split Log Data Using Serilog FilterExpression](https://vmsdurano.com/serilog-and-asp-net-core-split-log-data-using-filterexpression/)
+- [x] Sub Logger | [Serilog and ASP.NET Core: Split Log Data Using Serilog FilterExpression](https://vmsdurano.com/serilog-and-asp-net-core-split-log-data-using-filterexpression/)
 - FromLogContext, MessageTemplate(HashCode) | https://blog.datalust.co/serilog-tutorial/
 ---
 - [전문가 | Nicholas Blumhardt](https://nblumhardt.com/)

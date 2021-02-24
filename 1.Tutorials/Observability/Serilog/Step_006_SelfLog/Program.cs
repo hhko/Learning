@@ -37,7 +37,7 @@ namespace Step_024_SelfLog
             //
             Serilog.Debugging.SelfLog.Enable(
                 TextWriter.Synchronized(
-                    File.CreateText("./Log/Serilog.log")));
+                    File.CreateText("./Log/Serilog.txt")));
 
             Log.Information("Hello World!");
 
