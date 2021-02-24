@@ -14,7 +14,7 @@
 
 ## Contents
 1. Tutorials
-   - Log
+   - Observability
      - [NLog](./1.Tutorials/Observability/NLog)
      - [Serilog](./1.Tutorials/Observability/Serilog)
 1. Books
