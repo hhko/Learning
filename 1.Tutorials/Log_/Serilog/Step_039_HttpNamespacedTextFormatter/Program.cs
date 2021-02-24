@@ -24,9 +24,10 @@ namespace Step_039_NamespacedTextFormatter
                             .WriteTo.Http(
                                 requestUri: "http://192.168.70.23:7701",
 
-                                //
-                                // Properties.MainComponent.SubCompoent. ...(사용자 정의 속성)...
-                                //
+                                // "component : MainComponent, subCompoent : SubCompoent"일 때
+                                //    > Properties.MainComponent.SubCompoent. ...(사용자 정의 속성)...
+                                // "component : MainComponent, subCompoent : NULL"일 때(subComponent은 생략(NULL) 가능하다.)
+                                //    > Properties.MainComponent. ...(사용자 정의 속성)...
                                 textFormatter: new Formatter("MainComponent", "SubCompoent"),
                                 batchFormatter: new ArrayBatchFormatter())
                             .WriteTo.Console()

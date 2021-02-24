@@ -276,6 +276,7 @@
 - https://blog.datalust.co/serilog-tutorial/
 - http://merbla.com/2018/04/25/exploring-serilog-v2---using-the-http-client-factory/
 - https://www.honeycomb.io/blog/simple-structured-logging-with-nlog/
+- 예외 처리 : https://hamidmosalla.com/2018/06/19/exception-handling-in-asynchronous-code/
 
 <br/>
 

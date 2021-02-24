@@ -94,7 +94,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Sublogger", "10. Sublog
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. WriteTo - Http", "11. WriteTo - Http", "{EEB6F027-4759-4586-A817-CCDEE95DE530}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_038_SendLogstash", "Step_038_SendLogstash\Step_038_SendLogstash.csproj", "{86C3E425-20CC-4EB5-AFB7-9162277748CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_038_HttpLogstash", "Step_038_HttpLogstash\Step_038_HttpLogstash.csproj", "{86C3E425-20CC-4EB5-AFB7-9162277748CD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_015_DestructureByAttribute", "Step_015_DestructureByAttribute\Step_015_DestructureByAttribute.csproj", "{E1C3EB2D-D78B-4CC2-A150-F89AAF961C88}"
 EndProject
@@ -104,9 +104,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_030_MinimumLevelContro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_018_Exception", "Step_018_Exception\Step_018_Exception.csproj", "{D321D83E-2306-46F7-A4DB-8C9B2D2F267D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_039_NamespacedTextFormatter", "Step_039_NamespacedTextFormatter\Step_039_NamespacedTextFormatter.csproj", "{AEB4E354-EDC2-4CC3-8ED1-48F20B9EEB83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_039_HttpNamespacedTextFormatter", "Step_039_HttpNamespacedTextFormatter\Step_039_HttpNamespacedTextFormatter.csproj", "{AEB4E354-EDC2-4CC3-8ED1-48F20B9EEB83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_040_Exception", "Step_040_Exception\Step_040_Exception.csproj", "{BCC6683F-FA1E-498A-98C0-3DC5789A019C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_040_HttpException", "Step_040_HttpException\Step_040_HttpException.csproj", "{BCC6683F-FA1E-498A-98C0-3DC5789A019C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_041_HttpDiagnostics", "Step_041_HttpDiagnostics\Step_041_HttpDiagnostics.csproj", "{9B2383E2-CB91-4038-8E00-3152B433F8E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_042_DurableHttpUsingFileSizeRolledBuffers", "Step_042_DurableHttpUsingFileSizeRolledBuffers\Step_042_DurableHttpUsingFileSizeRolledBuffers.csproj", "{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -266,6 +270,14 @@ Global
 		{BCC6683F-FA1E-498A-98C0-3DC5789A019C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCC6683F-FA1E-498A-98C0-3DC5789A019C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCC6683F-FA1E-498A-98C0-3DC5789A019C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2383E2-CB91-4038-8E00-3152B433F8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2383E2-CB91-4038-8E00-3152B433F8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2383E2-CB91-4038-8E00-3152B433F8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2383E2-CB91-4038-8E00-3152B433F8E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -309,6 +321,8 @@ Global
 		{D321D83E-2306-46F7-A4DB-8C9B2D2F267D} = {EC847B06-B32B-45A8-93D7-73ABAFAF9B54}
 		{AEB4E354-EDC2-4CC3-8ED1-48F20B9EEB83} = {EEB6F027-4759-4586-A817-CCDEE95DE530}
 		{BCC6683F-FA1E-498A-98C0-3DC5789A019C} = {EEB6F027-4759-4586-A817-CCDEE95DE530}
+		{9B2383E2-CB91-4038-8E00-3152B433F8E0} = {EEB6F027-4759-4586-A817-CCDEE95DE530}
+		{59EF6CB7-3822-4D6D-BF54-C6636D47B84A} = {EEB6F027-4759-4586-A817-CCDEE95DE530}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71EE70B-138B-4A77-9211-73DACECF0057}
