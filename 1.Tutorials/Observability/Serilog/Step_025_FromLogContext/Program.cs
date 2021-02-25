@@ -34,6 +34,11 @@ namespace Step_025_FromLogContext
             //         "Id": 1
             //     }
             // }
+            //
+            // IDisposable PushProperty(string name, object value, bool destructureObjects = false);
+            //   - destructureObjects을 활용하여 "@" 연산자와 동일한 효과를 얻을 수 있다.
+            //     예. using(LogContext.PushProperty("Id", foo, true)) 
+            //
             using (LogContext.PushProperty("Id", 1))
             {
                 Log.Information("Hello Main");

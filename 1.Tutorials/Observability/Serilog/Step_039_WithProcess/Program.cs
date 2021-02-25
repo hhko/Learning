@@ -13,7 +13,6 @@ namespace Step_039_WithProcess
                                 //
                                 // 프로세스 Id
                                 //
-                                // .Enrich.WithAssemblyName<T>()
                                 .Enrich.WithProcessId()
 
                                 //

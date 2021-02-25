@@ -18,6 +18,19 @@
 - [x] Serilog.Sinks.Http
   - [Kibana Query Language](https://www.elastic.co/guide/en/kibana/7.9/kuery-query.html)
 - [x] SerilogTimings
+- [x] Serilog.Enrichers.Environment
+- [x] Serilog.Enrichers.AssemblyName
+- [x] Serilog.Enrichers.Process
+- [ ] Serilog.Enrichers.Thread
+---
+- [ ] Serilog.Sinks.Notepad
+- [ ] Serilog.Sinks.RichTextBox.Wpf
+- [ ] ExcelDna.Diagnostics.Serilog
+---
+- [ ] Serilog.Enrichers.Context
+- [ ] Serilog.Enrichers.Memory
+- [ ] ~~Serilog.Enrichers.CorrelationId~~ : 출력 안됨
+- [ ] ~~Serilog.Enrichers.Span~~ : 출력 안됨(.NET 5.0 이상)
 ---
 - [ ] Serilog.Sinks.Debug
 - [ ] Serilog.Sinks.Map
@@ -31,15 +44,6 @@
 - [ ] Serilog.Sinks.file-archive
 - [ ] ~~Serilog.Sinks.RollingFile~~
 ---
-- [ ] Serilog.Enrichers.Context
-- [ ] Serilog.Enrichers.Environment
-- [ ] Serilog.Enrichers.Thread
-- [ ] Serilog.Enrichers.Process
-- [ ] Serilog.Enrichers.AssemblyName
-- [ ] Serilog.Enrichers.Memory
-- [ ] ~~Serilog.Enrichers.CorrelationId~~ : 출력 안됨
-- [ ] ~~Serilog.Enrichers.Span~~ : 출력 안됨(.NET 5.0 이상)
----
 - [ ] Serilog.Extensions.Hosting
 - [ ] Serilog.Extensions.Logging
 ---
@@ -48,12 +52,9 @@
 - [ ] ~~SerilogMetrics~~
 - [ ] serilog-generator 
 ---
-- [ ] Serilog.Sinks.Notepad
-- [ ] Serilog.Sinks.RichTextBox.Wpf
-- [ ] ExcelDna.Diagnostics.Serilog
----
 - [ ] Serilog.Sinks.XUnit
 - [ ] Elastic.Elasticsearch.Xunit
+- [ ] Serilog.Enrichers.Process GitHub 단위 테스트 작성 방법 이해
 ---
 - [ ] Serilog.Formatting.Compact.Reader
 - [ ] Analogy.LogViewer.Serilog Json
@@ -61,12 +62,6 @@
 <br/>
 
 ## TODO
-- [ ] https://github.com/FantasticFiasco/serilog-sinks-http-sample-elastic-stack
-- [ ] Serilog.Enrichers.Environment
-- [ ] Serilog.Enrichers.Thread
-- [ ] Serilog.Enrichers.Process
-- [ ] Serilog.Enrichers.AssemblyName
----
 - Elasticsearch/Kibana 확인
 - [ ] 횟수 : 네임스페이스 > 클래스 > 메서드, 수준(Error : 예외 포함)
 - [ ] 내용 : 성공/실패
@@ -81,10 +76,7 @@
 - [ ] 로컬 로그 뷰어 CLI
 - [ ] 로컬 로그 뷰어 GUI
 - [ ] 단위 테스트
-- [ ] FromLogContext?
 - [ ] AuditTo?
-- [ ] 수행 시간 Timed, https://github.com/nblumhardt/serilog-timings
-- [ ] 기본 정보 : 프로그램명, 프로그그램 버전, 로거명, 로거버전
 - [ ] NuGET
   - Http
   - Async
@@ -93,7 +85,6 @@
 - [ ] 사용자 정의
   - Fomrat 사용자 정의 만들기
   - Sink 사용자 정의 만들기
-  - Enrich 사용자 정의 만들기
 - [ ] 공통 코드 Akka
 - [ ] 공통 코드 .NET Core
 - [ ] 공통 코드 .NET Framework
@@ -240,10 +231,14 @@
 <br/>
 
 ## 블러그
-- [x] How to destruct objects and log | [](https://ranjeet.dev/getting-started-with-serilog/)
-- [x] Sub Logger | [Serilog and ASP.NET Core: Split Log Data Using Serilog FilterExpression](https://vmsdurano.com/serilog-and-asp-net-core-split-log-data-using-filterexpression/)
-- FromLogContext, MessageTemplate(HashCode) | https://blog.datalust.co/serilog-tutorial/
+- [x] Enrichers 직접 구현 : [Creating custom serilog enrichers](https://www.ctrlaltdan.com/2018/08/14/custom-serilog-enrichers/)
+- [x] NotLogged 속성 이용하기 | (https://ranjeet.dev/getting-started-with-serilog/)
+- [x] 복수 Logger 만들기 | [Serilog and ASP.NET Core: Split Log Data Using Serilog FilterExpression](https://vmsdurano.com/serilog-and-asp-net-core-split-log-data-using-filterexpression/)
+- [x] Logstash에게 메시지 보내기 | https://github.com/FantasticFiasco/serilog-sinks-http-sample-elastic-stack
+- [x] MessageTemplate으로 Hash 값 만들기 | https://blog.datalust.co/serilog-tutorial/
+- [x] 환경 설정 기반에서 동적 Level 처리하기 | [Changing Serilog Minimum level without application restart on .NET Framework and Core](https://swimburger.net/blog/dotnet/changing-serilog-minimum-level-without-application-restart-on-dotnet-framework-and-core)
 ---
+- [ ] Visual Studio Serilog 확장 도구 https://github.com/Suchiman/SerilogAnalyzer
 - [전문가 | Nicholas Blumhardt](https://nblumhardt.com/)
 - [전문가 | Andrew Lock](https://andrewlock.net/tag/logging/)
 - [Enricher 만들기(Creating custom serilog enrichers)](https://www.ctrlaltdan.com/2018/08/14/custom-serilog-enrichers/)

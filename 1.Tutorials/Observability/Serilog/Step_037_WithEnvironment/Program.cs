@@ -25,7 +25,7 @@ namespace Step_037_WithEnvironment
                                 //    우선 순위 : ASPNETCORE_ENVIRONMENT > DOTNET_ENVIRONMENT
                                 //    둘다 없을 때 값은 "Production"이다.
                                 //
-                                .Enrich.WithEnvironmentName()
+                                //.Enrich.WithEnvironmentName()
                                 .WriteTo.Console(formatter: new JsonFormatter())
                                 .CreateLogger();
 

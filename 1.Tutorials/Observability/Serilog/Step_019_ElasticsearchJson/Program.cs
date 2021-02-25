@@ -19,7 +19,7 @@ namespace Step_015_ElasticsearchJson
             //
             // Elasticsearch Json vs. Json 차이점
             //   1. @timestamp이다.
-            //   2. 키가 소문자로 시작한다.
+            //   2. 키가 모두 소문자로 시작한다.
             //   3. "message"키가 있다.
             //   4. Properties -> fields 이름이 다르다.
             //

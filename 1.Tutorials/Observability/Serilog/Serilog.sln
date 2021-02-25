@@ -34,7 +34,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_012_DestructureOperato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_013_DestructureByTransforming", "Step_013_DestructureByTransforming\Step_013_DestructureByTransforming.csproj", "{4689A247-63E7-4E2C-B378-82B76464168F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Destructure - Structural", "03. Destructure - Structural", "{A27C05D0-F96D-4D84-9452-1E281824D60E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Destructure - Structural", "04. Destructure - Structural", "{A27C05D0-F96D-4D84-9452-1E281824D60E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. WriteTo - Limit", "02. WriteTo - Limit", "{6443B798-4061-4285-B4D4-93F402C951B9}"
 EndProject
@@ -46,19 +46,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_026_MinimumLevelRestri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_025_MinimumLevel", "Step_025_MinimumLevel\Step_025_MinimumLevel.csproj", "{2AD68E90-EF97-45D9-8EA3-6BF70F9E4AA6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07. MinimumLevel", "07. MinimumLevel", "{D5C1993F-5EB9-429E-A6B1-EB477F1FAF47}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. MinimumLevel", "06. MinimumLevel", "{D5C1993F-5EB9-429E-A6B1-EB477F1FAF47}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_023_SourceContext", "Step_023_SourceContext\Step_023_SourceContext.csproj", "{6C1F1238-24E8-45B0-AFC1-A60F1A6C3948}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_031_MatchingFilter", "Step_031_MatchingFilter\Step_031_MatchingFilter.csproj", "{927596CE-E720-46E1-A14C-8697FA903F66}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. Enrich - Context", "06. Enrich - Context", "{2BD50DDA-B78B-424D-ADBA-1B12CC4095EB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08. Enrich - Context", "08. Enrich - Context", "{2BD50DDA-B78B-424D-ADBA-1B12CC4095EB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_032_PropertiesFilter", "Step_032_PropertiesFilter\Step_032_PropertiesFilter.csproj", "{EBFEF4F1-1DCD-4D40-BE3E-153F153A31B5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_033_ByIncludingOnly", "Step_033_ByIncludingOnly\Step_033_ByIncludingOnly.csproj", "{D7C877F9-B007-4C90-9B2D-537E29A37EB5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08. Filter", "08. Filter", "{0CC85E57-6523-41EB-89CB-9D844322836A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07. Filter", "07. Filter", "{0CC85E57-6523-41EB-89CB-9D844322836A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_024_PropertyContext", "Step_024_PropertyContext\Step_024_PropertyContext.csproj", "{1DBE4123-FD9F-4983-B2EA-0643B2E6ED02}"
 EndProject
@@ -78,7 +78,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_022_XmlConfiguration",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_028_MinimumLevelSourceContext", "Step_028_MinimumLevelSourceContext\Step_028_MinimumLevelSourceContext.csproj", "{4BF62522-99E7-44F8-9F6E-35469802DC04}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. WriteTo - Format", "04. WriteTo - Format", "{EC847B06-B32B-45A8-93D7-73ABAFAF9B54}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. WriteTo - Format", "03. WriteTo - Format", "{EC847B06-B32B-45A8-93D7-73ABAFAF9B54}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_017_CompactJson", "Step_017_CompactJson\Step_017_CompactJson.csproj", "{626B472D-83C5-440C-8AF9-AEF9A85D38F7}"
 EndProject
@@ -90,7 +90,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_020_ElasticCommonSchem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_014_DestructureToMaximum", "Step_014_DestructureToMaximum\Step_014_DestructureToMaximum.csproj", "{B99F29AD-2C5E-442A-86B6-6B8EAC2E6B86}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. WriteTo - Logger", "10. WriteTo - Logger", "{DE1A8C2C-D78F-4122-8EEE-86FC0BD364D7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. WriteTo - Loggers", "10. WriteTo - Loggers", "{DE1A8C2C-D78F-4122-8EEE-86FC0BD364D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "12. WriteTo - Http", "12. WriteTo - Http", "{EEB6F027-4759-4586-A817-CCDEE95DE530}"
 EndProject
@@ -138,13 +138,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_025_FromLogContext", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_036_CusstomPropertyMessageTemplate", "Step_036_CusstomPropertyMessageTemplate\Step_036_CusstomPropertyMessageTemplate.csproj", "{4B79FABD-CC30-4027-B337-02B9F9466953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_037_WithEnvironment", "Step_037_WithEnvironment\Step_037_WithEnvironment.csproj", "{D01738FD-3779-4F6E-99C2-2546C6D87652}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_037_WithEnvironment", "Step_037_WithEnvironment\Step_037_WithEnvironment.csproj", "{D01738FD-3779-4F6E-99C2-2546C6D87652}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_038_WithAssemblyName", "Step_038_WithAssemblyName\Step_038_WithAssemblyName.csproj", "{A60655AA-05E2-4D0F-B38B-2289B9F680E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_038_WithAssemblyName", "Step_038_WithAssemblyName\Step_038_WithAssemblyName.csproj", "{A60655AA-05E2-4D0F-B38B-2289B9F680E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_039_WithProcess", "Step_039_WithProcess\Step_039_WithProcess.csproj", "{24DE750B-C8B4-4A22-9292-88BA71124AAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_039_WithProcess", "Step_039_WithProcess\Step_039_WithProcess.csproj", "{24DE750B-C8B4-4A22-9292-88BA71124AAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_040_WithThread", "Step_040_WithThread\Step_040_WithThread.csproj", "{058594E5-9A28-40DF-B68E-99F830818ACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_040_WithThread", "Step_040_WithThread\Step_040_WithThread.csproj", "{058594E5-9A28-40DF-B68E-99F830818ACB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99. Demo", "99. Demo", "{BD53A37C-697E-41EE-8CAD-0736BED5EB06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Step_91_Demo", "Step_91_Demo\Step_91_Demo.csproj", "{2E200884-338B-4FC6-A010-BAE16AB8BE29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_045_OperationFromForContext", "Step_045_OperationFromForContext\Step_045_OperationFromForContext.csproj", "{FC88F25D-A886-4221-9D1A-C6BB630F0C4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13. WriteTo - Extras", "13. WriteTo - Extras", "{DA81490A-A8BC-4BAB-A654-0BA06070BB4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_061_WriteToWpf", "Step_061_WriteToWpf\Step_061_WriteToWpf.csproj", "{D7530AF7-8502-40EA-9D66-35C001562826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step_060_WriteToNotepad", "Step_060_WriteToNotepad\Step_060_WriteToNotepad.csproj", "{55E3454B-FC4E-445C-92E1-5FE049927442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -376,6 +388,22 @@ Global
 		{058594E5-9A28-40DF-B68E-99F830818ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{058594E5-9A28-40DF-B68E-99F830818ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{058594E5-9A28-40DF-B68E-99F830818ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E200884-338B-4FC6-A010-BAE16AB8BE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E200884-338B-4FC6-A010-BAE16AB8BE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E200884-338B-4FC6-A010-BAE16AB8BE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E200884-338B-4FC6-A010-BAE16AB8BE29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC88F25D-A886-4221-9D1A-C6BB630F0C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC88F25D-A886-4221-9D1A-C6BB630F0C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC88F25D-A886-4221-9D1A-C6BB630F0C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC88F25D-A886-4221-9D1A-C6BB630F0C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7530AF7-8502-40EA-9D66-35C001562826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7530AF7-8502-40EA-9D66-35C001562826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7530AF7-8502-40EA-9D66-35C001562826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7530AF7-8502-40EA-9D66-35C001562826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E3454B-FC4E-445C-92E1-5FE049927442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E3454B-FC4E-445C-92E1-5FE049927442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E3454B-FC4E-445C-92E1-5FE049927442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E3454B-FC4E-445C-92E1-5FE049927442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -437,6 +465,10 @@ Global
 		{A60655AA-05E2-4D0F-B38B-2289B9F680E9} = {F3B83B5A-A452-4DB2-8516-E98C73F48B1B}
 		{24DE750B-C8B4-4A22-9292-88BA71124AAA} = {F3B83B5A-A452-4DB2-8516-E98C73F48B1B}
 		{058594E5-9A28-40DF-B68E-99F830818ACB} = {F3B83B5A-A452-4DB2-8516-E98C73F48B1B}
+		{2E200884-338B-4FC6-A010-BAE16AB8BE29} = {BD53A37C-697E-41EE-8CAD-0736BED5EB06}
+		{FC88F25D-A886-4221-9D1A-C6BB630F0C4D} = {479A1A4F-6BA9-4F0A-B3B5-76BD9CEE5125}
+		{D7530AF7-8502-40EA-9D66-35C001562826} = {DA81490A-A8BC-4BAB-A654-0BA06070BB4E}
+		{55E3454B-FC4E-445C-92E1-5FE049927442} = {DA81490A-A8BC-4BAB-A654-0BA06070BB4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71EE70B-138B-4A77-9211-73DACECF0057}
