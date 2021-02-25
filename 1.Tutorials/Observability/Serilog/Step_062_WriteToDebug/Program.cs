@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Step_061_WriteToWpf
+namespace Step_062_WriteToDebug
 {
     class Program
     {

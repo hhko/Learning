@@ -21,10 +21,11 @@
 - [x] Serilog.Enrichers.Environment
 - [x] Serilog.Enrichers.AssemblyName
 - [x] Serilog.Enrichers.Process
-- [ ] Serilog.Enrichers.Thread
+- [x] Serilog.Enrichers.Thread
+- [x] Serilog.Sinks.Notepad
+- [x] Serilog.Sinks.RichTextBox.Wpf
+- [ ] Serilog.Sinks.Debug
 ---
-- [ ] Serilog.Sinks.Notepad
-- [ ] Serilog.Sinks.RichTextBox.Wpf
 - [ ] ExcelDna.Diagnostics.Serilog
 ---
 - [ ] Serilog.Enrichers.Context
@@ -32,7 +33,6 @@
 - [ ] ~~Serilog.Enrichers.CorrelationId~~ : 출력 안됨
 - [ ] ~~Serilog.Enrichers.Span~~ : 출력 안됨(.NET 5.0 이상)
 ---
-- [ ] Serilog.Sinks.Debug
 - [ ] Serilog.Sinks.Map
 - [ ] Serilog.Sinks.Async
 - [ ] Serilog.Sinks.Elasticsearch
