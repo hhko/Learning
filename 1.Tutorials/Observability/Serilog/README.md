@@ -1,4 +1,4 @@
-﻿# Serilog Tutorial
+﻿﻿# Serilog Tutorial
 
 ## NuGet 패키지
 - [x] Serilog
@@ -46,6 +46,11 @@
 - [ ] Serilog.Filters.Expressions
 - [ ] ~~Elastic.Apm.SerilogEnricher~~ : 출력 안됨
 - [ ] ~~SerilogMetrics~~
+- [ ] serilog-generator 
+---
+- [ ] Serilog.Sinks.Notepad
+- [ ] Serilog.Sinks.RichTextBox.Wpf
+- [ ] ExcelDna.Diagnostics.Serilog
 ---
 - [ ] Serilog.Sinks.XUnit
 - [ ] Elastic.Elasticsearch.Xunit

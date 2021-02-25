@@ -28,7 +28,7 @@ namespace Step_023_CustomProperty
             //     "Level": "Information",
             //     "MessageTemplate": "Hello World",
             //     "Properties": {
-            //         "SourceContext": "Step_023_CustomProperty.Program",
+            //         "SourceContext": "Step_023_CustomProperty.Program",      <-- 로그를 호출한 "네임스페이스.클래스"
             //         "AppVersion": "1.6.0",
             //         "ApplicationName": "Step_023_CustomProperty",            // AppEnricher
             //         "ApplicationVersion": "1.0.0.0"                          // AppEnricher
@@ -65,7 +65,7 @@ namespace Step_023_CustomProperty
             //     "Level": "Information",
             //     "MessageTemplate": "Hello Foo",
             //     "Properties": {
-            //         "SourceContext": "Step_023_CustomProperty.Foo",
+            //         "SourceContext": "Step_023_CustomProperty.Foo",          <-- 로그를 호출한 "네임스페이스.클래스"
             //         "AppVersion": "1.6.0",
             //         "ApplicationName": "Step_023_CustomProperty",            // AppEnricher
             //         "ApplicationVersion": "1.0.0.0"                          // AppEnricher

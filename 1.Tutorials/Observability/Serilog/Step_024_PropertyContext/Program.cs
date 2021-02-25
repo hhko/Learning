@@ -14,6 +14,16 @@ namespace Step_018_ContextValue
                             .WriteTo.File(path: "./Logs/LogFile.json", formatter: new JsonFormatter())
                             .CreateLogger();
 
+            // [10:03:49 INF] Hello World from Non-Context
+            //
+            // {
+            //     "Timestamp": "2021-02-05T10:07:32.1467764+09:00",
+            //     "Level": "Information",
+            //     "MessageTemplate": "Hello World2"
+            // }
+            Log.Information("Hello World from Non-Context");
+
+
             // - [x] public static ILogger ForContext<TSource>();
             //          키 : SourceContext
             //          값 : 로그 출력 클래스
@@ -36,15 +46,6 @@ namespace Step_018_ContextValue
             // }
             ILogger contextLogger = Log.ForContext("MyKey", "2021");
             contextLogger.Information("Hello World");
-
-            // [10:03:49 INF] Hello World from Non-Context
-            //
-            // {
-            //     "Timestamp": "2021-02-05T10:07:32.1467764+09:00",
-            //     "Level": "Information",
-            //     "MessageTemplate": "Hello World2"
-            // }
-            Log.Information("Hello World from Non-Context");
 
             Foo foo = new Foo();
             foo.DoSomething();
