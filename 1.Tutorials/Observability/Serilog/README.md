@@ -24,40 +24,58 @@
 - [x] Serilog.Enrichers.Thread
 - [x] Serilog.Sinks.Notepad
 - [x] Serilog.Sinks.RichTextBox.Wpf
-- [ ] Serilog.Sinks.Debug
+- [x] Serilog.Sinks.Debug
+- [x] Serilog.Sinks.XUnit
+- [x] Serilog.Sinks.InMemory
+  - Serilog.Sinks.InMemory.Assertions
 ---
-- [ ] ExcelDna.Diagnostics.Serilog
+- [ ] 메서드 이름
+- [ ] Serilog.Enrichers.CorrelationId
+- [ ] Serilog.Enrichers.Span
+- [ ] Elastic.Apm.SerilogEnricher
+- [ ] SerilogMetrics
+---
+- [ ] Akka.Logger.Serilog
+- [ ] serilog-generator 
+---
+- [ ] WSL2 로컬 환경 구성 : Logstash -> Elasticseach -> Kibana(Grafana)
 ---
 - [ ] Serilog.Enrichers.Context
 - [ ] Serilog.Enrichers.Memory
-- [ ] ~~Serilog.Enrichers.CorrelationId~~ : 출력 안됨
-- [ ] ~~Serilog.Enrichers.Span~~ : 출력 안됨(.NET 5.0 이상)
----
 - [ ] Serilog.Sinks.Map
 - [ ] Serilog.Sinks.Async
-- [ ] Serilog.Sinks.Elasticsearch
 - [ ] Serilog.Sinks.PeriodicBatching
+- [ ] ExcelDna.Diagnostics.Serilog
+---
+- [ ] Serilog.Sinks.Elasticsearch
 - [ ] Serilog.Sinks.TestCorrelator
 - [ ] Serilog.Sinks.SQLite, 5.0.0
 - [ ] Serilog.Sinks.file-header
 - [ ] Serilog.Sinks.file-gzip
 - [ ] Serilog.Sinks.file-archive
 - [ ] ~~Serilog.Sinks.RollingFile~~
+- [ ] serilog-diagnostics-tracelistener
 ---
 - [ ] Serilog.Extensions.Hosting
 - [ ] Serilog.Extensions.Logging
 ---
 - [ ] Serilog.Filters.Expressions
-- [ ] ~~Elastic.Apm.SerilogEnricher~~ : 출력 안됨
-- [ ] ~~SerilogMetrics~~
-- [ ] serilog-generator 
+- [ ] Serilog.Enricher.WhenDo
+- [ ] Serilog.Enrichers.Sensitive
 ---
-- [ ] Serilog.Sinks.XUnit
 - [ ] Elastic.Elasticsearch.Xunit
 - [ ] Serilog.Enrichers.Process GitHub 단위 테스트 작성 방법 이해
 ---
 - [ ] Serilog.Formatting.Compact.Reader
-- [ ] Analogy.LogViewer.Serilog Json
+- [ ] Analogy.LogViewer https://github.com/Analogy-LogViewer/Analogy.LogViewer
+- [ ] serilog-ui https://github.com/mo-esmp/serilog-ui
+---
+- [ ] 사용자 정의 | WriteTo
+- [ ] 사용자 정의 | Enrich
+- [ ] 사용자 정의 | Filter
+- [ ] 사용자 정의 | Destructure
+- [ ] 사용자 정의 | ReadFrom
+- [ ] 사용자 정의 | Formatter
 
 <br/>
 
@@ -108,7 +126,9 @@
   - ToString()
   - destructuring operator
 - [ ] 로그 Level 가이드
-- [ ] Docker?
+- [ ] Docker? https://github.com/FantasticFiasco/serilog-logspout-elastic-stack
+  - Logspout https://github.com/gliderlabs/logspout
+
 
 <br/>
 
@@ -164,44 +184,6 @@
    - [ ] With
    - [ ] With<T>
 1. AuditTo
-
-<br/>
-
-## 데이터
-### 시간
-- [x] UTC `@timestamp`
-- [x] KST `events[0]:@timestamp`
-
-### Host
-- [x] IP : host
-- [x] MachineName : `events[0]:host:name`, **WithMachineName**
-- [x] UserName : `events[0]:_metadata:user_name`, **WithUserName**
-
-### 프로세스
-- [x] Process Name : `events[0]:process:name` (WithProcessName)
-- [x] Process Id : `events[0]:process:pid` (WithProcessId)
-- [x] Thread Name : (WithProcessName, WithProperty(ThreadNameEnricher.ThreadNamePropertyName, ...))
-- [x] Thread Id : `events[0]:process:thread:id` (WithProcessId)
-- [x] Log Level : `events[0]:log.evel`
-- [x] Log Message : `events[0]:message`, `_metadata:...` [+소문자+]
-  ```json
-  "_metadata" => {
-     "person" => {
-        "age" => "2020",
-        "$type" => "Person"
-     }
-  }
-  ```
-- [x] Exception : `events[0]:error:...` (WithExceptionDetails)
-
-### 필드
-- [x] 시스템 환경 변수 : `events[0]:_metadata:xxx`, **WithEnvironment**
-- [x] 사용자 변수 : `events[0]:_metadata:xxx`, **WithProperty**
-- [x] 함수 : `events[0]:_metadata:xxx`, **WithFunction**
-- [x] LogEvent 사용자 함수 : `events[0]:_metadata:xxx`, **WithFunction**
-- [x] 직접 구현 : [Creating custom serilog enrichers](https://www.ctrlaltdan.com/2018/08/14/custom-serilog-enrichers/)
-- [x] 구분 : `events[0]:_metadata:구분키`, **Enrich.FromLogContext(), using (LogContext.PushProperty("구분키", 구분값))**
-- [x] 성능(시간) : `events[0]:_metadata:outcome`, **using (Operation.Time("Submitting payment for {OrderId}", "1234"))**
 
 <br/>
 
@@ -269,29 +251,3 @@
 - http://merbla.com/2018/04/25/exploring-serilog-v2---using-the-http-client-factory/
 - https://www.honeycomb.io/blog/simple-structured-logging-with-nlog/
 - 예외 처리 : https://hamidmosalla.com/2018/06/19/exception-handling-in-asynchronous-code/
-
-<br/>
-
-## Collectbeat
-- [x] Pipeline 구분 : beats, serilogs  
-  - pipelines.yml : `7700-listen-beats`, `7701-listen-serilogs`
-    ```yml
-    - pipeline.id: 7700-listen-beats
-      pipeline.workers: 4
-      queue.type: persisted
-      queue.max_bytes: 1gb
-      path.config: "/usr/share/logstash/pipeline/7700-listen-beats.conf"
-    - pipeline.id: 7701-listen-serilogs
-      pipeline.workers: 4
-      queue.type: persisted
-      queue.max_bytes: 1gb
-      path.config: "/usr/share/logstash/pipeline/7701-listen-serilogs.conf"
-    - pipeline.id: alive
-      pipeline.workers: 1
-      path.config: "/usr/share/logstash/pipeline/alive.conf"
-    ```
-  - 7701-listen-serilogs.conf
-- [x] Pipeline 실행 확인  
-  ![image](/uploads/d034750b05ae050cf788ba49841a89f6/image.png)
-- [ ] **[+진행 : Kafka 토픽 구분+]** : `serilog.{솔루션명}.{버전}`
-  - serilog.daq.45
