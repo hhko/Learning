@@ -35,6 +35,7 @@
 
 ## 동영상(영어)
 - [ ] [8 Lines of Code ](https://www.infoq.com/presentations/8-lines-code-refactoring/)
+- [ ] [DevTernity 2019: Jimmy Bogard – Vertical Slice Architecture](https://www.youtube.com/watch?v=T6nglsEDaqA)
 
 ## NuGet
 - [xBehave.net](https://github.com/adamralph/xbehave.net)
