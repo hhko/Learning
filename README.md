@@ -19,7 +19,7 @@
      - [Serilog](./1.Tutorials/Observability/Serilog)
    - Clean Architecture
      - Microsoft.Extensions.DependencyInjection  
-     - MediatR
+     - [MediatR](./1.Tutorials/CleanArchitecture/MediatR)
      - FluentValidation
      - Polly
 1. Books
