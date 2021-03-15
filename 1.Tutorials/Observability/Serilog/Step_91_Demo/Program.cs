@@ -17,6 +17,8 @@ namespace Step_91_Demo
         public static async Task<int> Main()
         { 
             Log.Logger = new LoggerConfiguration()
+                //.MinimumLevel.Verbose()
+                .MinimumLevel.Debug()
                 .Enrich.FromLogContext()
                 .Enrich.WithMachineName()
                 .Enrich.WithEnvironmentUserName()
@@ -48,6 +50,38 @@ namespace Step_91_Demo
         }
     }
 
+    public class LogRandom
+    {
+        public static void Print(ILogger logger, Random rand, int value)
+        {
+            int level = rand.Next(1, 20);
+            if (1 <= level && level <= 6)   // 6
+            {
+                logger.Verbose("{Sum}", value);
+            }
+            else if (7 <= level && level <= 11) // 5
+            {
+                logger.Debug("{Sum}", value);
+            }
+            else if (12 <= level && level <= 15) // 4
+            {
+                logger.Information("{Sum}", value);
+            }
+            else if (16 <= level && level <= 18) // 3
+            {
+                logger.Warning("{Sum}", value);
+            }
+            else if (18 <= level && level <= 19) // 2
+            {
+                logger.Error("{Sum}", value);
+            }
+            else if (level == 20) // 1
+            {
+                logger.Fatal("{Sum}", value);
+            }
+        }
+    }
+
     [Command("Foo1")]
     public class Foo1Command : ICommand
     {
@@ -57,12 +91,14 @@ namespace Step_91_Demo
 
             while (true)
             {
-                using (var op = Log.ForContext<Foo1Command>().BeginOperation("{MSG}", "hello"))
+                ILogger logger = Log.ForContext<Foo1Command>();
+                using (var op = logger.BeginOperation("{MSG}", "hello"))
                 {
                     int sleep = rand.Next(1, 10);
                     int sum = Enumerable.Range(0, sleep * 1000).Sum();
 
-                    Log.Information("{Sum}", sum);
+                    //Log.Information("{Sum}", sum);
+                    LogRandom.Print(logger, rand, sum);
 
                     op.Complete("Sleep", sleep);
                 }
@@ -83,12 +119,14 @@ namespace Step_91_Demo
 
             while (true)
             {
-                using (var op = Log.ForContext<Foo2Command>().BeginOperation("{MSG}", "hello"))
+                ILogger logger = Log.ForContext<Foo2Command>();
+                using (var op = logger.BeginOperation("{MSG}", "hello"))
                 {
-                    int sleep = rand.Next(1, 10);
+                    int sleep = rand.Next(1, 15);
                     int sum = Enumerable.Range(0, sleep * 1000).Sum();
 
-                    Log.Information("{Sum}", sum);
+                    //Log.Information("{Sum}", sum);
+                    LogRandom.Print(logger, rand, sum);
 
                     op.Complete("Sleep", sleep);
                 }
@@ -109,12 +147,14 @@ namespace Step_91_Demo
 
             while (true)
             {
-                using (var op = Log.ForContext<Foo3Command>().BeginOperation("{MSG}", "hello"))
+                ILogger logger = Log.ForContext<Foo3Command>();
+                using (var op = logger.BeginOperation("{MSG}", "hello"))
                 {
-                    int sleep = rand.Next(1, 10);
+                    int sleep = rand.Next(1, 20);
                     int sum = Enumerable.Range(0, sleep * 1000).Sum();
 
-                    Log.Information("{Sum}", sum);
+                    //Log.Information("{Sum}", sum);
+                    LogRandom.Print(logger, rand, sum);
 
                     op.Complete("Sleep", sleep);
                 }

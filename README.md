@@ -18,7 +18,7 @@
      - [NLog](./1.Tutorials/Observability/NLog)
      - [Serilog](./1.Tutorials/Observability/Serilog)
    - Clean Architecture
-     - Microsoft.Extensions.DependencyInjection  
+     - [Microsoft.Extensions.DependencyInjection](./1.Tutorials/CleanArchitecture/ServiceCollection)
      - [MediatR](./1.Tutorials/CleanArchitecture/MediatR)
      - FluentValidation
      - Polly
