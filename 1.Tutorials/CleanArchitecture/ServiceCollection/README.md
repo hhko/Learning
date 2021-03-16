@@ -1,4 +1,5 @@
-﻿
+﻿# Microsoft.Extensions.DependencyInjection Tutorial
+
 ### 1. 의존성 등록 방법
 1. 인터페이스와 구현 클래스    
    - `IServiceCollection AddTransient<TService, TImplementation>()`
@@ -42,10 +43,23 @@
 ### 2. 복수 의존성s 등록 방법
 - `Try`
 
-### 3. <T>
+### x. 복수 인터페이스 구현(단일 객체)
+
+### x. Generic <T>
 - `typeof`
 
-### 4. 코드 정리
+### x. Builder 패턴
+
+### x. IOption 통합
+
+### x. 코드 정리
 - `namespace Microsoft.Extensions.DependencyInjection`
 
-### 5. IOption 제거
+### x. 주입
+1. 생성자
+1. Action Injection
+1. Middleware Injection
+
+### x. Scope
+1. Main -> Singleton 방지
+
