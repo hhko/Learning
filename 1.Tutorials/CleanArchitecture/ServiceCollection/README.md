@@ -52,6 +52,10 @@
 
 ### x. IOption 통합
 
+### x.
+- Remove ...
+- Replace ...
+
 ### x. 코드 정리
 - `namespace Microsoft.Extensions.DependencyInjection`
 
